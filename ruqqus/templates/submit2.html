@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ruqqus - the open, free-speech social platform</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e76eba0350.js"></script>
+
+    <!-- Tee Dee CSS -->
+    <link rel="stylesheet" href="main.css">
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("filter-bar-mobile").style.top = "49px";
+            } else {
+                document.getElementById("filter-bar-mobile").style.top = "-98px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand flex-grow-1" href="#"><i class="fas fa-paw"></i> ruqqus</a>
+            <div class="flex-grow-1 d-fl d-none d-md-block">
+                <form class="form-inline search flex-nowrap mx-0 mx-lg-auto">
+                    <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                    <span class="input-group-append">
+                        <span class="input-group-text border-0 bg-transparent" style="margin-left: -2.5rem;">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </form>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center px-2">
+                        <a class="btn btn-outline-white" href="#">Add Post</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center px-2">
+                        <a class="btn btn-primary" href="#">Add Link</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center text-center justify-content-center">
+                        <a class="nav-link" href="#"><i class="fa-icon-circle fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center justify-content-center text-center">
+                        <div class="dropdown">
+                            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-icon-circle fas fa-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left border-0 shadow fade py-1 mt-3"
+                                aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-meta">
+                                    <div class="font-weight-bold">the_zucc</div>
+                                    <div class="text-small text-secondary">25 Rep</div>
+                                </div>
+                                <hr class="my-1">
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-circle text-left mr-3"></i>My
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><i
+                                        class="fas fa-envelope text-left mr-3"></i>Inbox<span
+                                        class="badge badge-danger align-top ml-1">4</span></a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog text-left mr-3"></i>Settings</a>
+                                <hr class="my-1">
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+
+    <div class="container">
+
+        <div class="row justify-content-around mx-lg-5 no-gutters">
+
+            <div class="col h-100">
+
+
+                <h1 class="h2">Submit a post</h1>
+                <p class="text-muted">The first step to making a quality post is choosing an interesting title!</p>
+
+                <div class="bg-white border-sm rounded-md">
+
+                <!-- Submission type toggle -->
+
+                <div class="flex-row tab-bar sticky d-none d-md-flex">
+
+                    <ul class="nav post-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-uppercase" href="#">Text Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">Link</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="row no-gutters">
+
+                    <div class="col-12">
+
+                        <div class="submission p-3">
+
+                            <form action="/signup" method="post">
+
+                                <input type="hidden" name="formkey" value="6c7963988201321621da247c28cb3972">
+                                <input type="hidden" name="now" value="1563891643">
+
+                                <label for="title" class="mt-3">Post Title</label>
+
+                                <input class="form-control border" id="title-register"
+                                    aria-describedby="titleHelpRegister" type="text" name="title" required>
+                                <small id="titleHelpRegister"
+                                    class="form-text font-weight-bold text-muted d-none mt-1">Minimum of 10 characters
+                                    required.</small>
+                                <small id="titleHelpSuccess"
+                                    class="form-text font-weight-bold text-success d-none mt-1">That title is set to
+                                    jet!
+                                </small>
+
+                                <label for="URL" class="mt-3">URL</label>
+
+                                <input class="form-control border" id="URL" aria-describedby="URLHelp" type="url"
+                                    name="URL" required>
+
+                                <label for="body" class="mt-3">Text</label>
+
+                                <div class="input-group">
+                                    <textarea class="form-control border" aria-label="With textarea"
+                                        placeholder="Enter any text here. This is optional!" rows="7"></textarea>
+                                    <div class="bg-light text-format">
+                                        <small class="format"><i class="fas fa-bold"></i></small>
+                                        <small class="format"><i class="fas fa-italic"></i></small>
+                                        <small class="format"><i class="fas fa-quote-right"></i></small>
+                                        <small class="format"><i class="fas fa-link"></i></small>
+                                    </div>
+                                </div>
+
+                                <input class="btn btn-primary login mt-3" type="submit" value="Make a Ruqqus">
+
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar (hidden on devices smaller than "large") -->
+
+            <div class="col sidebar text-left d-none d-lg-block ml-3">
+                <div class="sidebar-section sidebar-rules">
+                    <div class="title">Ruqqus Rules</div>
+                    <div class="body">
+                        <ol class="pl-0">
+                            <li>No racism</li>
+                            <li>No doxxing, threats, or calls to violence</li>
+                            <li>No trolling</li>
+                            <li>No solicitation</li>
+                            <li>Patriots only</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="sidebar-section sidebar-stats">
+                    <div class="title">Stats</div>
+                    <div class="body">
+                        <div class="d-inline-block w-25">
+                            <span style="font-size: 13px;font-weight: bold;">10,345</span>
+                            <small style="display: block;">users</small>
+                        </div>
+                        <div class="d-inline-block w-25">
+                            <span style="font-size: 13px;font-weight: bold;">1,398</span>
+                            <small style="display: block;">online</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-section sidebar-trending">
+                    <div class="title">What's Hot</div>
+                    <div class="body">
+                        <p>Here are the most popular tags from the last 24 hours.</p>
+                        <div class="hashtag">
+                            <a href="#">#Mueller</a>
+                            <div class="text-muted text-small font-weight-normal">2.3K posting about this</div>
+                        </div>
+                        <div class="hashtag">
+                            <a href="#">#MemeWar2</a>
+                            <div class="text-muted text-small font-weight-normal">1.2K posting about this</div>
+                        </div>
+                        <div class="hashtag">
+                            <a href="#">#AskTrumpSupporters</a>
+                            <div class="text-muted text-small font-weight-normal">900 posting about this</div>
+                        </div>
+                        <div class="hashtag">
+                            <a href="#">#DNCDebates</a>
+                            <div class="text-muted text-small font-weight-normal">600 posting about this</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-section sidebar-mods">
+                    <div class="title">Moderators</div>
+                    <div class="body">
+                        <div class="flex">
+                            <div class="flex flex-row-reverse justify-end mr-2">
+                                <img src="https://imgur.com/1zqhP0D.jpg"
+                                    class="profile-pic-35 border-3 border-white rounded-circle" />
+                                <img src="https://imgur.com/116vN2z.jpg"
+                                    class="profile-pic-35 border-3 border-white rounded-circle"
+                                    style="margin-left: -15px;" />
+                                <img src="https://imgur.com/ld8yZ3P.jpg"
+                                    class="profile-pic-35 border-3 border-white rounded-circle"
+                                    style="margin-left: -15px;" />
+                            </div>
+                        </div>
+                        <small><a href="#">Message the mods <span>&#8594;</span></a></small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row fixed-top bg-white border-0 shadow d-inline-flex d-md-none p-3" id="filter-bar-mobile"
+            style="z-index: 3; top: 0; transition: top 0.3s;">
+
+            <div class="col">
+
+                <div class="d-flex flex-row flex-nowrap justify-content-between">
+
+                    <div class="post-filter">
+                        <span>Show:</span>
+                        <span class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">All</a>
+
+                            <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy"
+                                aria-labelledby="dropdownSortBy">
+                                <a class="dropdown-item" href="#">Posts</a>
+                                <a class="dropdown-item" href="#">Comments</a>
+                            </span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="footer py-5">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <ul class="list-inline text-center text-small text-muted font-weight-bold mb-0">
+                            <li class="list-inline-item">About</li>
+                            <li class="list-inline-item">Terms</li>
+                            <li class="list-inline-item">Privacy</li>
+                            <li class="list-inline-item">Donate</li>
+                            <li class="list-inline-item">Press</li>
+                            <li class="list-inline-item">Help</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS script -->
+    <script src="script.js"></script>
+
+    <!-- Custom JS for mobile devices -->
+    <script src="mobile.js"></script>
+
+</body>
+
+</html>
