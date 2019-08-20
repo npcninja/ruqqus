@@ -5,6 +5,8 @@ $dark: #363254;
 $secondary: #7D8CC4;
 $danger: #F45D01;
 $white: #ffffff;
+$black: #191919;
+$light: #F7F3F9;
 
 
 $purple: #6d3eb7;
@@ -28,13 +30,16 @@ $theme-colors: (
   "secondary": $secondary,
   "danger": $danger,
   "dark": $dark,
-  "white": $white
+  "white": $white,
+  "black": $black,
+  "light": $light,
+  "gray": $gray-100
 );
 
 // Body styling
 
 $body-color: #191919;  //this is the text color
-$body-bg: #F5F7F9; //this is the background color
+$body-bg: #F7F3F9; //this is the background color
 
 // Borders
 
@@ -53,12 +58,47 @@ $font-family-sans-serif: Open Sans;
 
 // Font size
 
+$font-size-base: 1rem;
+
 $small-font-size: 13px;
+
+
+$display5-size:  3rem !default;
+
+$display5-weight: 300;
+
+$lead-font-size: $font-size-base * 1.325 !default;
 
 // Font weight
 
 $font-weight-bold: 600;
 $headings-font-weight: $font-weight-bold;
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 3.5),
+  7: ($spacer * 5),
+  8: ($spacer * 10)
+);
+
+// Sizing
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    130: 130%,
+    auto: auto
+  ),
+  $sizes
+);
 
 // Box Shadow
 
@@ -73,6 +113,11 @@ html {
 body {
     padding-top: 98px;
     background-color: $gray-100;
+}
+
+#page {
+    padding-top: 49px;
+    background-color: $white;
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -97,6 +142,11 @@ body {
         padding-right:0;
     }
 
+#settings .container, #page .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 }
 
 // Positioning
@@ -107,7 +157,7 @@ body {
     top: 49px;
     height: auto;
     overflow-y: auto;
-    z-index: 3;
+    z-index: 4;
 }
 
 // Type
@@ -120,13 +170,27 @@ body {
     font-size: $small-font-size;
 }
 
+.display-5 {
+    @include font-size($display5-size);
+    font-weight: $display5-weight;
+    line-height: $display-line-height;
+  }
+
 // Links
+
+a:hover {
+    text-decoration: none;
+}
 
 a.dropdown-toggle:hover {
     text-decoration: none;
 }
 
 // list items
+
+ul.no-bullets {
+    list-style-type: none;
+}
 
 .comment-section li {
     list-style-type: none;
@@ -158,12 +222,6 @@ ol > li::before {
 
 .btn {
     border-radius: .25rem;
-    font-size: $small-font-size;
-}
-
-.btn-light {
-    background-color: $white;
-    border-color: $white;
 }
 
 .btn.login {
@@ -171,14 +229,25 @@ ol > li::before {
     border-radius: .25rem;
 }
 
-// Navbar and Filter Bar
+// Navbar and tab Bar
+
+#page .navbar-light .navbar-nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $dark;
+    font-weight: $font-weight-bold;
+}
+
+#page .navbar-light .navbar-nav .nav-link:hover {
+    color: $primary;
+}
 
 .navbar-brand, .navbar-light .navbar-brand {
     color: $purple;
     font-weight: $font-weight-bold;
 }
 
-.filter-bar {
+.tab-bar {
     border-bottom: 1px solid $border-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -220,13 +289,32 @@ ol > li::before {
     border-bottom: 3px solid $red;
 }
 
-.post-nav .nav-link:hover, .nav-link:focus {
+.post-nav .nav-link:hover, .post-nav .nav-link:focus {
     color: $red;
 }
 
-.post-nav .nav-item:last-child .nav-link {
-    padding-right: 0;
+// Nav pills
+
+#page .nav-pills .nav-link {
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+    color: $text-muted;
+    border-bottom: 2px solid transparent;
+    padding: 1rem 1.5rem;
 }
+
+#page .nav-pills .nav-link:hover {
+    color: $primary;
+}
+
+#page .bg-white .nav-pills .nav-link.active, .bg-white .nav-pills .show > .nav-link {
+    color: $primary;
+    background-color: transparent;
+    transition: ease 0.25s;
+    border-bottom: 2px solid $primary;
+}
+
 
 // Navbar icons and search box
 
@@ -299,10 +387,8 @@ label.terms {
 .dropdown-item:hover, .dropdown-item:focus {
     color: $white;
     text-decoration: none;
-    background-color: $secondary;
+    background-color: $primary;
 }
-
-
 
 // Font Awesome
 
@@ -404,6 +490,20 @@ label.terms {
     color: $gray-300 !important;		
 }
 
+// Link Arrow Symbol
+
+a .link-arrow {
+position: relative;
+right: 0;
+transition: right ease 0.25s;
+margin-left: .25rem;
+font-size: $small-font-size;
+}
+
+a:hover .link-arrow {
+right: -.5rem;
+}
+
 // Custom Borders
 
 .border-1 {
@@ -429,6 +529,20 @@ label.terms {
 .border-5 {
     border-width: 5px;
     border-style: solid;
+}
+
+// Opacity
+
+.opacity-25 {
+    opacity: .25;
+}
+
+.opacity-50 {
+    opacity: .5;
+}
+
+.opacity-80 {
+    opacity: .8;
 }
 
 // Main Content
@@ -683,7 +797,6 @@ label.terms {
     display: flex;
     position: relative;
     margin-top: 1rem;
-    border: 1px solid $gray-300;
 }
 
 .comment .comment-profile {
@@ -693,7 +806,6 @@ label.terms {
 
 .comment .comment-body {
     width: 100%;
-    padding: 1rem;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -820,27 +932,28 @@ ul.comment-section {
     margin-right: .25rem;
 }
 
-.comment .toggle-collapse::before {
-    position: absolute;
-    right: 1rem;
-    top: .25rem;
-    content: "\2212";
-    font-size: $font-size-lg;
-    color: $text-muted;
-    z-index: 2;
+.comment .comment-collapse::before {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    border-left: 2px solid $gray-400;
+    font-size: $small-font-size;
+    color: $purple;
+    display: inline-block;
+    height: 100%;
+    z-index: 4;
+    cursor: pointer;
 }
 
-.comment.collapsed .toggle-collapse::before {
-    position: absolute;
-    right: 1rem;
-    top: .25rem;
-    content: "\002B";
-    font-size: $font-size-lg;
-    color: $text-muted;
-    z-index: 2;
+.comment .comment-collapse:hover::before {
+    border-left-color: $primary;
 }
 
-.comment.collapsed .comment-profile, .comment.collapsed div.comment-text, .comment.collapsed .comment-actions, .comment.collapsed .comment-write,
+.comment.collapsed .comment-collapse::before {
+    content: "\f0fe";
+    border-left: none;
+}
+
+.comment.collapsed .comment-profile, .comment.collapsed .comment-body p.text, .comment.collapsed div.comment-text, .comment.collapsed .comment-actions, .comment.collapsed .comment-write,
 .comment.collapsed .comment {
     display: none;
 }
@@ -851,6 +964,10 @@ ul.comment-section {
 
 .comment.collapsed .comment-body {
     opacity: .5;
+}
+
+.comment.collapsed .comment-body:hover {
+    opacity: 1;
 }
 
 .dropdown-menu.user-profile-menu {
@@ -964,6 +1081,17 @@ ul.comment-section {
     text-shadow: 0 0 2px black;
 }
 
+// Settings Page
+
+.settings .settings-section {
+    margin-bottom: 3rem;
+    background: $white;
+}
+
+.settings .settings-section .title, .settings .settings-section .body, .settings .settings-section .footer {
+    padding: 1rem;
+}
+
 // Profile Page
 
 .profile-actions a {
@@ -999,8 +1127,21 @@ ul.comment-section {
 
 // Footer
 
+#page .footer h1, #page .footer h2, #page .footer h3, #page .footer h4, #page .footer h5, #page .footer h6 {
+    font-weight: $font-weight-bold;
+}
+
 .footer a {
     color: $gray-600;
+    text-decoration: none;
+}
+
+.footer a:hover, .footer a:focus, .footer a:active {
+    color: $body-color;
+}
+
+.footer.footer-dark a:hover, .footer.footer-dark a:focus, .footer.footer-dark a:active {
+    color: $white;
 }
 
 // Responsive Borders
@@ -1050,8 +1191,149 @@ ul.comment-section {
   }
 }
 
-.footer a:hover, a:focus, a:active {
-    color: $body-color;
+// Submissions
+
+.text-format {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .5rem;
+    width: 100%;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: $gray-300;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    z-index: 3;
+}
+
+.text-format .format {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    color: #adb5bd;
+}
+
+// Custom Switch (iOS-like toggle)
+
+.custom-switch {
+  padding-left: 2.25rem;
+  padding-bottom: 1rem; // added for positioning
+}
+
+.custom-control-label { // added for alignment with the switch
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  padding-bottom: 0.1rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    opacity: 1;
+    background-color: $success;
+    border: $success solid 1px;
+
+}
+
+.custom-control-input:checked ~ .custom-control-label:hover::before {
+    opacity: 1;
+}
+
+.custom-switch .custom-control-label::before {
+  left: -2.25rem;
+  height: 1.5rem;
+  width: 2.75rem;    // it was 1.75rem before. Sliding way is longer than before.
+  pointer-events: all;
+  border-radius: 1rem;
+  background-color: $gray-500;
+  border: $gray-500 solid 1px;
+  opacity: .7;
+}
+
+.custom-switch .custom-control-label:hover::before {
+    opacity: .85;
+}
+
+.custom-switch .custom-control-label::after {
+  top: calc(0.25rem + 2px);
+  left: calc(-2.25rem + 2px);
+  width: calc(1.5rem - 4px);   // it was calc(1rem - 4px) before. Oval is bigger than before.
+  height: calc(1.5rem - 4px);  // it was calc(1rem - 4px) before. Oval is bigger than before.
+  background-color: $white;
+  border-radius: 2rem; //   it was 0.5rem before. Oval is bigger than before.
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-switch .custom-control-label::after {
+    transition: none;
+  }
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(1.25rem); //translateX(0.75rem);
+  transform: translateX(1.25rem); //translateX(0.75rem);
+}
+
+// Code Prettify
+
+pre.prettyprint {
+    padding: 0;
+}
+
+pre ol.linenums {
+    padding-left: 0;
+}
+
+pre ol > li {
+    margin-bottom: 0;
+}
+
+pre ol > li::before {
+    color: $white;
+    font-weight: $font-weight-normal;
+    background-color: rgba(72, 68, 107, 0.9);
+    right: 1rem;
+    padding: .25rem;
+    text-align: right;
+    margin-right: 0.5rem;
+    width: 3rem;
+}
+
+pre li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: none;
+}
+
+pre .pln, code .pln {
+    color: #29b1f3;
+}
+
+pre .lit, code .lit {
+    color: $dark;
+}
+
+pre .kwd, code .kwd {
+    color: $green;
+}
+
+pre .str, code .str {
+    color: $green;
+    opacity: .75;
+}
+
+pre .com, code .com {
+    color: #ab4bc3;
+}
+
+pre .typ, code .typ {
+    color: $white;
+}
+
+pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
+    color: #fff;
 }
 
 // Adam's additions
