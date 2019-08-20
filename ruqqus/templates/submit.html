@@ -14,20 +14,7 @@
 
                 <div class="bg-white border-sm rounded-md">
 
-                <!-- Submission type toggle -->
-
-                <div class="flex-row tab-bar sticky d-none d-md-flex">
-
-                    <ul class="nav post-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active text-uppercase" href="#">Text Post</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="#">Link</a>
-                        </li>
-                    </ul>
-
-                </div>
+		{% if error %}<p><span class="red">{{ error }}</span></p>{% endif %}
 
 
                 <div class="row no-gutters">
