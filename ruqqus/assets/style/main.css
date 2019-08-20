@@ -11247,6 +11247,7 @@ ol > li::before {
 
 .btn {
   border-radius: 0.25rem;
+  font-weight: 600;
 }
 
 .btn.login {
@@ -11255,8 +11256,6 @@ ol > li::before {
 }
 
 #page .navbar-light .navbar-nav .nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
   color: #363254;
   font-weight: 600;
 }
@@ -11328,6 +11327,13 @@ ol > li::before {
 }
 
 #page .bg-white .nav-pills .nav-link.active, .bg-white .nav-pills .show > .nav-link {
+  color: #6d3eb7;
+  background-color: transparent;
+  transition: ease 0.25s;
+  border-bottom: 2px solid #6d3eb7;
+}
+
+#page .bg-light .nav-pills .nav-link.active, .bg-light .nav-pills .show > .nav-link {
   color: #6d3eb7;
   background-color: transparent;
   transition: ease 0.25s;
@@ -11504,12 +11510,13 @@ a .link-arrow {
   position: relative;
   right: 0;
   transition: right ease 0.25s;
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
   font-size: 13px;
 }
 
 a:hover .link-arrow {
   right: -0.5rem;
+  color: #363254;
 }
 
 .border-1 {
@@ -11648,6 +11655,10 @@ a:hover .link-arrow {
   border: none;
 }
 
+.card-title {
+  font-size: 16px;
+}
+
 .post-title {
   margin-bottom: 0;
 }
@@ -11685,6 +11696,7 @@ a:hover .link-arrow {
 .post-actions .fa, .post-actions .fas {
   font-size: 12px;
   margin-right: 0.5rem;
+  opacity: 0.8;
 }
 
 .post-actions .dropdown-item:active .fa, .post-actions .dropdown-item:active .fas {
@@ -11793,14 +11805,12 @@ a:hover .link-arrow {
 
 .comment .comment-body {
   width: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .comment .comment-body .user-info {
   font-size: 13px;
   color: #757a84;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .comment .comment-body p.text {
@@ -11920,8 +11930,13 @@ ul.comment-section {
   margin-right: 0.25rem;
 }
 
+.comment .comment-collapse {
+  padding-right: 15px;
+}
+
 .comment .comment-collapse::before {
   content: "";
+  position: absolute;
   font-family: "Font Awesome 5 Free";
   border-left: 2px solid #ced4da;
   font-size: 13px;
@@ -11937,8 +11952,11 @@ ul.comment-section {
 }
 
 .comment.collapsed .comment-collapse::before {
-  content: "";
+  content: "";
   border-left: none;
+  color: #adb5bd;
+  font-size: 11px;
+  top: 2.25px;
 }
 
 .comment.collapsed .comment-profile, .comment.collapsed .comment-body p.text, .comment.collapsed div.comment-text, .comment.collapsed .comment-actions, .comment.collapsed .comment-write,

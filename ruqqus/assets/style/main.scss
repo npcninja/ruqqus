@@ -222,6 +222,7 @@ ol > li::before {
 
 .btn {
     border-radius: .25rem;
+    font-weight: $font-weight-bold;
 }
 
 .btn.login {
@@ -232,8 +233,6 @@ ol > li::before {
 // Navbar and tab Bar
 
 #page .navbar-light .navbar-nav .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
     color: $dark;
     font-weight: $font-weight-bold;
 }
@@ -309,6 +308,13 @@ ol > li::before {
 }
 
 #page .bg-white .nav-pills .nav-link.active, .bg-white .nav-pills .show > .nav-link {
+    color: $primary;
+    background-color: transparent;
+    transition: ease 0.25s;
+    border-bottom: 2px solid $primary;
+}
+
+#page .bg-light .nav-pills .nav-link.active, .bg-light .nav-pills .show > .nav-link {
     color: $primary;
     background-color: transparent;
     transition: ease 0.25s;
@@ -496,12 +502,13 @@ a .link-arrow {
 position: relative;
 right: 0;
 transition: right ease 0.25s;
-margin-left: .25rem;
+margin-left: .5rem;
 font-size: $small-font-size;
 }
 
 a:hover .link-arrow {
 right: -.5rem;
+color: $dark;
 }
 
 // Custom Borders
@@ -654,6 +661,10 @@ right: -.5rem;
     border: none;
 }
 
+.card-title {
+    font-size: 16px;
+}
+
 .post-title {
     margin-bottom: 0;
 }
@@ -691,6 +702,7 @@ right: -.5rem;
 .post-actions .fa, .post-actions .fas {
     font-size: 12px;
     margin-right: .5rem;
+    opacity: .8;
 }
 
 .post-actions .dropdown-item:active .fa, .post-actions .dropdown-item:active .fas {
@@ -806,14 +818,12 @@ right: -.5rem;
 
 .comment .comment-body {
     width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .comment .comment-body .user-info {
     font-size: $small-font-size;
     color: $text-muted;
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
 }
 
 .comment .comment-body p.text {
@@ -932,8 +942,13 @@ ul.comment-section {
     margin-right: .25rem;
 }
 
+.comment .comment-collapse {
+    padding-right: 15px;
+}
+
 .comment .comment-collapse::before {
     content: "";
+    position: absolute;
     font-family: "Font Awesome 5 Free";
     border-left: 2px solid $gray-400;
     font-size: $small-font-size;
@@ -949,8 +964,11 @@ ul.comment-section {
 }
 
 .comment.collapsed .comment-collapse::before {
-    content: "\f0fe";
+    content: "\f055";
     border-left: none;
+    color: $gray-500;
+    font-size: 11px;
+    top: 2.25px;
 }
 
 .comment.collapsed .comment-profile, .comment.collapsed .comment-body p.text, .comment.collapsed div.comment-text, .comment.collapsed .comment-actions, .comment.collapsed .comment-write,
