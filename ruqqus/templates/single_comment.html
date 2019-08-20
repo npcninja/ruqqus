@@ -92,7 +92,7 @@
 
   {% else %}
     {% for reply in c.replies %}
-    <div class="">
+    <div class="pl-2">
     {{ reply.rendered_comment(v=v, level=level+1) | safe }}
     </div>
     {% endfor %}
