@@ -26,3 +26,12 @@ class DMs(Base):
     def __repr__(self):
         return f"<DMs(id={self.id}, uid={self.user_id}, from_uid={self.from_user_id}," \
                f" to_uid={self.to_user_id}, parent_dm_id={self.parent_dm_id}, created={self.created_utc})>"
+
+    @property
+    def base36id(self):
+        return base36encode(self.id)
+
+
+    @property
+    def fullname(self):
+        return f"t5_{self.base36id}"
