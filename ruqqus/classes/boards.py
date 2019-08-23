@@ -3,7 +3,7 @@ from sqlalchemy import *
 from sqlalchemy.orm import relationship
 
 from ruqqus.helpers.base36 import *
-from ruqqus.__main__ import Base, db
+from ruqqus.__main__ import Base, db, cache
 
 
 class Boards(Base):
