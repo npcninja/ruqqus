@@ -30,7 +30,7 @@ class Badge(Base):
     description=Column(String(64))
     url=Column(String(256))
     created_utc=Column(Integer)
-    badge=relationship("Badge", uselist=False)
+    badge=relationship("BadgeDefs", uselist=False)
 
     @property
     def text(self):
