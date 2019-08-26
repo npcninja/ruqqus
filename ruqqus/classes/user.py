@@ -37,7 +37,7 @@ class User(Base):
     ips = relationship('IP', lazy="dynamic", backref="users")
     bio=deferred(Column(String, default=""))
     bio_html=deferred(Column(String, default=""))
-    badges=relationship("Badge", lazy="dynamic", back_populates="user_id")
+    badges=relationship("Badge", lazy="dynamic", backref="user")
 
     #properties defined as SQL server-side functions
     energy = deferred(Column(Integer, server_default=FetchedValue()))
