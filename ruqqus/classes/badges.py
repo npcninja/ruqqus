@@ -26,7 +26,7 @@ class Badge(Base):
     id=Column(Integer, primary_key=True)
 
     user_id = Column(Integer, ForeignKey('users.id'))
-    badge_id=Column(Integer, ForeignKey("badge_list.id"))
+    badge_id=Column(Integer, ForeignKey("badge_defs.id"))
     description=Column(String(64))
     url=Column(String(256))
     created_utc=Column(Integer)
