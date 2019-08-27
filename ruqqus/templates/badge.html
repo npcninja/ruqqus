@@ -1,5 +1,12 @@
+<div title="{{ b.text }}">
 {% if b.url %}
-<div><a href="{{ b.url }}" title="{{ b.text }}">{{ b.name }}</a></div>
+<a href="{{ b.url }}">
+<img src="{{ b.path }}">
+</a>
 {% else %}
-<div><span title="{{ b.text }}">{{ b.name }}</span></div>
+<img src="{{ b.path }}">
 {% endif %}
+<div>
+{{ b.name }}
+</div
+</div>

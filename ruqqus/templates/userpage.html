@@ -46,11 +46,15 @@
                         </div>
                     </div>
                 </div>
+
+		{% if u.badges %}
 		<div class="sidebar-section sidebar-profile-badges">
+		<h1>Badges</h1>
 		{% for b in u.badges %}
 			{{ b.rendered | safe }}
 		{% endfor %}
 		</div>
+		{% endif %}
 {% endblock %}
 
 {% block adminpanel %}
