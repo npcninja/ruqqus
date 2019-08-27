@@ -53,6 +53,8 @@
 		<div class="pl-3">
 		{% for b in u.badges %}
 			{{ b.rendered | safe }}
+		{% else %}
+			<div>Nothing yet!</div>
 		{% endfor %}
 		</div>
 		</div>
