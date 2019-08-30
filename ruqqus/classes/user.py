@@ -254,19 +254,16 @@ class User(Base):
 
         output=[]
 
-        i=0
+        badges=[x for x in self.badges.all()]
 
-        while i< len(self.badges):
-
-            to_append=[self.badges[i]]
-
-            i+=1
-            if i < len(self.badges):
-                to_append.append(self.badges[i])
-
+        while badges:
+            
+            to_append=[badges.pop(0)]
+            
+            if badges:
+                to_append.append(badges.pop(0))
+                
             output.append(to_append)
-            i+=1
 
-        print(output)
         return output
         
