@@ -51,8 +51,8 @@
 		<div class="sidebar-section sidebar-profile-badges">
 		<div class="title">Badges</div>
 		<div class="pl-3">
-		{% for b in u.badges %}
-			{{ b.rendered | safe }}
+		{% for bp in u.badge_pair %}
+			{% include "badge_pair.html"  %}
 		{% else %}
 			<div>Nothing yet!</div>
 		{% endfor %}
