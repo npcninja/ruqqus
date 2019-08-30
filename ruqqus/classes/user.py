@@ -267,5 +267,6 @@ class User(Base):
             output.append(to_append)
             i+=1
 
+        print(output)
         return output
         
