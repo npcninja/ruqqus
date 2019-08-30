@@ -1,4 +1,5 @@
-<div title="{{ b.text }}">
+<div class="col" title="{{ b.text }}">
+<div class="row text-center">
 {% if b.url %}
 <a href="{{ b.url }}">
 <img style="width: 50px; height: 50px" src="{{ b.path }}">
@@ -6,7 +7,8 @@
 {% else %}
 <img style="width: 50px; height: 50px" src="{{ b.path }}">
 {% endif %}
-<div>
+</div>
+<div class="row">
 {{ b.name }}
 </div>
 </div>
