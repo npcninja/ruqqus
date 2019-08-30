@@ -247,3 +247,25 @@ class User(Base):
     def post_count(self):
 
         return self.submissions.filter_by(is_banned=False).count()
+
+    @property
+    #@cache.memoize(timeout=60)
+    def badge_pairs(self):
+
+        output=[]
+
+        i=0
+
+        while i< len(self.badges):
+
+            to_append=[self.badges[i]]
+
+            i+=1
+            if i < len(self.badges):
+                to_append.append(self.badges[i])
+
+            output.append(to_append)
+            i+=1
+
+        return output
+        
