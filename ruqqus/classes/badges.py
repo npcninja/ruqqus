@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 
 from ruqqus.__main__ import Base, db
 
-class BadgeDefs(Base):
+class BadgeDef(Base):
 
     __tablename__="badge_defs"
 
@@ -12,6 +12,10 @@ class BadgeDefs(Base):
     name=Column(String(64))
     description=Column(String(64))
     icon=Column(String(64))
+
+    def __repr__(self):
+
+        return f"<BadgeDef(badge_id={self.id})>"
 
     @property
     def path(self):
@@ -30,7 +34,11 @@ class Badge(Base):
     description=Column(String(64))
     url=Column(String(256))
     created_utc=Column(Integer)
-    badge=relationship("BadgeDefs", uselist=False)
+    badge=relationship("BadgeDef", uselist=False)
+
+    def __repr__(self):
+
+        return f"<Badge(user_id={self.user_id}, badge_id={self.badge_id})>"
 
     @property
     def text(self):
