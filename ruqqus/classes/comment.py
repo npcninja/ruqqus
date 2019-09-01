@@ -33,6 +33,7 @@ class Comment(Base):
     ups = Column(Integer, server_default=FetchedValue())
     downs=Column(Integer, server_default=FetchedValue())
     age=Column(Integer, server_default=FetchedValue())
+    flags=Column(Integer, server_default=FetchedValue())
 
     def __init__(self, *args, **kwargs):
                    

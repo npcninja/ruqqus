@@ -41,6 +41,7 @@ class Submission(Base):
     downs=Column(Integer, server_default=FetchedValue())
     age=Column(Integer, server_default=FetchedValue())
     comment_count=Column(Integer, server_default=FetchedValue())
+    flags=Column(Integer, server_default=FetchedValue())
     
 
     def __init__(self, *args, **kwargs):
@@ -222,6 +223,10 @@ class Submission(Base):
             years=now.tm_year-ctd.tm_year
             return f"{years} year{'s' if years>1 else ''} ago"
         
+    @property
+    @cache.memoize(timeout=60)
+    def unresolved_flag_count(self):
+        return self.flags.filter_by(resolved=False).count()
 
     @property
     def created_date(self):

@@ -108,6 +108,22 @@ def prep_database():
     RETURNS NULL ON NULL INPUT;
     """)
 
+    #flag count
+    c.execute("""
+    CREATE OR REPLACE FUNCTION flag_count(submissions)
+    RETURNS bigint AS '
+      SELECT COUNT(*)
+      FROM flags
+      JOIN users ON flags.user_id=users.id
+      WHERE post_id=$1.id
+      AND users.is_banned=false
+      '
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT;
+    """)
+    
+
     #=========COMMENTS========
 
     #ups
@@ -217,3 +233,5 @@ def prep_database():
     conn.commit()
     c.close()
     conn.close()
+
+prep_database()
