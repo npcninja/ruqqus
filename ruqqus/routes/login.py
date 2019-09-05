@@ -37,16 +37,9 @@ def login_post():
 
     username=request.form.get("username")
 
-    #step1: identify if username is username or email
-    if "@" in username:
-        account = db.query(User).filter_by(email=username).first()
-        if not account:
-            return render_template("login.html", failed=True, i=random_image())
-
-    else:
-        account = db.query(User).filter_by(username=username).first()
-        if not account:
-            return render_template("login.html", failed=True, i=random_image())
+    account = db.query(User).filter_by(username=username).first()
+    if not account:
+        return render_template("login.html", failed=True, i=random_image())
 
     #test password
     if account.verifyPass(request.form.get("password")):

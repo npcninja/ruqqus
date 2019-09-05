@@ -25,7 +25,10 @@ def send_mail(to_address, subject, plaintext, html, from_address="Ruqqus <norepl
                          )
 
 
-def send_verification_email(user):
+def send_verification_email(user, email=None):
+
+    if not email:
+        email=user.email
 
     url=f"https://{environ.get('domain')}/activate"
     now=int(time.time())
@@ -42,7 +45,7 @@ def send_verification_email(user):
 
     text=f"Thank you for signing up. Click to verify your email address: {link}"
 
-    send_mail(to_address=user.email,
+    send_mail(to_address=email,
               html=html,
               plaintext=text,
               subject="Validate your Ruqqus account"
@@ -77,16 +80,17 @@ def activate(v):
     if not user:
         abort(400)
 
-    if user.is_activated:
+    if user.is_activated and user.email=email:
         return render_template("message.html", v=v, title="Email already verified.", message="Email already verified."), 404
 
-    user.is_activated=True
+    user.email=email
 
-    mail_badge = Badge(user_id=user.id,
+    if not any([b.badge_id==2 for b in user.badges]):
+        mail_badge = Badge(user_id=user.id,
                        badge_id=2,
                        created_utc=time.time())
+        db.add(mail_badge)
     
     db.add(user)
-    db.add(mail_badge)
     db.commit()
     return render_template("message.html", v=v, title="Email verified.", message=f"Your email {email} has been verified. Thank you.")
