@@ -69,9 +69,6 @@ def settings_security_post(v):
         if new_email == v.email:
             return render_template("settings_security.html", v=v, error="That's already your email!")
 
-        v.email=new_email
-        v.is_activated=False
-
         send_verification_email(v, email=new_email)
 
         return render_template("settings_security.html", v=v, msg=f"Verify your new email address {new_email} to complete the email change process.")
