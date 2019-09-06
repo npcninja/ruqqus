@@ -40,7 +40,7 @@ def send_verification_email(user, email=None):
 
     html=f"""
          <p>Welcome to Ruqqus, {user.username}!<p>
-         <a href="{link}">Click here</a> to verify your email address.</p>
+         <a href="{link}">Click here</a> to verify your email address on {environ.get('domain')}.</p>
          """
 
     text=f"Thank you for signing up. Click to verify your email address: {link}"
@@ -74,11 +74,11 @@ def activate(v):
 
 
     if not validate_hash(f"{email}+{id}+{timestamp}", token):
-        abort(400)
+        abort(401)
 
     user = db.query(User).filter_by(id=id).first()
     if not user:
-        abort(400)
+        abort(404)
 
     if user.is_activated and user.email==email:
         return render_template("message.html", v=v, title="Email already verified.", message="Email already verified."), 404
