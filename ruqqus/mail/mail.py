@@ -2,6 +2,7 @@ from os import environ
 import requests
 import time
 from flask import *
+from urllib.parse import quote
 
 from ruqqus.helpers.security import *
 from ruqqus.helpers.wrappers import *
@@ -34,7 +35,7 @@ def send_verification_email(user, email=None):
     now=int(time.time())
 
     token=generate_hash(f"{email}+{user.id}+{now}")
-    params=f"?email={escape(email)}&id={user.id}&time={now}&token={token}"
+    params=f"?email={quote(email)}&id={user.id}&time={now}&token={token}"
 
     link=url+params
 
