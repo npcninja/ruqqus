@@ -85,6 +85,7 @@ def activate(v):
         return render_template("message.html", v=v, title="Email already verified.", message="Email already verified."), 404
 
     user.email=email
+    user.is_activated=True
 
     if not any([b.badge_id==2 for b in user.badges]):
         mail_badge = Badge(user_id=user.id,
