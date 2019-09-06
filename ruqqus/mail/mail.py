@@ -80,7 +80,7 @@ def activate(v):
     if not user:
         abort(400)
 
-    if user.is_activated and user.email=email:
+    if user.is_activated and user.email==email:
         return render_template("message.html", v=v, title="Email already verified.", message="Email already verified."), 404
 
     user.email=email
