@@ -48,8 +48,6 @@ def settings_profile_post(v):
 @validate_formkey
 def settings_security_post(v):
 
-    updated=False
-
     if request.form.get("new_password"):
         if request.form.get("new_password") != request.form.get("cnf_password"):
             return render_template("settings_security.html", v=v, error="Passwords do not match.")

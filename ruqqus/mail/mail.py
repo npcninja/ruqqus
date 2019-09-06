@@ -33,7 +33,7 @@ def send_verification_email(user, email=None):
     url=f"https://{environ.get('domain')}/activate"
     now=int(time.time())
 
-    token=generate_hash(f"{user.email}+{user.id}+{now}")
+    token=generate_hash(f"{email}+{user.id}+{now}")
     params=f"?email={escape(user.email)}&id={user.id}&time={now}&token={token}"
 
     link=url+params
@@ -74,7 +74,7 @@ def activate(v):
 
 
     if not validate_hash(f"{email}+{id}+{timestamp}", token):
-        abort(401)
+        abort(403)
 
     user = db.query(User).filter_by(id=id).first()
     if not user:
