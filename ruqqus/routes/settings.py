@@ -63,6 +63,11 @@ def settings_security_post(v):
         return render_template("settings_security.html", v=v, msg="Your password has been changed.")
 
     if request.form.get("new_email"):
+
+        if not v.verifyPass(request.form.get('password')):
+            return render_template("settings_security.html", v=v, error="Invalid password")
+            
+        
         new_email = request.form.get("new_email")
         if new_email == v.email:
             return render_template("settings_security.html", v=v, error="That's already your email!")
