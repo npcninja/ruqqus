@@ -126,7 +126,7 @@
 
                             <div class="settings-section rounded">
 
-                                <form  action="/settings/security" method="post" autocomplete="off">
+                                <form  action="/settings/security" method="post">
 				<input type="hidden" name="formkey" value="{{ v.formkey }}">
 
 
@@ -144,11 +144,11 @@
 
                                         <label for="new-email" class="mt-3">New Email</label>
 
-                                        <input class="form-control mb-2" id="new_email"
+                                        <input autocomplete="off" class="form-control mb-2" id="new_email"
                                             aria-describedby="new_email" type="text" name="new_email" required>
 
 					<label for="email-password" class="mt-3">Password</label>
-					<input type="password" class="form-control mb-2" id="email-password" name="password" required>
+					<input autocomplete="off" type="password" class="form-control mb-2" id="email-password" name="password" required>
 
                                     </div>
 
