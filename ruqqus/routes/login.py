@@ -1,8 +1,9 @@
 from flask import *
-from time import time
+import time
 import hmac
 from os import environ
 import re
+import random
 
 from ruqqus.classes import *
 from ruqqus.helpers.wrappers import *
@@ -37,8 +38,9 @@ def login_post():
 
     username=request.form.get("username")
 
-    account = db.query(User).filter_by(username=username).first()
+    account = db.query(User).filter_by(email=username).first()
     if not account:
+        time.sleep(random.uniform(0,2))
         return render_template("login.html", failed=True, i=random_image())
 
     #test password
@@ -51,6 +53,7 @@ def login_post():
         return redirect(account.url)
 
     else:
+        time.sleep(random.uniform(0,2))
         return render_template("login.html", failed=True, i=random_image())
 
 @app.route("/me", methods=["GET"])
