@@ -1286,6 +1286,10 @@ ul.comment-section {
     padding: 1rem;
 }
 
+.settings .settings-section .title p:last-of-type {
+    margin-bottom: 0;
+}
+
 .settings .settings-section .footer {
     background-color: $gray-200;
 }
@@ -1586,6 +1590,7 @@ body {
 }
 
 .comments-count .total {
+    font-size: $small-font-size;
     font-weight: $font-weight-normal;
 }
 

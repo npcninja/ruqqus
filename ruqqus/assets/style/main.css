@@ -12001,7 +12001,7 @@ ol > li::before {
 
 .settings-nav .nav-link {
   color: #757a84;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 600;
   padding-top: 0;
 }
@@ -12999,6 +12999,10 @@ ul.comment-section {
   padding: 1rem;
 }
 
+.settings .settings-section .title p:last-of-type {
+  margin-bottom: 0;
+}
+
 .settings .settings-section .footer {
   background-color: #EBE9EF;
 }
@@ -13690,6 +13694,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
   }
 
   .comments-count .total {
+    font-size: 13px;
     font-weight: 400;
   }
 
