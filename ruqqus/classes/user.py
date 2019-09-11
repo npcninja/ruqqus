@@ -11,6 +11,7 @@ import random
 from ruqqus.helpers.base36 import *
 from ruqqus.helpers.security import *
 from .votes import Vote
+from .subscriptions import Subscriptions
 from .ips import IP
 from ruqqus.__main__ import Base, db
 
@@ -30,6 +31,7 @@ class User(Base):
     creation_ip=Column(String, default=None)
     most_recent_ip=Column(String, default=None)
     submissions=relationship("Submission", lazy="dynamic", backref="users")
+    subscriptions=relationship("Subscriptions", lazy="dynamic", backref="users")
     comments=relationship("Comment", lazy="dynamic", primaryjoin="Comment.author_id==User.id")
     comment_notifications=relationship("Comment", lazy="dynamic", primaryjoin="Comment.parent_author_id==User.id")
     votes=relationship("Vote", lazy="dynamic", backref="users")
@@ -248,4 +250,18 @@ class User(Base):
     def notifications_count(self):
 
         return self.comment_notifications.filter_by(read=False, is_banned=False).count()
-        
+
+    def addSubscription(self, board_id):
+
+        if not board_id in [b.board_id for b in self.subscriptions]:
+
+            sub=Subscriptions(id=None, uid=self.id, board_id=board_id, is_banned=False)
+            db.add(sub)
+            db.commit()
+
+            return render_template("home.html", v=self, msg="Subscription Successful.")
+
+        return render_template("home.html", v=self, error="You are already subscribed to this board.")
+
+
+
