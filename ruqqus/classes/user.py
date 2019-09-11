@@ -1,19 +1,19 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import render_template, session
+from flask import render_template, session, request
 from time import strftime, time, gmtime
 from sqlalchemy import *
-from sqlalchemy.orm import relationship
-import hmac
+from sqlalchemy.orm import relationship, deferred
 from os import environ
 from secrets import token_hex
 import random
 
 from ruqqus.helpers.base36 import *
 from ruqqus.helpers.security import *
+from ruqqus.helpers.lazy import lazy
 from .votes import Vote
 from .subscriptions import Subscriptions
 from .ips import IP
-from ruqqus.__main__ import Base, db
+from ruqqus.__main__ import Base, db, cache
 
 class User(Base):
 
@@ -37,9 +37,11 @@ class User(Base):
     votes=relationship("Vote", lazy="dynamic", backref="users")
     commentvotes=relationship("CommentVote", lazy="dynamic", backref="users")
     ips = relationship('IP', lazy="dynamic", backref="users")
+    bio=deferred(Column(String, default=""))
+    bio_html=deferred(Column(String, default=""))
 
     #properties defined as SQL server-side functions
-    energy = Column(Integer, server_default=FetchedValue())
+    energy = deferred(Column(Integer, server_default=FetchedValue()))
 
     def __init__(self, **kwargs):
 
@@ -52,30 +54,17 @@ class User(Base):
 
         super().__init__(**kwargs)
 
-        self._lazy_dict = {}
+    @property
+    @cache.memoize(timeout=60)
+    def karma(self):
+        return self.energy
 
-    def _lazy(f):
-
-        def wrapper(self, *args, **kwargs):
-            
-            if "_lazy_dict" not in self.__dict__:
-                self._lazy_dict={}
-
-            if f.__name__ not in self._lazy_dict:
-                self._lazy_dict[f.__name__]=f(self, *args, **kwargs)
-
-            return self._lazy_dict[f.__name__]
-
-        wrapper.__name__=f.__name__
-        return wrapper
 
     @property
-    @_lazy
     def base36id(self):
         return base36encode(self.id)
 
     @property
-    @_lazy
     def fullname(self):
         return f"t1_{self.base36id}"
 
@@ -119,33 +108,41 @@ class User(Base):
     def verifyPass(self, password):
         return check_password_hash(self.passhash, password)
 
-    def visible_posts(self, v=None):
-        
-        if not v:
-            return self.submissions.filter_by(is_banned=False).all()
-        elif v.admin_level:
-            return self.submissions.all()
-        else:
-            return self.submissions.filter_by(is_banned=False).all()
-            
-        
     def rendered_userpage(self, v=None):
 
         if self.is_banned:
             return render_template("userpage_banned.html", u=self, v=v)
-        
-        posts = [x for x in self.visible_posts(v)]
-        posts.sort(key=lambda x: x.created_utc, reverse=True)
-        
-        if len(posts)>50:
-            posts=posts[0:50]
 
-        posts.sort(key=lambda x: x.created_utc, reverse=True)
+        page=int(request.args.get("page","1"))
+        
+        if v:
+            if v.admin_level or v.id==self.id:
+                listing=[p for p in self.submissions.order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
+            else:
+                listing=[p for p in self.submissions.filter_by(is_banned=False).order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
+        else:
+            listing=[p for p in self.submissions.filter_by(is_banned=False).order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
 
-        return render_template("userpage.html", u=self, v=v, listing=posts)
+        return render_template("userpage.html", u=self, v=v, listing=listing)
+
+    def rendered_comments_page(self, v=None):
+
+        if self.is_banned:
+            return render_template("userpage_banned.html", u=self, v=v)
+        
+        page=int(request.args.get("page","1"))
+
+        if v:
+            if v.admin_level or v.id==self.id:
+                listing=[p for p in self.comments.order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
+            else:
+                listing=[p for p in self.comments.filter_by(is_banned=False).order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
+        else:
+            listing=[p for p in self.comments.filter_by(is_banned=False).order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]
+
+        return render_template("userpage_comments.html", u=self, v=v, listing=listing)
 
     @property
-    @_lazy
     def formkey(self):
 
         if "session_id" not in session:
@@ -193,20 +190,16 @@ class User(Base):
         return render_template("settings.html", v=self, msg="Your account name has been updated and validated.")
 
     @property
-    @_lazy
     def url(self):
         return f"/u/{self.username}"
 
     @property
-    @_lazy
     def permalink(self):
         return self.url
 
     @property
-    @_lazy
+    @lazy
     def created_date(self):
-
-        print(self.created_utc)
 
         return strftime("%d %B %Y", gmtime(self.created_utc))
 
@@ -215,7 +208,7 @@ class User(Base):
 
 
     @property
-    @_lazy
+    @lazy
     def color(self):
 
         random.seed(self.id)
@@ -250,6 +243,12 @@ class User(Base):
     def notifications_count(self):
 
         return self.comment_notifications.filter_by(read=False, is_banned=False).count()
+
+    @property
+    def post_count(self):
+
+        return self.submissions.filter_by(is_banned=False).count()
+
 
     def addSubscription(self, board_id):
 

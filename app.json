@@ -2,7 +2,8 @@
   "addons": [
     "adminium",
     "papertrail",
-    "heroku-postgresql"
+    "heroku-postgresql",
+    "heroku-redis"
   ],
   "buildpacks": [
     {
@@ -11,6 +12,12 @@
   ],
   "env": {
     "ADMINIUM_URL": {
+      "required": true
+    },
+    "banlist": {
+      "required": true
+    },
+    "domain": {
       "required": true
     },
     "DATABASE_URL": {
@@ -28,7 +35,7 @@
     "reddit_secret": {
       "required": true
     },
-    "banlist": {
+    "REDIS_URL": {
       "required": true
     }
   },

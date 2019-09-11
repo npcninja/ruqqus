@@ -19,6 +19,7 @@ def api_is_available(name):
 
 
 @app.route("/u/<username>", methods=["GET"])
+@app.route("/u/<username>/posts", methods=["GET"])
 @auth_desired
 def u_username(username, v=None):
     
@@ -37,6 +38,26 @@ def u_username(username, v=None):
         return redirect(result.url)
         
     return result.rendered_userpage(v=v)
+
+@app.route("/u/<username>/comments", methods=["GET"])
+@auth_desired
+def u_username_comments(username, v=None):
+    
+    #username is unique so at most this returns one result. Otherwise 404
+    
+    #case insensitive search
+
+    result = db.query(User).filter(User.username.ilike(username)).first()
+
+    if not result:
+        abort(404)
+
+    #check for wrong cases
+
+    if username != result.username:
+        return redirect(result.url)
+        
+    return result.rendered_comments_page(v=v)
 
 @app.route("/post/<base36id>", methods=["GET"])
 @auth_desired
@@ -164,7 +185,6 @@ def ip_address(addr, v):
 @validate_formkey
 def api_comment(v):
 
-    body=request.form.get("text")
     parent_submission=base36decode(request.form.get("submission"))
     parent_fullname=request.form.get("parent_fullname")
 
@@ -182,6 +202,14 @@ def api_comment(v):
     if existing:
         return redirect(existing.permalink)
     
+    parent_id=int(parent_fullname.split("_")[1], 36)
+    if parent_fullname.startswith("t2"):
+        parent=db.query(Submission).filter_by(id=parent_id).first()
+    elif parent_fullname.startswith("t3"):
+        parent=db.query(Comment).filter_by(id=parent_id).first()
+
+    if parent.is_banned:
+        abort(403)
 
 
     c=Comment(author_id=v.id,
@@ -191,10 +219,6 @@ def api_comment(v):
               parent_fullname=parent_fullname,
               parent_author_id=parent.author.id if parent.author.id != v.id else None
               )
-
-    #no replying to removed things
-    if c.parent.is_banned:
-        abort(403)
 
     db.add(c)
     db.commit()
