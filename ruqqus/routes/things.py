@@ -71,6 +71,18 @@ def post_pid_comment_cid(p_id, c_id, v=None):
         
     return post.rendered_page(v=v, comment=comment)
 
+@app.route("/subscribe", methods=['POST'])
+@auth_required
+@validate_formkey
+def subscribe(v):
+    board_id = int(request.args.get("subscribe", -1))
+    if board_id < 0:
+        return render_template("home.html", v=v, error="Invalid Board ID.")
+
+    v.addSubscription(board_id)
+
+
+
 
 @app.route("/submit", methods=['POST'])
 @is_not_banned
