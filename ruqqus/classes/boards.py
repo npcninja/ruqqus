@@ -13,7 +13,8 @@ class Boards(Base):
     is_banned = Column(Boolean, default=False)
     created_utc = Column(Integer, default=None)
     #mods = relationship('MODs', lazy="dynamic", backref="users")
-    submissions = relationship("Submission", lazy="dynamic")
+    submissions = relationship("Submission", lazy="dynamic", backref="boards")
+    subscriptions = relationship("Subscriptions", lazy="dynamic", backref="boards")
 
     def __init__(self, *args, **kwargs):
         if "created_utc" not in kwargs:

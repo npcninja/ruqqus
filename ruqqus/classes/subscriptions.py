@@ -10,7 +10,7 @@ class Subscriptions(Base):
     __tablename__ = "subscriptions"
     id = Column(BigInteger, primary_key=True)
     uid = Column(Integer, ForeignKey("users.id"))
-    board_id = Column(BigInteger, ForeignKey("submissions.board_id"))
+    board_id = Column(BigInteger, ForeignKey("boards.id"))
     is_banned = Column(Boolean, default=False)
     created_utc = Column(Integer, default=None)
 
