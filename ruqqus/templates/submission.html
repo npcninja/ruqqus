@@ -153,7 +153,7 @@
 
 
 {% if not p.is_banned %}
-                        <div class="comment-write px-3">
+                        <div class="comment-write mb-3">
                             <form id="reply-to-{{ p.fullname }}" class="input-group" action="/api/comment" method="post">
 				<input type="hidden" name="formkey" value="{{ v.formkey }}">
 				<input type="hidden" name="parent_fullname" value="t2_{{ p.base36id }}">
