@@ -240,9 +240,9 @@
             <div class="col text-center">
         
                 <div class="post-actions mx-auto">
-                    <ul class="list-inline">
+                    <ul class="list-inline d-flex justify-content-center">
                         
-                        <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
+                        <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item mr-auto{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
                             <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" {% if voted==1 %}onclick="vote('{{ p.base36id }}','0')"{% elif voted>-2 %}onclick="vote('{{ p.base36id }}','1')"{% endif %}>
                                 <i class="fas fa-chevron-up mx-0"></i>
                             </span>
