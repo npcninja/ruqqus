@@ -12290,22 +12290,14 @@ label.terms {
     min-width: length;
   }
 }
-.arrow-up {
-  width: 0;
-  height: 0;
-}
-
 .arrow-up::before {
   font-family: "Font Awesome 5 Free";
   content: "";
 }
 
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 10px solid #E0E4E9;
+.arrow-down::before {
+  font-family: "Font Awesome 5 Free";
+  content: "";
 }
 
 .upvoted .arrow-mobile-up {
@@ -12317,7 +12309,7 @@ label.terms {
 }
 
 .upvoted .arrow-up {
-  border-bottom: 10px solid #FA7921;
+  color: #FA7921;
 }
 
 .downvoted .arrow-down {

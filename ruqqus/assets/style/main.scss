@@ -566,23 +566,14 @@ label.terms {
 }
 }
 
-
-.arrow-up {
-  width: 0;
-  height: 0;
-}
-
 .arrow-up::before {
     font-family: "Font Awesome 5 Free";
     content: "\f077";
 }
 
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 10px solid $gray-300;
+.arrow-down::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
 }
 
 .upvoted .arrow-mobile-up {
@@ -594,7 +585,7 @@ label.terms {
 }
 
 .upvoted .arrow-up {
-  border-bottom: 10px solid $upvote;
+    color: $upvote;
 }
 
 .downvoted .arrow-down {
