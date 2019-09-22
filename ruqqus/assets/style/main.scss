@@ -570,9 +570,11 @@ label.terms {
 .arrow-up {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid $gray-300;
+}
+
+.arrow-up::before {
+    font-family: "Font Awesome 5";
+    content: "\f077";
 }
 
 .arrow-down {

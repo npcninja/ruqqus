@@ -12293,9 +12293,11 @@ label.terms {
 .arrow-up {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid #E0E4E9;
+}
+
+.arrow-up::before {
+  font-family: "Font Awesome 5";
+  content: "";
 }
 
 .arrow-down {
