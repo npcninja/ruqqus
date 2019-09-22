@@ -12815,7 +12815,6 @@ ul.comment-section {
   height: 100%;
   cursor: pointer;
   width: 10px;
-  top: 4px;
 }
 
 .comment .comment-collapse:hover::before {
