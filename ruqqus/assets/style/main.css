@@ -12297,6 +12297,14 @@ label.terms {
   content: "";
 }
 
+.upvoted .arrow-up::before {
+  color: #FA7921;
+}
+
+.downvoted .arrow-down::before {
+  color: #3970a2;
+}
+
 @media (max-width: 767.98px) {
   .voting {
     min-width: length;
@@ -12308,14 +12316,6 @@ label.terms {
 
 .downvoted .arrow-mobile-down {
   color: #3970a2;
-}
-
-.upvoted .arrow-up {
-  color: #FA7921;
-}
-
-.downvoted .arrow-down {
-  border-top: 10px solid #3970a2;
 }
 
 .score-up {

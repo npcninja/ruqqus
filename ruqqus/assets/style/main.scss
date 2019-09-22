@@ -570,6 +570,14 @@ label.terms {
     content: "\f078";
 }
 
+.upvoted .arrow-up::before {
+    color: $upvote;
+}
+
+.downvoted .arrow-down::before {
+    color: $downvote;
+}
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
@@ -584,14 +592,6 @@ label.terms {
 
 .downvoted .arrow-mobile-down {
     color: $downvote;
-}
-
-.upvoted .arrow-up {
-    color: $upvote;
-}
-
-.downvoted .arrow-down {
-  border-top: 10px solid $downvote;
 }
 
 .score-up {
