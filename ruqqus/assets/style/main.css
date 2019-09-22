@@ -12285,21 +12285,23 @@ label.terms {
   min-width: 40px;
 }
 
-@media (max-width: 767.98px) {
-  .voting {
-    min-width: length;
-  }
-}
 .arrow-up::before {
+  color: #C2C2C2;
   font-family: "Font Awesome 5 Free";
   content: "";
 }
 
 .arrow-down::before {
+  color: #C2C2C2;
   font-family: "Font Awesome 5 Free";
   content: "";
 }
 
+@media (max-width: 767.98px) {
+  .voting {
+    min-width: length;
+  }
+}
 .upvoted .arrow-mobile-up {
   color: #FA7921;
 }

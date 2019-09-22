@@ -558,22 +558,24 @@ label.terms {
     min-width: 40px;
 }
 
+.arrow-up::before {
+    color: $gray-400;
+    font-family: "Font Awesome 5 Free";
+    content: "\f077";
+}
+
+.arrow-down::before {
+    color: $gray-400;
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+}
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
     .voting {
     min-width: length;
 }
-}
-
-.arrow-up::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f077";
-}
-
-.arrow-down::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f078";
 }
 
 .upvoted .arrow-mobile-up {
