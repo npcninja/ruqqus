@@ -12012,13 +12012,13 @@ ol > li::before {
 }
 
 .post-nav > .nav-item > .nav-link.active {
-  color: #102E4A;
-  border-bottom: 3px solid #102E4A;
+  color: #FA7921;
+  border-bottom: 3px solid #FA7921;
 }
 
 .settings-nav > .nav-item > .nav-link.active {
-  color: #102E4A;
-  border-bottom: 3px solid #102E4A;
+  color: #FA7921;
+  border-bottom: 3px solid #FA7921;
 }
 
 .post-nav .nav-link:hover, .post-nav .nav-link:focus, .settings-nav .nav-link:hover, .settings-nav .nav-link:focus {
@@ -12083,11 +12083,11 @@ ol > li::before {
 }
 
 .post-nav .nav-link:hover .fa, .post-nav .nav-link:focus .fa, .post-nav .nav-link:hover .fas, .post-nav .nav-link:focus .fas {
-  color: #102E4A;
+  color: #FA7921;
 }
 
 .post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas {
-  color: #102E4A;
+  color: #FA7921;
 }
 
 .post-nav .fa, .post-nav .fas {
