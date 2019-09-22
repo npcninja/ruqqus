@@ -329,14 +329,14 @@ ol > li::before {
 }
 
 .post-nav > .nav-item > .nav-link.active {
-    color: $danger;
-    border-bottom: 3px solid $danger;
+    color: $dark;
+    border-bottom: 3px solid $dark;
 }
 
 
 .settings-nav > .nav-item > .nav-link.active {
-    color: $danger;
-    border-bottom: 3px solid $danger;
+    color: $dark;
+    border-bottom: 3px solid $dark;
 }
 
 .post-nav .nav-link:hover, .post-nav .nav-link:focus, .settings-nav .nav-link:hover, .settings-nav .nav-link:focus {
@@ -345,7 +345,7 @@ ol > li::before {
 }
 
 .post-nav .nav-link:hover .fa , .post-nav .nav-link:focus .fa, .post-nav .nav-link:hover .fas , .post-nav .nav-link:focus .fas {
-    color: $danger;
+    color: $dark;
 }
 
 .post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas {
