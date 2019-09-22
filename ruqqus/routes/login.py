@@ -210,3 +210,23 @@ def sign_up_post(v):
     
     return redirect(new_user.permalink)
     
+
+@app.route("/forgot", methods=["GET"])
+def get_forgot():
+
+    return render_template("forgot_password.html")
+
+@app.route("/forgot", methods=["POST"])
+def post_forgot():
+
+    username = request.form.get("username")
+    email = request.form.get("email")
+
+    user = db.query(Users).filter(username=username, email=email).first()
+
+    if user:
+        send_reset_email(user)
+
+    return render_template("forgot_password.html", msg="If the username and email matches an account, you will be sent a password reset email.")
+
+
