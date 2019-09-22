@@ -78,9 +78,6 @@
                                 <div class="post-meta text-left d-none d-md-block">Posted by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> {{ p.age_string }} | ({{ p.domain }})</div>
 
                             </div>
-                            <div class="card-header bg-transparent border-0 p-0 ml-auto d-block d-md-none">
-                                {% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="">{% endif %}
-                            </div>
 
                             <!-- Voting on "medium" devices or larger, hidden on smaller devices -->
 
@@ -101,6 +98,12 @@
 				{{ p.body_html | safe }}
 			</div>
 			{% endif %}
+
+            <div class="row no-gutters d-block d-md-none">
+                <div class="col">
+                   {% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">{% endif %}
+                </div>
+            </div>
 
                     </div>
 
