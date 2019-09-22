@@ -64,7 +64,7 @@ var autoExpand = function (field) {
 	             + field.scrollHeight
 	             + parseInt(computed.getPropertyValue('padding-bottom'), 10)
 	             + parseInt(computed.getPropertyValue('border-bottom-width'), 10)
-		     + 32;
+		     + 99;
 
 	field.style.height = height + 'px';
 
