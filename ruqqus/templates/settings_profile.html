@@ -63,11 +63,11 @@
                                     <div class="body">
                                     <form id="removeReddit" action="/api/del_reddit_name" method="post">
                                     <input type="hidden" name="formkey" value="{{ v.formkey }}">
-                                        <div class="btn-group btn-integration" id="usernameVerification" role="group" aria-label="Basic example">
-                                            <button form="removeReddit" type="button" class="btn">
+                                        <div class="btn-group btn-integration" form="removeReddit" id="usernameVerification" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn">
                                                 <i class="fab fa-reddit" style="color: #ed4630" aria-hidden="true"></i>
                                             </button>
-                                            <button form="removeReddit" type="button"
+                                            <button type="button"
                                                 class="btn btn-light btn-integration">Disconnect</button>
                                         </div>
                                     </form>
