@@ -266,6 +266,11 @@ ol > li::before {
 
 // Navbar and tab Bar
 
+.navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 #page .navbar-light .navbar-nav .nav-link {
     color: $dark;
 }
