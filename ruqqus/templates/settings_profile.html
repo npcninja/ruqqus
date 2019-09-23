@@ -84,11 +84,13 @@
                                     <div class="body">
 
 					<a href="/api/get_reddit_auth">
-                                        <button class="btn btn-danger ml-auto" id="usernameVerification">
-                                            <i class="fab fa-reddit-alien align-middle mr-2"
-                                                style="font-size: 16px"></i>
-                                            <span class="align-middle">Link your reddit account</span>
-                                        </button>
+                                        <div class="btn-group btn-integration" id="usernameVerification" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn">
+                                                <i class="fab fa-reddit" style="color: #ed4630" aria-hidden="true"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-light btn-integration">Disconnect</button>
+                                        </div>
 					</a>
 
                                     </div>
