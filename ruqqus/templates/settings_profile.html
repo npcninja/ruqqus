@@ -32,7 +32,7 @@
 
                 <div class="row">
 
-                    <div class="col col-md-8">
+                    <div class="col">
 
                         <div class="settings">
 {% if error %}
@@ -97,13 +97,13 @@
 
                             </div>
 
+                                                        <form  id="profile-settings" action="/settings/profile" method="post">
+
                             <h2 class="h5">Content Filters</h2>
 
                             <p class="text-small text-muted">Manage what type of content you can see across Ruqqus.</p>
 
                             <div class="settings-section rounded">
-
-                                <form  id="profile-settings" action="/settings/profile" method="post">
 
 				<input type="hidden" name="formkey" value="{{ v.formkey }}">
 
@@ -122,15 +122,20 @@
 
                                     </div>
 
+                            </div>
+
 				<br>
                             <h2 class="h5">Your Profile</h2>
 
                             <p class="text-small text-muted">Edit how others see you on Ruqqus.</p>
 
+<div class="sections-section rounded">
+
+<input type="hidden" name="formkey" value="{{ v.formkey }}">
 
                                     <div class="body">
 
-                                        <label for="bio">Bio</label>
+                                        <label for="bio" class="text-black">Bio</label>
 
                                         <div class="input-group mb-2">
                                             <textarea class="form-control border" id="bio" aria-label="With textarea"
@@ -141,6 +146,10 @@
                                         <small>Limit of 280 characters</small>
 
                                     </div>
+
+                                    </div>
+
+                                                                </form>
 
                                     <div class="footer border-top">
 
