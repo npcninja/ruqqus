@@ -36,10 +36,14 @@
 
                         <div class="settings">
 {% if error %}
-<p><span class="red">{{ error }}</span></p>
+<div class="alert alert-warning" role="alert">
+  {{ error }}
+</div>
 {% endif %}
 {% if msg %}
-<p><span class="green">{{ msg }}</span></p>
+<div class="alert alert-success" role="alert">
+  {{ msg }}
+</div>
 {% endif %}
 
                             <h2 class="h5">Social Integrations</h2>
