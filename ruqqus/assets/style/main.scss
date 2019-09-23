@@ -296,6 +296,7 @@ ol > li::before {
 .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
     color: $primary;
     text-align: center;
+    font-size: $font-size-lg;
 }
 
 .navbar-light .navbar-nav .btn-primary.nav-link {

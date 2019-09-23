@@ -11964,6 +11964,7 @@ ol > li::before {
 .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
   color: #360568;
   text-align: center;
+  font-size: 1.25rem;
 }
 
 .navbar-light .navbar-nav .btn-primary.nav-link {
