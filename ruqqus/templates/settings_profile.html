@@ -17,13 +17,13 @@
 
                     <ul class="nav post-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-uppercase" href="/settings/profile">Profile</a>
+                            <a class="nav-link active" href="/settings/profile">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase" href="/settings/security">Security</a>
+                            <a class="nav-link" href="/settings/security">Security</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase d-none" href="/settings/notifications">Notifications</a>
+                            <a class="nav-link d-none" href="/settings/notifications">Notifications</a>
                         </li>
                     </ul>
 
@@ -61,17 +61,16 @@
                                     </div>
 
                                     <div class="body">
-					<form id="removeReddit" action="/api/del_reddit_name" method="post">
-
-                                        <input type="hidden" name="formkey" value="{{ v.formkey }}">
-
-                                        <button form="removeReddit" class="btn btn-danger ml-auto" id="usernameVerification" value="">
-                                            <i class="fab fa-reddit-alien align-middle mr-2"
-                                                style="font-size: 16px"></i>
-                                            <span class="align-middle">Unlink Reddit</span>
-                                        </button>
-					</form>
-
+                                    <form id="removeReddit" action="/api/del_reddit_name" method="post">
+                                    <input type="hidden" name="formkey" value="{{ v.formkey }}">
+                                        <div class="btn-group btn-integration" id="usernameVerification" role="group" aria-label="Basic example">
+                                            <button form="removeReddit" type="button" class="btn">
+                                                <i class="fab fa-reddit" style="color: #ed4630" aria-hidden="true"></i>
+                                            </button>
+                                            <button form="removeReddit" type="button"
+                                                class="btn btn-light btn-integration">Disconnect</button>
+                                        </div>
+                                    </form>
                                     </div>
 
 				{% else %}
