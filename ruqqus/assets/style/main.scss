@@ -1553,6 +1553,11 @@ body {
     height: 100vh;
 }
 
+.navbar-nav .nav-link, .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 #thread {
     padding-top: 98px;
     background-color: $white;
