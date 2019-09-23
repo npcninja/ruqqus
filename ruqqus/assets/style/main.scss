@@ -389,15 +389,15 @@ ol > li::before {
 // Navbar icons and search box
 
 .form-inline.search .form-control:hover, .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
-    border-color: $white;
+    border-color: $black;
 }
 
 .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
-    background-color: $white;
+    background-color: $black;
 }
 
 .form-inline.search .form-control {
-    background-color: rgba(0, 0, 0, .05);
+    background-color: $light;
     border-color: $input-border-color;
     font-size: $small-font-size;
 }

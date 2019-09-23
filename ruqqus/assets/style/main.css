@@ -12109,15 +12109,15 @@ ol > li::before {
 }
 
 .form-inline.search .form-control:hover, .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
-  border-color: #ffffff;
+  border-color: #1E1E24;
 }
 
 .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
-  background-color: #ffffff;
+  background-color: #1E1E24;
 }
 
 .form-inline.search .form-control {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #F6F6F6;
   border-color: #ECECEC;
   font-size: 13px;
 }
