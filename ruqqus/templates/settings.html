@@ -56,7 +56,14 @@ function formkey() {
     {% include "bootstrap.html" %}
 
 <script>
-$('.toast').toast(option)
+$(document).ready(function() {
+  $('.toast').toast({
+    'autohide': false
+  });
+
+  $('.toast').toast('show');
+});
+
 </script>
 
 </body>
