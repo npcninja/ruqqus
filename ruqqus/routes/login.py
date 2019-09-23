@@ -161,7 +161,7 @@ def sign_up_post(v):
 
     #check for matched passwords
     if not request.form.get("password") == request.form.get("password_confirm"):
-        return new_signup("Password and Confirm Password do not match. Please try again.")
+        return new_signup("Passwords did not match. Please try again.")
 
     #check username/pass conditions
     if not re.match(valid_username_regex, request.form.get("username")):
