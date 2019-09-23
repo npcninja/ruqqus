@@ -1,9 +1,9 @@
 // Colors
 
-$primary: #6350CC;
+$primary: #360568;
 $dark: #2E4057;
 $secondary: #353A47;
-$danger: #FA7921;
+$danger: #EE6352;
 $white: #ffffff;
 $black: #1E1E24;
 $light: #F9FAFC;
@@ -15,9 +15,9 @@ $gray: #5F5F5F;
 $green: #6350CC;
 
 $purple: #311C49;
-$red:  #FA7921;
+$red:  #EE6352;
 $gray: #5F5F5F;
-$green: #6350CC;
+$green: #360568;
 
 $gray-100: #F8F8F9;
 $gray-200: #EBE9EF;
@@ -26,9 +26,9 @@ $gray-400: #C2C2C2;
 $gray-500: #adb5bd;
 $gray-600: #ACACAC;
 
-$upvote: #FA7921;
+$upvote: #EE6352;
 $downvote: #3970a2;
-$admin: #FA7921;
+$admin: #EE6352;
 $banned: #FF9999;
 $mod: #07c20c;
 
@@ -340,7 +340,6 @@ ol > li::before {
 }
 
 .post-nav .nav-link:hover, .post-nav .nav-link:focus, .settings-nav .nav-link:hover, .settings-nav .nav-link:focus {
-
     color: $dark;
 }
 
@@ -350,7 +349,6 @@ ol > li::before {
 
 .post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas {
     color: $dark;
-
 }
 
 .post-nav .fa, .post-nav .fas {
@@ -399,8 +397,8 @@ ol > li::before {
 }
 
 .form-inline.search .form-control {
-    background-color: rgba(0, 0, 0, .1);
-    border-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05);
+    border-color: $input-border-color;
     font-size: $small-font-size;
 }
 
@@ -465,7 +463,6 @@ ol > li::before {
     outline: 0;
     border-color: $primary;
     box-shadow: none;
-
 }
 
 label {
@@ -669,7 +666,6 @@ color: $dark;
     font-size: $small-font-size;
     font-weight: $font-weight-bold;
     color: $text-muted;
-
 }
 
 .post-filter .fa, .post-filter .fas {
@@ -696,11 +692,9 @@ color: $dark;
 .sidebar .sidebar-section .title {
     font-size: $extra-small-font-size;
     font-weight: $font-weight-bold;
-
     color: $gray;
     padding: 0 0 .5rem 0;
     border-bottom: 1px solid $input-border-color;
-
     margin-bottom: 1rem;
 }
 
@@ -721,7 +715,7 @@ color: $dark;
 
 .sidebar-section.sidebar-alert {
     color: $white;
-    background-color: $dark;
+    background-color: $primary;
     border: none;
 }
 
@@ -825,7 +819,6 @@ color: $dark;
 .post-actions {
     position: relative;
     z-index: 3;
-
     color: $text-muted;
     font-weight: $font-weight-normal;
     font-size: $small-font-size;
@@ -930,9 +923,7 @@ color: $dark;
 
 .comments-count .total {
     font-weight: $font-weight-bold;
-
     font-size: $small-font-size;
-
     color: $text-muted;
 }
 
@@ -1052,7 +1043,6 @@ ul.comment-section {
 
 .comment-write textarea {
     background: $white;
-
 }
 
 .comment-write .comment-format {
@@ -1569,11 +1559,10 @@ body {
 #thread .post-title {
     font-size: 16px;
     font-weight: $font-weight-medium;
-
 }
 
-.comment-write .comment-format .format {
-    display: none;
+.footer .list-inline-item {
+    line-height: 3;
 }
 
 .comments-count .total {
