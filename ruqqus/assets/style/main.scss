@@ -290,7 +290,7 @@ ol > li::before {
 }
 
 .tab-bar {
-    border-bottom: 1px solid $border-color;
+    box-shadow: inset 0 -1px 0 $border-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     padding: 1rem 1rem 0 1rem;
@@ -340,26 +340,26 @@ ol > li::before {
 }
 
 .post-nav > .nav-item > .nav-link.active {
-    color: $dark;
-    border-bottom: 3px solid $dark;
+    color: $primary;
+    box-shadow: inset 0 -2px 0 $primary;
 }
 
 
 .settings-nav > .nav-item > .nav-link.active {
-    color: $dark;
-    border-bottom: 3px solid $dark;
+    color: $primary;
+    box-shadow: inset 0 -2px 0 $primary;
 }
 
 .post-nav .nav-link:hover, .post-nav .nav-link:focus, .settings-nav .nav-link:hover, .settings-nav .nav-link:focus {
-    color: $dark;
+    color: $primary;
 }
 
 .post-nav .nav-link:hover .fa , .post-nav .nav-link:focus .fa, .post-nav .nav-link:hover .fas , .post-nav .nav-link:focus .fas {
-    color: $dark;
+    color: $primary;
 }
 
 .post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas {
-    color: $dark;
+    color: $primary;
 }
 
 .post-nav .fa, .post-nav .fas {
@@ -627,6 +627,12 @@ font-size: $small-font-size;
 a:hover .link-arrow {
 right: -.5rem;
 color: $dark;
+}
+
+// Custom Box Shadows (behaves like borders)
+
+.box-shadow-bottom {
+    box-shadow: inset 0 -1px 0 $border-color;
 }
 
 // Custom Borders
