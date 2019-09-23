@@ -11936,7 +11936,7 @@ ol > li::before {
   vertical-align: middle;
 }
 
-.navbar-nav .nav-link {
+.navbar-expand-md .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem;
 }

@@ -1,9 +1,9 @@
 {% extends "settings.html" %}
 
 {% block content %}
-        <div class="row justify-content-around mx-lg-5 no-gutters">
+        <div class="row justify-content-around">
 
-            <div class="col h-100">
+            <div class="col-12 col-md-7 h-100">
 
                 <div class="py-3 p-md-0">
 
@@ -30,7 +30,7 @@
                 </div>
 
 
-                <div class="row no-gutters">
+                <div class="row">
 
                     <div class="col col-md-8">
 
@@ -55,9 +55,9 @@
 
 
                                     <div class="title">
-                                        <label for="usernameVerification" class="text-black mr-2">Reddit</label>
-                                        <p class="text-muted text-small-extra">You are linked with Reddit profile <a target="blank"
-                                                href="https://reddit.com/user/{{ v.reddit_username }}">/u/{{ v.reddit_username }}<span style="vertical-align: text-bottom;"><i class="text-lg fas fa-external-link-alt ml-2" aria-hidden="true"></i></span></a>.</p>
+                                        <label for="usernameVerification">Reddit</label>
+                                        <p class="mb-0 mb-md-3">You are linked with Reddit profile <a target="blank"
+                                                href="https://reddit.com/user/{{ v.reddit_username }}">/u/{{ v.reddit_username }}</a>.</p>
                                     </div>
 
                                     <div class="body">
@@ -78,19 +78,17 @@
 
                                     <div class="title">
                                         <label for="usernameVerification">Reddit</label>
-                                        <p class="text-muted text-small-extra">You are not linked to a Reddit profile.</p>
+                                        <p class="mb-0 mb-md-3">You are not linked to a Reddit profile.</p>
                                     </div>
 
                                     <div class="body">
 
 					<a href="/api/get_reddit_auth">
-                                        <div class="btn-group btn-integration" id="usernameVerification" role="group" aria-label="link reddit account">
-                                            <button type="button" class="btn">
-                                                <i class="fab fa-reddit" style="color: #ed4630" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-light btn-integration">Connect</button>
-                                        </div>
+                                        <button class="btn btn-danger ml-auto" id="usernameVerification">
+                                            <i class="fab fa-reddit-alien align-middle mr-2"
+                                                style="font-size: 16px"></i>
+                                            <span class="align-middle">Link your reddit account</span>
+                                        </button>
 					</a>
 
                                     </div>
