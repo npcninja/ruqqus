@@ -59,11 +59,7 @@
 
                             <div class="settings-section rounded">
 
-                                
-
 				{% if v.reddit_username %}
-
-
 
                                     <div class="title">
                                         <label for="usernameVerification">Reddit</label>
@@ -119,14 +115,14 @@
 				<input type="hidden" name="formkey" value="{{ v.formkey }}">
 
                                     <div class="title">
-                                        <label for="usernameVerification">NSFW Content</label>
+                                        <label for="over18">NSFW Content</label>
                                     </div>
 
                                     <div class="body">
 
                                         <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch1" name="over18"{% if v.over_18 %} checked{% endif %}>
-                                            <label class="custom-control-label" for="customSwitch1"></label>
+                                            <input type="checkbox" class="custom-control-input" id="over18" name="over18"{% if v.over_18 %} checked{% endif %}>
+                                            <label class="custom-control-label" for="over18"></label>
                                         </div>
 
                                         <span>Enable if you are 18+ and are ok with viewing NSFW content.</span>
@@ -162,7 +158,7 @@
 
                                         <div class="d-flex">
 
-                                            <input class="btn btn-primary ml-auto" id="usernameVerification"
+                                            <input class="btn btn-primary ml-auto" id="bioSave"
                                                 type="submit" value="Save Changes">
 
 
