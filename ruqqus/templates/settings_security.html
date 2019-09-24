@@ -6,6 +6,23 @@
 
             <div class="col-12 col-md-7 h-100">
 
+            {% if error %}
+<div class="alert alert-danger alert-dismissible fade show my-3" role="alert">
+  {{ error }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+{% if msg %}
+<div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+  {{ msg }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endif %}
+
                 <div class="py-3 p-md-0">
 
                     <h1 class="h3">Settings</h1>
@@ -36,22 +53,6 @@
                     <div class="col">
 
                         <div class="settings">
-{% if error %}
-<div class="alert alert-danger alert-dismissible fade show my-3" role="alert">
-  {{ error }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endif %}
-{% if msg %}
-<div class="alert alert-success alert-dismissible fade show my-3" role="alert">
-  {{ msg }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endif %}
 
                             <h2 class="h5">Password</h2>
 
