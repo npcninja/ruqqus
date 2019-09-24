@@ -37,10 +37,20 @@
 
                         <div class="settings">
 {% if error %}
-<p><span class="red">{{ error }}</span></p>
+<div class="alert alert-warning alert-dismissible fade show my-3" role="alert">
+  {{ error }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 {% endif %}
 {% if msg %}
-<p><span class="green">{{ msg }}</span></p>
+<div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+  {{ msg }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 {% endif %}
 
                             <h2 class="h5">Password</h2>
