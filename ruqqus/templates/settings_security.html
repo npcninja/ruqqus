@@ -140,8 +140,10 @@
                                             <div class="text-danger text-small-extra mt-1">Email not verified. <u><a href="javascript:void(0)" onclick="post('/api/verify_email')" class="text-danger">Verify now.</a></u></div>
                                             {% endif %}
 
-					<label for="email-password" class="mt-3">Password</label>
+					<label for="email-password" class="mt-3" id="email-password-label">Password</label>
 					<input autocomplete="new-password" type="password" class="form-control mb-2" id="email-password" name="password" required>
+
+                    <small id="emailpasswordRequired" class="form-text font-weight-bold text-danger d-none mt-1">Password required to update your email.</small>
 
                                     </div>
 
