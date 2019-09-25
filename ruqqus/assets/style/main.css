@@ -12669,6 +12669,11 @@ a:hover .link-arrow {
   background-color: #F6F6F6;
 }
 
+#frontpage .pseudo-submit-form.card .card-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .post-filter {
   display: inline-block;
   font-size: 13px;

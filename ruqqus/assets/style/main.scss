@@ -706,6 +706,11 @@ color: $dark;
     background-color: $light;
 }
 
+#frontpage .pseudo-submit-form.card .card-body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .post-filter {
     display: inline-block;
     font-size: $small-font-size;
