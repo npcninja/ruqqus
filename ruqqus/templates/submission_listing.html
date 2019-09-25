@@ -35,62 +35,6 @@
                   <h5 class="card-title post-title text-left mb-3 mb-md-2"><a href="{{ p.permalink }}" class="stretched-link">{{ p.title }}</a></h5>
                   <div class="post-meta text-left d-none d-md-block">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
                   </div>
-                  <div class="post-actions d-block d-md-none">
-                    <ul class="list-inline">
-			<li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
-                            <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
-                                <i class="fas fa-chevron-up mx-0" aria-hidden="true"></i>
-                            </span>
-
-
-                                
-				<span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
-		  		<span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
-		  		<span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
-
-
-                            <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
-                                <i class="fas fa-chevron-down mx-0" aria-hidden="true"></i>
-                            </span>
-                        </li>
-
-
-                      <li class="list-inline-item"><a href="{{ p.permalink }}"><i class="fas fa-comment-dots"></i>{{ p.comment_count }}</a></li>
-                      <li class="list-inline-item d-none d-md-inline-block"><a href="#"><i class="fas fa-share-alt"></i>Share</a></li>
-                      <li class="list-inline-item">
-                        <div class="dropdown show">
-                          <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>More
-                          </a>
-
-                          <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-			    <a class="dropdown-item d-block d-md-none" href="#"><i class="fas fa-share-alt"></i>Share</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
-                            {% if v %}
-{% if v.admin_level >=1 %}
-    {% if p.is_banned %}
-                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a>
-                            {% else %}
-                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a>
-                                {% endif %}
-{% endif %}
-{% endif %}
-                          </div>
-                        </div>
-                      </li>
-{% if v %}
-{% if v.admin_level >=1 %}
-		{% if p.is_banned %}
-		      <li class="list-inline-item d-none d-md-inline-block"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
-		{% else %}
-		      <li class="list-inline-item d-none d-md-inline-block"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
-		{% endif %}
-{% endif %}
-{% endif %}
-                    </ul>
-                  </div>
 
                 </div>
 
@@ -107,8 +51,64 @@
 
                   <div id="post-{{ p.base36id }}-down" class="text-muted mx-auto arrow-down" {% if not p.is_banned %}{% if voted==-1 %}onclick="vote('{{ p.base36id }}','0')"{% elif voted>-2 %}onclick="vote('{{ p.base36id }}','-1')"{% endif %}{% endif %}></div>
 
+                </div>
+
+                <div class="card-footer d-block d-md-none">
+                                    <div class="post-actions">
+                    <ul class="list-inline">
+      <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
+                            <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
+                                <i class="fas fa-chevron-up mx-0" aria-hidden="true"></i>
+                            </span>
 
 
+                                
+        <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
+          <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
+          <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
+
+
+                            <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
+                                <i class="fas fa-chevron-down mx-0" aria-hidden="true"></i>
+                            </span>
+                        </li>
+
+
+                      <li class="list-inline-item"><a href="{{ p.permalink }}"><i class="fas fa-comment-dots"></i>{{ p.comment_count }}</a></li>
+                      <li class="list-inline-item">
+                        <div class="dropdown show">
+                          <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>More
+                          </a>
+
+                          <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
+          <a class="dropdown-item d-block d-md-none" href="#"><i class="fas fa-share-alt"></i>Share</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
+                            {% if v %}
+{% if v.admin_level >=1 %}
+    {% if p.is_banned %}
+                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a>
+                            {% else %}
+                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a>
+                                {% endif %}
+{% endif %}
+{% endif %}
+                          </div>
+                        </div>
+                      </li>
+{% if v %}
+{% if v.admin_level >=1 %}
+    {% if p.is_banned %}
+          <li class="list-inline-item d-none d-md-inline-block"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
+    {% else %}
+          <li class="list-inline-item d-none d-md-inline-block"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
+    {% endif %}
+{% endif %}
+{% endif %}
+                    </ul>
+                  </div>
                 </div>
 
               </div>
