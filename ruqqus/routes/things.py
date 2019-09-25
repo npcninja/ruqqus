@@ -241,6 +241,7 @@ def edit_comment(v, id):
 
     c.body=body
     c.body_html=body_html
+    c.edited_timestamp = time.time()
 
     db.add(c)
     db.commit()
