@@ -12370,6 +12370,14 @@ label.terms {
   transform: rotate(45deg);
 }
 
+.fa-rotate--45 {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 .sidebar-section .fa, .sidebar-section .fas {
   font-size: 12px;
 }
