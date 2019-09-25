@@ -12665,7 +12665,10 @@ a:hover .link-arrow {
 #frontpage .pseudo-submit-form.card {
   border-width: 0 0 1px 0;
   border-color: #E6E6E6;
-  border-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #F6F6F6;
 }
 
