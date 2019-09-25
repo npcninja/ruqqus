@@ -6,7 +6,7 @@ document.getElementById("post-"+post_id).classList.add("banned");
 
 button=document.getElementById("moderate-post-"+post_id);
 button.onclick=function(){approvePost(post_id)};
-button.innerHTML="<i class="far fa-check-square"></i>Approve"
+button.innerHTML="<i class="fas fa-clipboard-check"></i>Approve"
 }
 post(url, callback, "Unable to remove post at this time. Please try again later.")
 }
