@@ -13,7 +13,7 @@
 
 
               <div id="post-{{ p.base36id }}" class="card d-flex flex-row-reverse flex-nowrap justify-content-end{% if p.is_banned %} banned{% endif %}{% if p.stickied %} stickied{% endif %}{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
-                <div class="card-header bg-transparent border-0 p-0 ml-1 ml-auto">
+                <div class="card-header bg-transparent border-0 p-0 my-auto ml-3 ml-md-auto">
                   {% if p.url.endswith((".jpg",".png")) %}<img href="{{ p.url }}" src="{{ p.url }}" class="post-img" alt="">{% endif %}
                   <div class="dropdown show my-auto post-actions ml-4 mr-1 d-none d-md-block">
                         <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
