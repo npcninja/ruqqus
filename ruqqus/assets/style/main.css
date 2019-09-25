@@ -12662,6 +12662,12 @@ a:hover .link-arrow {
   opacity: 0.8;
 }
 
+#frontpage .pseudo-submit-form.card {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  background-color: #F6F6F6;
+}
+
 .post-filter {
   display: inline-block;
   font-size: 13px;
@@ -12819,10 +12825,13 @@ a:hover .link-arrow {
 
 .post-actions {
   position: relative;
-  z-index: 3;
   color: #7D7D7D;
   font-weight: 400;
   font-size: 13px;
+}
+
+.post-actions a {
+  z-index: 3;
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {

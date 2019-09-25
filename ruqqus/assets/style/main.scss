@@ -699,6 +699,12 @@ color: $dark;
 
 // Main Content
 
+#frontpage .pseudo-submit-form.card {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    background-color: $light;
+}
+
 .post-filter {
     display: inline-block;
     font-size: $small-font-size;
@@ -856,10 +862,13 @@ color: $dark;
 
 .post-actions {
     position: relative;
-    z-index: 3;
     color: $text-muted;
     font-weight: $font-weight-normal;
     font-size: $small-font-size;
+}
+
+.post-actions a {
+    z-index: 3;
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
