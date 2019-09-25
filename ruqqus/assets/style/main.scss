@@ -1615,6 +1615,10 @@ body {
     border-bottom: 1px solid $border-color;
 }
 
+#submit .custom-gutters {
+    padding: 0 15px;
+}
+
 .post-title {
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
