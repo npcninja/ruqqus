@@ -15,6 +15,19 @@
               <div id="post-{{ p.base36id }}" class="card d-flex flex-row-reverse flex-nowrap justify-content-end{% if p.is_banned %} banned{% endif %}{% if p.stickied %} stickied{% endif %}{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
                 <div class="card-header bg-transparent border-0 p-0 ml-1 ml-auto">
                   {% if p.url.endswith((".jpg",".png")) %}<img href="{{ p.url }}" src="{{ p.url }}" class="post-img" alt="">{% endif %}
+                  <div class="dropdown show my-auto post-actions ml-4 mr-1 d-none d-md-block">
+                        <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </a>
+
+                        <div class="dropdown-menu border-0 shadow dropdown-menu-right dropdown-menu-lg-left mt-2"
+                          aria-labelledby="dropdownMoreLink">
+                          <a class="dropdown-item d-block d-md-none" href="#"><i class="fas fa-share-alt"></i>Share</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
+                        </div>
+                      </div>
 		</div>
                 <div class="card-block text-left my-md-auto">
                   <div class="post-meta text-left d-block d-md-none mb-3">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})
@@ -22,7 +35,7 @@
                   <h5 class="card-title post-title text-left mb-3 mb-md-2"><a href="{{ p.permalink }}" class="stretched-link">{{ p.title }}</a></h5>
                   <div class="post-meta text-left d-none d-md-block mb-2">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})
                   </div>
-                  <div class="post-actions">
+                  <div class="post-actions d-block d-md-none">
                     <ul class="list-inline">
 			<li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
                             <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
@@ -61,9 +74,9 @@
 {% if v %}
 {% if v.admin_level >=1 %}
 		{% if p.is_banned %}
-		      <li class="list-inline-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')">approve</a></li>
+		      <li class="list-inline-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
 		{% else %}
-		      <li class="list-inline-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')">remove</a></li>
+		      <li class="list-inline-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
 		{% endif %}
 {% endif %}
 {% endif %}
