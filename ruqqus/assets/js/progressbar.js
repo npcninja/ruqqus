@@ -3,7 +3,6 @@
 window.onload = function() {
 
 	pBar = document.getElementById('progressbar');
-
 	scorePercent = document.getElementById('score-percent');
 
 	var upsNum = +document.getElementById('p-ups').innerHTML;
@@ -13,11 +12,15 @@ window.onload = function() {
 
 	var val = (Math.floor((upsNum / sum) * 100));
 
+	// console log var val for troubleshooting
+
 	console.log(val);
 
 	scorePercent.innerHTML = val + "% upvoted";
 
 	pBar.style.width = val + "%";
+
+	// Set background color of progress bar based on score
 
 	if (val = 100) {
 		pBar.classlist.remove("bg-success");
