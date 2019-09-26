@@ -11,7 +11,7 @@ window.onload = function progressbar() {
 
 	console.log(val);
 
-	document.getElementById('progressbar-value').innherHTML = val;
+	document.getElementById('score-percent').innherHTML = val + "% upvoted";
 
 	document.getElementById('progressbar').style.width = val + "%";
 }
