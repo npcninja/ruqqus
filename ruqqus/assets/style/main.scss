@@ -865,7 +865,7 @@ color: $dark;
     width: fit-content;
 }
 
-#frontpage .posts .card .card-footer {
+#frontpage .posts .card .card-footer, #thread .card .card-footer  {
     border: 0;
     background-color: transparent;
     padding: 0;
