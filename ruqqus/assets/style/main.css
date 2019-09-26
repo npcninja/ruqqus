@@ -14149,6 +14149,12 @@ select:focus,
 textarea {
     font-size: 16px !important;
   }
+
+  input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 .sidebar-adminpanel input[type=submit] {
   width: 100%;
