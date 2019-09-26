@@ -12966,6 +12966,10 @@ a:hover .link-arrow {
   padding: 0;
 }
 
+.post-body p {
+  margin-bottom: 0;
+}
+
 .post-actions {
   position: relative;
   color: #7D7D7D;

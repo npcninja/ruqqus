@@ -871,6 +871,10 @@ color: $dark;
     padding: 0;
 }
 
+.post-body p {
+    margin-bottom: 0;
+}
+
 .post-actions {
     position: relative;
     color: $text-muted;
