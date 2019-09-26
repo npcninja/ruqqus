@@ -1,6 +1,6 @@
 // Get score percentage and make width of progress bar
 
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
 
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
@@ -27,4 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.getElementById('progressbar').classList.remove("bg-success");
 		document.getElementById('progressbar').classList.add("bg-warning");
 	};
-}, false);
+}
