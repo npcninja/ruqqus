@@ -13951,10 +13951,6 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     border-bottom: 1px solid #E6E6E6;
   }
 
-  #submit .custom-gutters {
-    padding: 0 15px;
-  }
-
   .post-title {
     font-size: 1rem;
     font-weight: 400;
