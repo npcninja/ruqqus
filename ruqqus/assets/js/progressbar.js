@@ -11,5 +11,5 @@ window.onload = function progressbar() {
 
 	console.log(val);
 
-	document.getElementById('progressbar').style.width = val + "%";
+	document.getElementById('progressbar').style.width = val + "%;";
 }
