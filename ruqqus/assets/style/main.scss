@@ -245,7 +245,8 @@ ol > li::before {
 // Buttons
 
 .btn {
-    font-size: $small-font-size;
+    font-size: $extra-small-font-size;
+    font-weight: $font-weight-bold;
     padding: .35rem .75rem;
     border-radius: $border-radius;
 }
