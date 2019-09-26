@@ -2,9 +2,6 @@
 
 window.onload = function() {
 
-	pBar = document.getElementById('progressbar');
-	scorePercent = document.getElementById('score-percent');
-
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
 
@@ -16,18 +13,18 @@ window.onload = function() {
 
 	console.log(val);
 
-	scorePercent.innerHTML = val + "% upvoted";
+	document.getElementById('score-percent');.innerHTML = val + "% upvoted";
 
-	pBar.style.width = val + "%";
+	document.getElementById('progressbar').style.width = val + "%";
 
 	// Set background color of progress bar based on score
 
 	if (val = 100) {
-		pBar.classlist.remove("bg-success");
-		pBar.classList.add("bg-gold");
+		document.getElementById('progressbar').classlist.remove("bg-success");
+		document.getElementById('progressbar').classList.add("bg-gold");
 	}
 	else if (val < 50) {
-		pBar.classlist.remove("bg-success");
-		pBar.classList.add("bg-warning");
+		document.getElementById('progressbar').classlist.remove("bg-success");
+		document.getElementById('progressbar').classList.add("bg-warning");
 	};
 }
