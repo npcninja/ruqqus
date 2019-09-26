@@ -12975,7 +12975,12 @@ a:hover .link-arrow {
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
   font-size: 12px;
+  color: #ACACAC;
   margin-right: 0.5rem;
+}
+
+.post-actions .voting .fa, .post-actions .voting .fas, .post-actions .voting .far {
+  color: inherit;
 }
 
 .post-actions .fa-ellipsis-v {

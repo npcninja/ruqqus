@@ -877,7 +877,12 @@ color: $dark;
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
     font-size: $extra-small-font-size;
+    color: $gray-600;
     margin-right: .5rem;
+}
+
+.post-actions .voting .fa, .post-actions .voting .fas, .post-actions .voting .far {
+    color: inherit;
 }
 
 .post-actions .fa-ellipsis-v {
