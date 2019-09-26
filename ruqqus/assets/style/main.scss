@@ -1621,6 +1621,10 @@ body {
     border-bottom: 1px solid $border-color;
 }
 
+.voting {
+    font-weight: $font-weight-normal;
+}
+
 .post-title {
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
