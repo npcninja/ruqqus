@@ -12979,11 +12979,11 @@ a:hover .link-arrow {
   color: #ACACAC;
 }
 
-.post-actions .upvoted .fa, .post-actions .upvoted .fas, .post-actions .upvoted .far {
+.post-actions .arrow-mobile-up .fa, .post-actions .arrow-mobile-up .fas, .post-actions .arrow-mobile-up .far {
   color: #EE6352;
 }
 
-.post-actions .downvoted .fa, .post-actions .downvoted .fas, .post-actions .downvoted .far {
+.post-actions .arrow-mobile-down .fa, .post-actions .arrow-mobile-down .fas, .post-actions .arrow-mobile-down .far {
   color: #3970a2;
 }
 
