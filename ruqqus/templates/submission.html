@@ -56,6 +56,8 @@
                     <div class="body">
                         <div class="score">{{ score }} point{{ 's' if score !=1 else '' }}<span class="score-percent ml-2">{{ p.score_percent }}% upvoted</span></div>
                         <div class="progress mt-2" style="height: 8px;">
+                            <div class="d-none" id="p-ups">{{ p.ups }}</div>
+                            <div class="d-none" id="p-downs">{{ p.downs }}</div>
                             <div class="d-none" id="progressbar-value">{{ p.score_percent }}</div>
                             <div class="progress-bar bg-success" role="progressbar" id="progressbar" style=""
                                 aria-valuenow="{{ p.score_percent }}" aria-valuemin="0" aria-valuemax="100"></div>

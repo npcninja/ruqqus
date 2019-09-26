@@ -1,7 +1,11 @@
 // Get score percentage and make width of progress bar
 
 window.onload = function progressbar() {
-	var val = document.getElementById('progressbar-value').innerHTML;
+
+	var upsNum = document.getElementById('p-ups').innerHTML;
+	var downsNum = document.getElementById('p-downs').innerHTML;
+
+	var val = (upsNum/(upsNum + downsNum))*100
 
 	document.getElementById('progressbar').style.width = val;
 }
