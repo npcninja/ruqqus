@@ -67,7 +67,7 @@ class Submission(Base):
     @property
     @cache.memoize(timeout=60)
     def score_percent(self):
-        return (self.ups/(self.ups+self.downs))*100
+        return int((self.ups/(self.ups+self.downs))*100)
 
     @property
     def base36id(self):
