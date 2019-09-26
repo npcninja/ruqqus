@@ -5,7 +5,9 @@ window.onload = function progressbar() {
 	var upsNum = document.getElementById('p-ups').innerHTML;
 	var downsNum = document.getElementById('p-downs').innerHTML;
 
-	var val = (upsNum/(upsNum + downsNum))*100;
+	var sum = upsNum + downsNum;
+
+	var val = upsNum/sum*100;
 
 	console.log(val);
 
