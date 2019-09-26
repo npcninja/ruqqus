@@ -14,7 +14,7 @@
   --red: #EE6352;
   --orange: #fd7e14;
   --yellow: #ffc107;
-  --green: #360568;
+  --green: #23CE6B;
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #ffffff;
@@ -13898,11 +13898,11 @@ pre .lit, code .lit {
 }
 
 pre .kwd, code .kwd {
-  color: #360568;
+  color: #23CE6B;
 }
 
 pre .str, code .str {
-  color: #360568;
+  color: #23CE6B;
   opacity: 0.75;
 }
 
@@ -14023,7 +14023,7 @@ span.red {
 }
 
 span.green {
-  color: #360568;
+  color: #23CE6B;
 }
 
 div.banned {
