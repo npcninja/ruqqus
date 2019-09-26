@@ -2,9 +2,9 @@
 
 window.onload = function progressbar() {
 
-	document.getElementById('progressbar') = pBar;
+	pBar = document.getElementById('progressbar');
 
-	document.getElementById('score-percent') = scorePercent
+	scorePercent = document.getElementById('score-percent');
 
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
