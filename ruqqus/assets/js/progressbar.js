@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Set background color of progress bar based on score
 
 	if (val = 100) {
-		document.getElementById('progressbar').classlist.remove("bg-success");
+		document.getElementById('progressbar').classList.remove("bg-success");
 		document.getElementById('progressbar').classList.add("bg-gold");
 	}
 	else if (val < 50) {
-		document.getElementById('progressbar').classlist.remove("bg-success");
+		document.getElementById('progressbar').classList.remove("bg-success");
 		document.getElementById('progressbar').classList.add("bg-warning");
 	};
 }, false);
