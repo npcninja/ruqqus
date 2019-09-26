@@ -618,11 +618,11 @@ label.terms {
 }
 
 .upvoted .arrow-mobile-up {
-    color: $upvote;
+    color: $upvote!important;
 }
 
 .downvoted .arrow-mobile-down {
-    color: $downvote;
+    color: $downvote!important;
 }
 
 .score-up {

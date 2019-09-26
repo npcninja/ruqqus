@@ -12723,11 +12723,11 @@ label.terms {
   }
 }
 .upvoted .arrow-mobile-up {
-  color: #EE6352;
+  color: #EE6352 !important;
 }
 
 .downvoted .arrow-mobile-down {
-  color: #3970a2;
+  color: #3970a2 !important;
 }
 
 .score-up {
