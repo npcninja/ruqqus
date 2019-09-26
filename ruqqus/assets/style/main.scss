@@ -609,14 +609,6 @@ label.terms {
     color: $downvote;
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-
-    .voting {
-    min-width: length;
-}
-}
-
 .upvoted .arrow-mobile-up {
     color: $upvote!important;
 }
@@ -887,6 +879,14 @@ color: $dark;
     font-size: $extra-small-font-size;
     margin-right: .5rem;
     color: $gray-600;
+}
+
+.post-actions .upvoted .fa, .post-actions .upvoted .fas, .post-actions .upvoted .far {
+    color: $upvote;
+}
+
+.post-actions .downvoted .fa, .post-actions .downvoted .fas, .post-actions .downvoted .far {
+    color: $downvote;
 }
 
 .post-actions .fa-ellipsis-v {
@@ -1627,6 +1627,7 @@ body {
 
 .voting {
     font-weight: $font-weight-normal;
+    min-width: length;
 }
 
 .post-title {
