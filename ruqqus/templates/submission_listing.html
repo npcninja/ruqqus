@@ -14,7 +14,7 @@
 
               <div id="post-{{ p.base36id }}" class="card{% if p.is_banned %} banned{% endif %}{% if p.stickied %} stickied{% endif %}{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
               <div class="d-flex flex-row-reverse flex-nowrap justify-content-end">
-                <div class="card-header bg-transparent border-0 d-flex flex-row flex-nowrap p-0 my-auto pl-3 ml-auto">
+                <div class="card-header bg-transparent border-0 d-flex flex-row flex-nowrap p-0 my-md-auto pl-3 ml-auto">
                   {% if p.url.endswith((".jpg",".png")) %}<img href="{{ p.url }}" src="{{ p.url }}" class="post-img" alt="">{% endif %}
                   <div class="dropdown show my-auto post-actions ml-4 d-none d-md-block">
                         <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
@@ -40,9 +40,9 @@
                       </div>
 		</div>
                 <div class="card-block text-left my-md-auto">
-                  <div class="post-meta text-left d-block d-md-none mb-3">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
+                  <div class="post-meta text-left d-block d-md-none mb-2">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
                   </div>
-                  <h5 class="card-title post-title text-left mb-3 mb-md-2"><a href="{{ p.permalink }}" class="stretched-link">{{ p.title }}</a></h5>
+                  <h5 class="card-title post-title text-left mb-2"><a href="{{ p.permalink }}" class="stretched-link">{{ p.title }}</a></h5>
                   <div class="post-meta text-left d-none d-md-block">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
                   </div>
 
