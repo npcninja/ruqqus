@@ -23,7 +23,7 @@ window.onload = function() {
 	// Set background color of progress bar based on score
 
 	if (val < 50) {
-		pBar.classList.remove("bg-success");
-		pBar.classList.add("bg-warning");
+		pBar.classList.remove("bg-upvote");
+		pBar.classList.add("bg-downvote");
 	}
 }

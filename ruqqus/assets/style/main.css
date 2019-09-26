@@ -30,6 +30,8 @@
   --dark: #2E4057;
   --white: #ffffff;
   --black: #1E1E24;
+  --downvote: #48A9A6;
+  --upvote: #6350CC;
   --gold: #ddbd37;
   --gray: #5F5F5F;
   --gray-100: #F8F8F9;
@@ -1763,6 +1765,46 @@ pre code {
   background-color: #b3b3b5;
 }
 
+.table-downvote,
+.table-downvote > th,
+.table-downvote > td {
+  background-color: #cce7e6;
+}
+.table-downvote th,
+.table-downvote td,
+.table-downvote thead th,
+.table-downvote tbody + tbody {
+  border-color: #a0d2d1;
+}
+
+.table-hover .table-downvote:hover {
+  background-color: #bbdfde;
+}
+.table-hover .table-downvote:hover > td,
+.table-hover .table-downvote:hover > th {
+  background-color: #bbdfde;
+}
+
+.table-upvote,
+.table-upvote > th,
+.table-upvote > td {
+  background-color: #d3cef1;
+}
+.table-upvote th,
+.table-upvote td,
+.table-upvote thead th,
+.table-upvote tbody + tbody {
+  border-color: #aea4e4;
+}
+
+.table-hover .table-upvote:hover {
+  background-color: #c1baeb;
+}
+.table-hover .table-upvote:hover > td,
+.table-hover .table-upvote:hover > th {
+  background-color: #c1baeb;
+}
+
 .table-gold,
 .table-gold > th,
 .table-gold > td {
@@ -2754,6 +2796,60 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(64, 64, 69, 0.5);
 }
 
+.btn-downvote {
+  color: #ffffff;
+  background-color: #48A9A6;
+  border-color: #48A9A6;
+}
+.btn-downvote:hover {
+  color: #ffffff;
+  background-color: #3d8e8c;
+  border-color: #398583;
+}
+.btn-downvote:focus, .btn-downvote.focus {
+  box-shadow: 0 0 0 0.2rem rgba(99, 182, 179, 0.5);
+}
+.btn-downvote.disabled, .btn-downvote:disabled {
+  color: #ffffff;
+  background-color: #48A9A6;
+  border-color: #48A9A6;
+}
+.btn-downvote:not(:disabled):not(.disabled):active, .btn-downvote:not(:disabled):not(.disabled).active, .show > .btn-downvote.dropdown-toggle {
+  color: #ffffff;
+  background-color: #398583;
+  border-color: #357c7a;
+}
+.btn-downvote:not(:disabled):not(.disabled):active:focus, .btn-downvote:not(:disabled):not(.disabled).active:focus, .show > .btn-downvote.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(99, 182, 179, 0.5);
+}
+
+.btn-upvote {
+  color: #ffffff;
+  background-color: #6350CC;
+  border-color: #6350CC;
+}
+.btn-upvote:hover {
+  color: #ffffff;
+  background-color: #4c37be;
+  border-color: #4835b4;
+}
+.btn-upvote:focus, .btn-upvote.focus {
+  box-shadow: 0 0 0 0.2rem rgba(122, 106, 212, 0.5);
+}
+.btn-upvote.disabled, .btn-upvote:disabled {
+  color: #ffffff;
+  background-color: #6350CC;
+  border-color: #6350CC;
+}
+.btn-upvote:not(:disabled):not(.disabled):active, .btn-upvote:not(:disabled):not(.disabled).active, .show > .btn-upvote.dropdown-toggle {
+  color: #ffffff;
+  background-color: #4835b4;
+  border-color: #4432ab;
+}
+.btn-upvote:not(:disabled):not(.disabled):active:focus, .btn-upvote:not(:disabled):not(.disabled).active:focus, .show > .btn-upvote.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(122, 106, 212, 0.5);
+}
+
 .btn-gold {
   color: #212529;
   background-color: #ddbd37;
@@ -3191,6 +3287,56 @@ fieldset:disabled a.btn {
 }
 .btn-outline-black:not(:disabled):not(.disabled):active:focus, .btn-outline-black:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-black.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(30, 30, 36, 0.5);
+}
+
+.btn-outline-downvote {
+  color: #48A9A6;
+  border-color: #48A9A6;
+}
+.btn-outline-downvote:hover {
+  color: #ffffff;
+  background-color: #48A9A6;
+  border-color: #48A9A6;
+}
+.btn-outline-downvote:focus, .btn-outline-downvote.focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 169, 166, 0.5);
+}
+.btn-outline-downvote.disabled, .btn-outline-downvote:disabled {
+  color: #48A9A6;
+  background-color: transparent;
+}
+.btn-outline-downvote:not(:disabled):not(.disabled):active, .btn-outline-downvote:not(:disabled):not(.disabled).active, .show > .btn-outline-downvote.dropdown-toggle {
+  color: #ffffff;
+  background-color: #48A9A6;
+  border-color: #48A9A6;
+}
+.btn-outline-downvote:not(:disabled):not(.disabled):active:focus, .btn-outline-downvote:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-downvote.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(72, 169, 166, 0.5);
+}
+
+.btn-outline-upvote {
+  color: #6350CC;
+  border-color: #6350CC;
+}
+.btn-outline-upvote:hover {
+  color: #ffffff;
+  background-color: #6350CC;
+  border-color: #6350CC;
+}
+.btn-outline-upvote:focus, .btn-outline-upvote.focus {
+  box-shadow: 0 0 0 0.2rem rgba(99, 80, 204, 0.5);
+}
+.btn-outline-upvote.disabled, .btn-outline-upvote:disabled {
+  color: #6350CC;
+  background-color: transparent;
+}
+.btn-outline-upvote:not(:disabled):not(.disabled):active, .btn-outline-upvote:not(:disabled):not(.disabled).active, .show > .btn-outline-upvote.dropdown-toggle {
+  color: #ffffff;
+  background-color: #6350CC;
+  border-color: #6350CC;
+}
+.btn-outline-upvote:not(:disabled):not(.disabled):active:focus, .btn-outline-upvote:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-upvote.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(99, 80, 204, 0.5);
 }
 
 .btn-outline-gold {
@@ -5231,6 +5377,32 @@ a.badge-black:focus, a.badge-black.focus {
   box-shadow: 0 0 0 0.2rem rgba(30, 30, 36, 0.5);
 }
 
+.badge-downvote {
+  color: #ffffff;
+  background-color: #48A9A6;
+}
+a.badge-downvote:hover, a.badge-downvote:focus {
+  color: #ffffff;
+  background-color: #398583;
+}
+a.badge-downvote:focus, a.badge-downvote.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(72, 169, 166, 0.5);
+}
+
+.badge-upvote {
+  color: #ffffff;
+  background-color: #6350CC;
+}
+a.badge-upvote:hover, a.badge-upvote:focus {
+  color: #ffffff;
+  background-color: #4835b4;
+}
+a.badge-upvote:focus, a.badge-upvote.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(99, 80, 204, 0.5);
+}
+
 .badge-gold {
   color: #212529;
   background-color: #ddbd37;
@@ -5485,6 +5657,30 @@ a.badge-reddit:focus, a.badge-reddit.focus {
 }
 .alert-black .alert-link {
   color: #070708;
+}
+
+.alert-downvote {
+  color: #346668;
+  background-color: #daeeed;
+  border-color: #cce7e6;
+}
+.alert-downvote hr {
+  border-top-color: #bbdfde;
+}
+.alert-downvote .alert-link {
+  color: #234546;
+}
+
+.alert-upvote {
+  color: #42387b;
+  background-color: #e0dcf5;
+  border-color: #d3cef1;
+}
+.alert-upvote hr {
+  border-top-color: #c1baeb;
+}
+.alert-upvote .alert-link {
+  color: #2f2858;
 }
 
 .alert-gold {
@@ -5932,6 +6128,34 @@ a.badge-reddit:focus, a.badge-reddit.focus {
   color: #ffffff;
   background-color: #1e1e24;
   border-color: #1e1e24;
+}
+
+.list-group-item-downvote {
+  color: #346668;
+  background-color: #cce7e6;
+}
+.list-group-item-downvote.list-group-item-action:hover, .list-group-item-downvote.list-group-item-action:focus {
+  color: #346668;
+  background-color: #bbdfde;
+}
+.list-group-item-downvote.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #346668;
+  border-color: #346668;
+}
+
+.list-group-item-upvote {
+  color: #42387b;
+  background-color: #d3cef1;
+}
+.list-group-item-upvote.list-group-item-action:hover, .list-group-item-upvote.list-group-item-action:focus {
+  color: #42387b;
+  background-color: #c1baeb;
+}
+.list-group-item-upvote.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #42387b;
+  border-color: #42387b;
 }
 
 .list-group-item-gold {
@@ -6883,6 +7107,26 @@ button.bg-black:focus {
   background-color: #070708 !important;
 }
 
+.bg-downvote {
+  background-color: #48A9A6 !important;
+}
+
+a.bg-downvote:hover, a.bg-downvote:focus,
+button.bg-downvote:hover,
+button.bg-downvote:focus {
+  background-color: #398583 !important;
+}
+
+.bg-upvote {
+  background-color: #6350CC !important;
+}
+
+a.bg-upvote:hover, a.bg-upvote:focus,
+button.bg-upvote:hover,
+button.bg-upvote:focus {
+  background-color: #4835b4 !important;
+}
+
 .bg-gold {
   background-color: #ddbd37 !important;
 }
@@ -7039,6 +7283,14 @@ button.bg-reddit:focus {
 
 .border-black {
   border-color: #1E1E24 !important;
+}
+
+.border-downvote {
+  border-color: #48A9A6 !important;
+}
+
+.border-upvote {
+  border-color: #6350CC !important;
 }
 
 .border-gold {
@@ -11969,6 +12221,22 @@ a.text-white:hover, a.text-white:focus {
 
 a.text-black:hover, a.text-black:focus {
   color: black !important;
+}
+
+.text-downvote {
+  color: #48A9A6 !important;
+}
+
+a.text-downvote:hover, a.text-downvote:focus {
+  color: #317371 !important;
+}
+
+.text-upvote {
+  color: #6350CC !important;
+}
+
+a.text-upvote:hover, a.text-upvote:focus {
+  color: #402fa1 !important;
 }
 
 .text-gold {
