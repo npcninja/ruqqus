@@ -1621,6 +1621,14 @@ body {
     border-bottom: 1px solid $border-color;
 }
 
+#frontpage .posts .card:hover {
+    background-color: none;
+}
+
+.post-title a:hover, .post-title a:active, .post-title a:focus {
+    color: $primary;
+}
+
 .voting {
     font-weight: $font-weight-normal;
     min-width: length;

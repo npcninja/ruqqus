@@ -14090,6 +14090,14 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     border-bottom: 1px solid #E6E6E6;
   }
 
+  #frontpage .posts .card:hover {
+    background-color: none;
+  }
+
+  .post-title a:hover, .post-title a:active, .post-title a:focus {
+    color: #360568;
+  }
+
   .voting {
     font-weight: 400;
     min-width: length;
