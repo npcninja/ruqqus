@@ -9,9 +9,9 @@ window.onload = function progressbar() {
 
 	var div = upsNum/sum;
 
-	var val = div *100;
+	var val = div * 1000;
 
 	console.log(val);
 
-	document.getElementById('progressbar').style.width = val + "%;";
+	document.getElementById('progressbar').style.width = val + "%";
 }
