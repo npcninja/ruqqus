@@ -76,8 +76,30 @@
                     <div class="col-12">
 
                         <div id="post-{{ p.base36id }}" class="card d-flex flex-row-reverse flex-nowrap justify-content-end border-0 mt-4 mt-md-3{% if p.is_banned %} banned{% endif %}{% if p.stickied %} stickied{% endif %}{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
-                            <div class="card-header bg-transparent border-0 p-0 ml-auto d-none d-md-block">
+                            <div class="card-header bg-transparent border-0 d-flex flex-row flex-nowrap p-0 my-auto pl-3 ml-auto">
                                 {% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="post-img" alt="">{% endif %}
+                        <div class="dropdown show my-auto post-actions ml-4 d-none d-md-block">
+                        <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </a>
+
+                        <div class="dropdown-menu border-0 shadow dropdown-menu-right dropdown-menu-lg-left mt-2"
+                          aria-labelledby="dropdownMoreLink">
+                          <a class="dropdown-item" href="#"><i class="fas fa-link"></i>Permalink</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
+                          <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
+{% if v %}
+{% if v.admin_level >=1 %}
+    {% if p.is_banned %}
+                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a>
+                            {% else %}
+                            <a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a>
+                                {% endif %}
+{% endif %}
+{% endif %}
+                        </div>
+                      </div>
                             </div>
                             <div class="card-block my-md-auto">
                                 <div class="post-meta text-left d-block d-md-none mb-3 mb-md-2">{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})</div>
@@ -124,7 +146,7 @@
 
                 </div>
 
-                <div class="row mb-3 d-none d-md-block">
+                <div class="row mb-3 d-md-block d-none">
                     <div class="col-12">
 
                         <div class="post-actions">
@@ -242,7 +264,7 @@
 {% block mobileactions %}
 <!-- Mobile responsive fixed footer with post actions -->
 
-        <div class="row fixed-top bg-white shadow d-inline-flex d-md-none p-3" id="fixed-bar-mobile" style="z-index: 3; top: 49px; transition: top 0.3s;">
+        <div class="row fixed-top bg-white shadow d-inline-flex d-none p-3" id="fixed-bar-mobile" style="z-index: 3; top: 49px; transition: top 0.3s;">
         
             <div class="col text-center">
         
