@@ -13,7 +13,7 @@ window.onload = function() {
 
 	console.log(val);
 
-	document.getElementById('score-percent');.innerHTML = val + "% upvoted";
+	document.getElementById('score-percent').innerHTML = val + "% upvoted";
 
 	document.getElementById('progressbar').style.width = val + "%";
 
