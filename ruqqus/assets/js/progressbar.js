@@ -2,8 +2,8 @@
 
 window.onload = function progressbar() {
 
-	var upsNum = document.getElementById('p-ups').innerHTML;
-	var downsNum = document.getElementById('p-downs').innerHTML;
+	var upsNum = +document.getElementById('p-ups').innerHTML;
+	var downsNum = +document.getElementById('p-downs').innerHTML;
 
 	var sum = upsNum + downsNum;
 
