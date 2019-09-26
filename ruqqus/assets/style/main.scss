@@ -859,13 +859,10 @@ color: $dark;
 
 .post-meta {
     position: relative;
+    z-index: 2;
     color: $text-muted;
     font-size: $small-font-size;
     width: fit-content;
-}
-
-.post-meta a {
-    z-index: 2;
 }
 
 #frontpage .posts .card .card-footer {
