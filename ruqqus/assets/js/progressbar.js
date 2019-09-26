@@ -26,5 +26,5 @@ window.onload = function progressbar() {
 	else if (val < 50) {
 		pBar.classlist.remove("bg-success");
 		pBar.classList.add("bg-warning");
-	}
+	};
 }
