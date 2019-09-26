@@ -52,7 +52,7 @@
 {% block sidebarblock %}
 <div class="sidebar-section sidebar-post-meta">
                     <div class="body">
-                        <div class="score" id="score-percent">{{ score }} point{{ 's' if score !=1 else '' }}<span class="score-percent ml-2"></span></div>
+                        <div class="score">{{ score }} point{{ 's' if score !=1 else '' }}<span class="score-percent ml-2" id="score-percent"></span></div>
                         <div class="progress mt-2" style="height: 8px;">
                             <div class="d-none" id="p-ups">{{ p.ups }}</div>
                             <div class="d-none" id="p-downs">{{ p.downs }}</div>
