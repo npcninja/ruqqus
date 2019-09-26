@@ -12954,10 +12954,13 @@ a:hover .link-arrow {
 
 .post-meta {
   position: relative;
-  z-index: 2;
   color: #7D7D7D;
   font-size: 13px;
   width: fit-content;
+}
+
+.post-meta a {
+  z-index: 2;
 }
 
 #frontpage .posts .card .card-footer {
