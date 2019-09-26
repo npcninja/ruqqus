@@ -30,6 +30,7 @@
   --dark: #2E4057;
   --white: #ffffff;
   --black: #1E1E24;
+  --gold: #ddbd37;
   --gray: #5F5F5F;
   --gray-100: #F8F8F9;
   --gray-200: #EBE9EF;
@@ -1762,6 +1763,26 @@ pre code {
   background-color: #b3b3b5;
 }
 
+.table-gold,
+.table-gold > th,
+.table-gold > td {
+  background-color: #f5edc7;
+}
+.table-gold th,
+.table-gold td,
+.table-gold thead th,
+.table-gold tbody + tbody {
+  border-color: #eddd97;
+}
+
+.table-hover .table-gold:hover {
+  background-color: #f1e6b1;
+}
+.table-hover .table-gold:hover > td,
+.table-hover .table-gold:hover > th {
+  background-color: #f1e6b1;
+}
+
 .table-gray,
 .table-gray > th,
 .table-gray > td {
@@ -2733,6 +2754,33 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(64, 64, 69, 0.5);
 }
 
+.btn-gold {
+  color: #212529;
+  background-color: #ddbd37;
+  border-color: #ddbd37;
+}
+.btn-gold:hover {
+  color: #212529;
+  background-color: #cbab23;
+  border-color: #c0a221;
+}
+.btn-gold:focus, .btn-gold.focus {
+  box-shadow: 0 0 0 0.2rem rgba(193, 166, 53, 0.5);
+}
+.btn-gold.disabled, .btn-gold:disabled {
+  color: #212529;
+  background-color: #ddbd37;
+  border-color: #ddbd37;
+}
+.btn-gold:not(:disabled):not(.disabled):active, .btn-gold:not(:disabled):not(.disabled).active, .show > .btn-gold.dropdown-toggle {
+  color: #ffffff;
+  background-color: #c0a221;
+  border-color: #b5981f;
+}
+.btn-gold:not(:disabled):not(.disabled):active:focus, .btn-gold:not(:disabled):not(.disabled).active:focus, .show > .btn-gold.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(193, 166, 53, 0.5);
+}
+
 .btn-gray {
   color: #ffffff;
   background-color: #5F5F5F;
@@ -3143,6 +3191,31 @@ fieldset:disabled a.btn {
 }
 .btn-outline-black:not(:disabled):not(.disabled):active:focus, .btn-outline-black:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-black.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(30, 30, 36, 0.5);
+}
+
+.btn-outline-gold {
+  color: #ddbd37;
+  border-color: #ddbd37;
+}
+.btn-outline-gold:hover {
+  color: #212529;
+  background-color: #ddbd37;
+  border-color: #ddbd37;
+}
+.btn-outline-gold:focus, .btn-outline-gold.focus {
+  box-shadow: 0 0 0 0.2rem rgba(221, 189, 55, 0.5);
+}
+.btn-outline-gold.disabled, .btn-outline-gold:disabled {
+  color: #ddbd37;
+  background-color: transparent;
+}
+.btn-outline-gold:not(:disabled):not(.disabled):active, .btn-outline-gold:not(:disabled):not(.disabled).active, .show > .btn-outline-gold.dropdown-toggle {
+  color: #212529;
+  background-color: #ddbd37;
+  border-color: #ddbd37;
+}
+.btn-outline-gold:not(:disabled):not(.disabled):active:focus, .btn-outline-gold:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-gold.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(221, 189, 55, 0.5);
 }
 
 .btn-outline-gray {
@@ -5158,6 +5231,19 @@ a.badge-black:focus, a.badge-black.focus {
   box-shadow: 0 0 0 0.2rem rgba(30, 30, 36, 0.5);
 }
 
+.badge-gold {
+  color: #212529;
+  background-color: #ddbd37;
+}
+a.badge-gold:hover, a.badge-gold:focus {
+  color: #212529;
+  background-color: #c0a221;
+}
+a.badge-gold:focus, a.badge-gold.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(221, 189, 55, 0.5);
+}
+
 .badge-gray {
   color: #ffffff;
   background-color: #5F5F5F;
@@ -5399,6 +5485,18 @@ a.badge-reddit:focus, a.badge-reddit.focus {
 }
 .alert-black .alert-link {
   color: #070708;
+}
+
+.alert-gold {
+  color: #81712e;
+  background-color: #f8f2d7;
+  border-color: #f5edc7;
+}
+.alert-gold hr {
+  border-top-color: #f1e6b1;
+}
+.alert-gold .alert-link {
+  color: #5b5021;
 }
 
 .alert-gray {
@@ -5834,6 +5932,20 @@ a.badge-reddit:focus, a.badge-reddit.focus {
   color: #ffffff;
   background-color: #1e1e24;
   border-color: #1e1e24;
+}
+
+.list-group-item-gold {
+  color: #81712e;
+  background-color: #f5edc7;
+}
+.list-group-item-gold.list-group-item-action:hover, .list-group-item-gold.list-group-item-action:focus {
+  color: #81712e;
+  background-color: #f1e6b1;
+}
+.list-group-item-gold.list-group-item-action.active {
+  color: #ffffff;
+  background-color: #81712e;
+  border-color: #81712e;
 }
 
 .list-group-item-gray {
@@ -6771,6 +6883,16 @@ button.bg-black:focus {
   background-color: #070708 !important;
 }
 
+.bg-gold {
+  background-color: #ddbd37 !important;
+}
+
+a.bg-gold:hover, a.bg-gold:focus,
+button.bg-gold:hover,
+button.bg-gold:focus {
+  background-color: #c0a221 !important;
+}
+
 .bg-gray {
   background-color: #5F5F5F !important;
 }
@@ -6917,6 +7039,10 @@ button.bg-reddit:focus {
 
 .border-black {
   border-color: #1E1E24 !important;
+}
+
+.border-gold {
+  border-color: #ddbd37 !important;
 }
 
 .border-gray {
@@ -11843,6 +11969,14 @@ a.text-white:hover, a.text-white:focus {
 
 a.text-black:hover, a.text-black:focus {
   color: black !important;
+}
+
+.text-gold {
+  color: #ddbd37 !important;
+}
+
+a.text-gold:hover, a.text-gold:focus {
+  color: #ab8f1d !important;
 }
 
 .text-gray {
