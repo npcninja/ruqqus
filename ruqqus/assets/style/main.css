@@ -12710,27 +12710,27 @@ label.terms {
 }
 
 .upvoted .arrow-up::before {
-  color: #EE6352;
+  color: #6350CC;
 }
 
 .downvoted .arrow-down::before {
-  color: #3970a2;
+  color: #48A9A6;
 }
 
 .upvoted .arrow-mobile-up {
-  color: #EE6352 !important;
+  color: #6350CC !important;
 }
 
 .downvoted .arrow-mobile-down {
-  color: #3970a2 !important;
+  color: #48A9A6 !important;
 }
 
 .score-up {
-  color: #EE6352 !important;
+  color: #6350CC !important;
 }
 
 .score-down {
-  color: #3970a2 !important;
+  color: #48A9A6 !important;
 }
 
 .banned .score {
