@@ -3,6 +3,7 @@
 window.onload = function() {
 
 	pBar = document.getElementById('progressbar');
+	score = document.getElementById('score-percent');
 
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
@@ -15,9 +16,9 @@ window.onload = function() {
 
 	console.log(val);
 
-	document.getElementById('score-percent').innerHTML = val + "% upvoted";
+	score.innerHTML = val + "% upvoted";
 
-	document.getElementById('progressbar').style.width = val + "%";
+	pBar.style.width = val + "%";
 
 	// Set background color of progress bar based on score
 
