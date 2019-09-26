@@ -2,6 +2,8 @@
 
 window.onload = function() {
 
+	pBar = document.getElementById('progressbar');
+
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
 
@@ -19,12 +21,8 @@ window.onload = function() {
 
 	// Set background color of progress bar based on score
 
-	if (val = 100) {
-		document.getElementById('progressbar').classList.remove("bg-success");
-		document.getElementById('progressbar').classList.add("bg-gold");
+	if (val < 50) {
+		pBar.classList.remove("bg-success");
+		pBar.classList.add("bg-warning");
 	}
-	else if (val < 50) {
-		document.getElementById('progressbar').classList.remove("bg-success");
-		document.getElementById('progressbar').classList.add("bg-warning");
-	};
 }
