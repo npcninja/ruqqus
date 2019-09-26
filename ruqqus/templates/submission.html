@@ -123,6 +123,7 @@
 
                             </div>
 
+<!-- Disable card-footer for now
                                             <div class="card-footer d-none">
                                     <div class="post-actions">
                     <ul class="list-inline text-right">
@@ -170,11 +171,13 @@
                     </ul>
                   </div>
                 </div>
+-->
+
 
                         </div>
 			
 			{% if p.body_html %}
-                        <div class="post-body mt-4 mb-2"> 
+                        <div class="post-body mt-3"> 
 				{{ p.body_html | safe }}
 			</div>
 			{% endif %}
