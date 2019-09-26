@@ -13803,6 +13803,11 @@ ul.comment-section {
   color: #adb5bd;
 }
 
+.transition-15 {
+  -webkit-transition: width 0.15s;
+  transition: width 0.15s;
+}
+
 .custom-switch {
   padding-left: 2.25rem;
   padding-bottom: 1rem;

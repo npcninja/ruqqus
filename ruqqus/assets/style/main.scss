@@ -1457,6 +1457,13 @@ ul.comment-section {
     color: #adb5bd;
 }
 
+// Transitions 
+
+.transition-15 {
+    -webkit-transition: width .15s;
+    transition: width .15s;
+}
+
 // Custom Switch (iOS-like toggle)
 
 .custom-switch {
