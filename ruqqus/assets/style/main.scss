@@ -878,15 +878,6 @@ color: $dark;
 .post-actions .fa, .post-actions .fas, .post-actions .far {
     font-size: $extra-small-font-size;
     margin-right: .5rem;
-    color: $gray-600;
-}
-
-.post-actions .upvoted .arrow-mobile-up .fa, .post-actions .upvoted .arrow-mobile-up .fas, .post-actions .upvoted .arrow-mobile-up .far {
-    color: $upvote;
-}
-
-.post-actions .downvoted .arrow-mobile-down .fa, .post-actions .downvoted .arrow-mobile-down .fas, .post-actions .downvoted .arrow-mobile-down .far {
-    color: $downvote;
 }
 
 .post-actions .fa-ellipsis-v {

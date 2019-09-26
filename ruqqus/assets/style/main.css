@@ -12976,15 +12976,6 @@ a:hover .link-arrow {
 .post-actions .fa, .post-actions .fas, .post-actions .far {
   font-size: 12px;
   margin-right: 0.5rem;
-  color: #ACACAC;
-}
-
-.post-actions .upvoted .arrow-mobile-up .fa, .post-actions .upvoted .arrow-mobile-up .fas, .post-actions .upvoted .arrow-mobile-up .far {
-  color: #EE6352;
-}
-
-.post-actions .downvoted .arrow-mobile-down .fa, .post-actions .downvoted .arrow-mobile-down .fas, .post-actions .downvoted .arrow-mobile-down .far {
-  color: #3970a2;
 }
 
 .post-actions .fa-ellipsis-v {
