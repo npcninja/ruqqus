@@ -7,5 +7,5 @@ window.onload = function progressbar() {
 
 	var val = (upsNum/(upsNum + downsNum))*100
 
-	document.getElementById('progressbar').style.width = val;
+	document.getElementById('progressbar').style.width = val + "px";
 }
