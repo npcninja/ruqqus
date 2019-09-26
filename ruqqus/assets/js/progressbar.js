@@ -2,6 +2,10 @@
 
 window.onload = function progressbar() {
 
+	document.getElementById('progressbar') = pBar;
+
+	document.getElementById('score-percent') = scorePercent
+
 	var upsNum = +document.getElementById('p-ups').innerHTML;
 	var downsNum = +document.getElementById('p-downs').innerHTML;
 
@@ -11,7 +15,16 @@ window.onload = function progressbar() {
 
 	console.log(val);
 
-	document.getElementById('score-percent').innerHTML = val + "% upvoted";
+	scorePercent.innerHTML = val + "% upvoted";
 
-	document.getElementById('progressbar').style.width = val + "%";
+	pBar.style.width = val + "%";
+
+	if (val = 100) {
+		pBar.classlist.remove("bg-success");
+		pBar.classList.add("bg-gold");
+	}
+	else if (val < 50) {
+		pBar.classlist.remove("bg-success");
+		pBar.classList.add("bg-warning");
+	}
 }
