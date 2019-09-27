@@ -260,7 +260,7 @@ def get_reset():
     if not validate_hash(f"{user_id}+{timestamp}+forgot", token):
         abort(400)
                            
-    user=db.query(Users).filter_by(id=user_id).first()
+    user=db.query(User).filter_by(id=user_id).first()
 
     if not user:
         abort(404)
@@ -295,7 +295,7 @@ def post_reset():
     if not validate_hash(f"{user.id}+{now}+reset", token):
         abort(400)
 
-    user=db.query(Users).filter_by(id=user_id).first()
+    user=db.query(User).filter_by(id=user_id).first()
     if not user:
         abort(404)
 
