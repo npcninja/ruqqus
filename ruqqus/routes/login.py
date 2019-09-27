@@ -257,7 +257,7 @@ def get_reset():
     if now-timestamp > 600:
         return render_template("message.html", title="Password Reset Link Expired", text="That password reset link has expired.")
 
-    if not validate_hash(f"{user_id}+{time}+forgot", token):
+    if not validate_hash(f"{user_id}+{timestamp}+forgot", token):
         abort(400)
                            
     user=db.query(Users).filter_by(id=user_id).first()
