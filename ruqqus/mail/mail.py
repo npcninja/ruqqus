@@ -39,17 +39,13 @@ def send_verification_email(user, email=None):
 
     link=url+params
 
-    html=f"""
-         <p>Welcome to Ruqqus, {user.username}!<p>
-         <a href="{link}">Click here</a> to verify your email address on {environ.get('domain')}.</p>
-         """
-
     text=f"Thank you for signing up. Click to verify your email address: {link}"
 
     send_mail(to_address=email,
-              html=html,
-              plaintext=text,
-              subject="Validate your Ruqqus account"
+              html=render_template("email/email_verify.html",
+                                   action_url=link
+                                   v=user),
+              subject="Validate your Ruqqus account email."
               )
 
 @app.route("/api/verify_email", methods=["POST"])

@@ -225,8 +225,73 @@ def post_forgot():
     user = db.query(Users).filter(username=username, email=email).first()
 
     if user:
-        send_reset_email(user)
+        #generate url
+        now=int(time.time())
+        token=generate_hash(f"{user.id}+{now}+forgot")
+        url=f"https://{app.config['SERVER_NAME']}/reset?id={user.id}&time={now}&token={token}"
 
-    return render_template("forgot_password.html", msg="If the username and email matches an account, you will be sent a password reset email.")
+        send_mail(to_address=user.email,
+                  subject="Ruqqus - Password Reset Request,
+                  html=render_template("email/password_reset.html",
+                                       action_url=url)
+                  )
+
+    return render_template("forgot_password.html", msg="If the username and email matches an account, you will be sent a password reset email. You have ten minutes to complete the password reset process.")
 
 
+@app.route("/reset", methods=["GET"])
+def get_reset():
+
+
+    user_id = request.args.get("id")
+    time=request.args.get("time")
+    token=request.args.get("token")
+
+    now=int(time.time())
+
+    if now-time > 600:
+        return render_template("message.html", title="Password Reset Link Expired", text="That password reset link has expired.")
+
+    if not validate_hash(f"{user_id}+{time}+forgot", token):
+        abort(400)
+                           
+    user=db.query(Users).filter(id=user_id).first()
+
+    if not user:
+        abort(404)
+
+    reset_token=generate_hash(f"{user.id}+{now}+reset")
+
+    return render_template("reset_password.html", v=user, token=reset_token, time=time)
+
+
+@app.route("/reset", methods=["POST"])
+def post_reset():
+
+    user_id=request.form.get("user_id")
+    time=request.form.get("time")
+    token=request.form.get("token")
+
+    password=request.form.get("password")
+    confirm_password=request.form.get("confirm_password")
+
+    now=int(time.time())
+
+    if now-time>600:
+        return render_template("message.html", title="Password Reset Expired", text="That password reset form has expired.")
+
+    if not validate_hash(f"{user.id}+{now}+reset", token):
+        abort(400)
+
+    user=db.query(Users).filter(id=user_id).first()
+    if not user:
+        abort(404)
+
+    if not password==confirm_password:
+        return render_template("reset_password.html", v=user, token=reset_token, time=time, error="Passwords didn't match.")
+
+    user.passhash = hash_password(password)
+    db.add(user)
+    db.commit()
+
+    return render_template("message.html", title="Password Reset Successful", text="Login normally to access your account.")
