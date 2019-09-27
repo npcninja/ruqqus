@@ -84,7 +84,7 @@ def settings_security_post(v):
         link=url+params
         
         send_mail(to_address=new_email,
-                  subject="Verify your email address."
+                  subject="Verify your email address.",
                   html=render_template("email/email_change.html",
                                        action_url=link,
                                        v=v)
