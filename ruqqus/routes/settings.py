@@ -78,8 +78,8 @@ def settings_security_post(v):
             
         now=int(time.time())
 
-        token=generate_hash(f"{email}+{v.id}+{now}")
-        params=f"?email={quote(email)}&id={v.id}&time={now}&token={token}"
+        token=generate_hash(f"{new_email}+{v.id}+{now}")
+        params=f"?email={quote(new_email)}&id={v.id}&time={now}&token={token}"
 
         link=url+params
         
