@@ -240,7 +240,8 @@ def post_forgot():
                   )
 
     return render_template("forgot_password.html",
-                           msg="If the username and email matches an account, you will be sent a password reset email. You have ten minutes to complete the password reset process.")
+                           msg="If the username and email matches an account, you will be sent a password reset email. You have ten minutes to complete the password reset process.",
+                           i=random_image())
 
 
 @app.route("/reset", methods=["GET"])
