@@ -249,7 +249,7 @@ def get_reset():
 
 
     user_id = request.args.get("id")
-    timestamp=request.args.get("time")
+    timestamp=int(request.args.get("time"))
     token=request.args.get("token")
 
     now=int(time.time())
@@ -279,7 +279,7 @@ def get_reset():
 def post_reset():
 
     user_id=request.form.get("user_id")
-    time=request.form.get("time")
+    timestamp=int(request.form.get("time"))
     token=request.form.get("token")
 
     password=request.form.get("password")
@@ -287,7 +287,7 @@ def post_reset():
 
     now=int(time.time())
 
-    if now-time>600:
+    if now-timestamp>600:
         return render_template("message.html",
                                title="Password Reset Expired",
                                text="That password reset form has expired.")
