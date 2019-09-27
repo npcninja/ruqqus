@@ -292,7 +292,7 @@ def post_reset():
                                title="Password Reset Expired",
                                text="That password reset form has expired.")
 
-    if not validate_hash(f"{user.id}+{now}+reset", token):
+    if not validate_hash(f"{user_id}+{now}+reset", token):
         abort(400)
 
     user=db.query(User).filter_by(id=user_id).first()
