@@ -1,4 +1,5 @@
 import hmac
+from werkzeug.security import *
 from os import environ
 
 def generate_hash(string):
