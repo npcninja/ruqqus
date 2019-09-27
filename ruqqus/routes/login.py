@@ -214,7 +214,9 @@ def sign_up_post(v):
 @app.route("/forgot", methods=["GET"])
 def get_forgot():
 
-    return render_template("forgot_password.html")
+    return render_template("forgot_password.html",
+                           i=random_image()
+                           )
 
 @app.route("/forgot", methods=["POST"])
 def post_forgot():
@@ -236,7 +238,8 @@ def post_forgot():
                                        action_url=url)
                   )
 
-    return render_template("forgot_password.html", msg="If the username and email matches an account, you will be sent a password reset email. You have ten minutes to complete the password reset process.")
+    return render_template("forgot_password.html",
+                           msg="If the username and email matches an account, you will be sent a password reset email. You have ten minutes to complete the password reset process.")
 
 
 @app.route("/reset", methods=["GET"])
@@ -262,7 +265,12 @@ def get_reset():
 
     reset_token=generate_hash(f"{user.id}+{now}+reset")
 
-    return render_template("reset_password.html", v=user, token=reset_token, time=time)
+    return render_template("reset_password.html",
+                           v=user,
+                           token=reset_token,
+                           time=time,
+                           i=random_image()
+                           )
 
 
 @app.route("/reset", methods=["POST"])
@@ -278,7 +286,9 @@ def post_reset():
     now=int(time.time())
 
     if now-time>600:
-        return render_template("message.html", title="Password Reset Expired", text="That password reset form has expired.")
+        return render_template("message.html",
+                               title="Password Reset Expired",
+                               text="That password reset form has expired.")
 
     if not validate_hash(f"{user.id}+{now}+reset", token):
         abort(400)
@@ -294,4 +304,6 @@ def post_reset():
     db.add(user)
     db.commit()
 
-    return render_template("message.html", title="Password Reset Successful", text="Login normally to access your account.")
+    return render_template("message.html",
+                           title="Password Reset Successful",
+                           text="Login normally to access your account.")
