@@ -300,7 +300,12 @@ def post_reset():
         abort(404)
 
     if not password==confirm_password:
-        return render_template("reset_password.html", v=user, token=reset_token, time=time, error="Passwords didn't match.")
+        return render_template("reset_password.html",
+                               v=user,
+                               token=token,
+                               time=timestamp,
+                               i=random_image(),
+                               error="Passwords didn't match.")
 
     user.passhash = hash_password(password)
     db.add(user)
