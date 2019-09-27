@@ -224,7 +224,7 @@ def post_forgot():
     username = request.form.get("username")
     email = request.form.get("email")
 
-    user = db.query(User).filter(username=username, email=email).first()
+    user = db.query(User).filter_by(username=username, email=email).first()
 
     if user:
         #generate url
@@ -258,7 +258,7 @@ def get_reset():
     if not validate_hash(f"{user_id}+{time}+forgot", token):
         abort(400)
                            
-    user=db.query(Users).filter(id=user_id).first()
+    user=db.query(Users).filter_by(id=user_id).first()
 
     if not user:
         abort(404)
@@ -293,7 +293,7 @@ def post_reset():
     if not validate_hash(f"{user.id}+{now}+reset", token):
         abort(400)
 
-    user=db.query(Users).filter(id=user_id).first()
+    user=db.query(Users).filter_by(id=user_id).first()
     if not user:
         abort(404)
 
