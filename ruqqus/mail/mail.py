@@ -39,8 +39,6 @@ def send_verification_email(user, email=None):
 
     link=url+params
 
-    text=f"Thank you for signing up. Click to verify your email address: {link}"
-
     send_mail(to_address=email,
               html=render_template("email/email_verify.html",
                                    action_url=link,
