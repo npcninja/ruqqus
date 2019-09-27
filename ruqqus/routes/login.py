@@ -231,7 +231,7 @@ def post_forgot():
         url=f"https://{app.config['SERVER_NAME']}/reset?id={user.id}&time={now}&token={token}"
 
         send_mail(to_address=user.email,
-                  subject="Ruqqus - Password Reset Request,
+                  subject="Ruqqus - Password Reset Request",
                   html=render_template("email/password_reset.html",
                                        action_url=url)
                   )
