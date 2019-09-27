@@ -69,7 +69,10 @@
                     </div>
 
 			{% if error %}
-			<div class="text-center mt-5 mb-3"><span class="red">{{ error }}</span></div>
+				<div class="text-center mt-5 mb-3"><span class="red">{{ error }}</span></div>
+			{% endif %}
+			{% if msg %}
+				<div class="text-center mt-5 mb-3"><span class="green">{{ msg }}</span></div>
 			{% endif %}
 
                         {% block content %}

@@ -235,7 +235,8 @@ def post_forgot():
         send_mail(to_address=user.email,
                   subject="Ruqqus - Password Reset Request",
                   html=render_template("email/password_reset.html",
-                                       action_url=url)
+                                       action_url=url,
+                                       v=user)
                   )
 
     return render_template("forgot_password.html",
