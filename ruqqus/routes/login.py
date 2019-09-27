@@ -249,12 +249,12 @@ def get_reset():
 
 
     user_id = request.args.get("id")
-    time=request.args.get("time")
+    timestamp=request.args.get("time")
     token=request.args.get("token")
 
     now=int(time.time())
 
-    if now-time > 600:
+    if now-timestamp > 600:
         return render_template("message.html", title="Password Reset Link Expired", text="That password reset link has expired.")
 
     if not validate_hash(f"{user_id}+{time}+forgot", token):
@@ -270,7 +270,7 @@ def get_reset():
     return render_template("reset_password.html",
                            v=user,
                            token=reset_token,
-                           time=time,
+                           time=timestamp,
                            i=random_image()
                            )
 
