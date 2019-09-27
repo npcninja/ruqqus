@@ -68,6 +68,10 @@
                             <span class="h3 text-primary">ruqqus</span>
                     </div>
 
+			{% if error %}
+			<div class="text-center mt-5 mb-3"><span class="red">{{ error }}</span></div>
+			{% endif %}
+
                         {% block content %}
 			{% endblock %}
 
