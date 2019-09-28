@@ -1,7 +1,7 @@
 // Colors
 
-$primary: #653DA8;
-$dark: #1E2438;
+$primary: #6350CC;
+$dark: #1B1F3B;
 $secondary: #353A47;
 $danger: #FF8C42;
 $white: #ffffff;
@@ -27,7 +27,7 @@ $gray-400: #C2C2C2;
 $gray-500: #adb5bd;
 $gray-600: #ACACAC;
 
-$upvote: #653DA8;
+$upvote: #6350CC;
 $downvote: #48A9A6;
 $admin: #FF8C42;
 $banned: #FF9999;
@@ -767,6 +767,15 @@ color: $dark;
     color: $white;
     background-color: $primary;
     border: none;
+}
+
+.list-group-item-action {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
+    background-color: transparent!important;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .user-count {
