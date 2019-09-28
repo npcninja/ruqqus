@@ -72,6 +72,8 @@ function formkey() {
 {% block progressbarJS %}
 {% endblock %}
 
+{% include "bootstrap.html" %}
+
 </head>
 
 <body id="{% block pagetype %}frontpage{% endblock %}">
@@ -230,13 +232,15 @@ function formkey() {
   </footer>
  </div>
 
-{% include "bootstrap.html" %}
-
 <script src="/assets/js/collapse.js"></script>
 
 {% if v %}
 <script src="/assets/js/comment_form.js"></script>
 {% endif %}
+
+<!-- Initialize BS 4 tool tips -->
+
+<script src="/assets/js/tooltips.js"></script>
 
 </body>
 
