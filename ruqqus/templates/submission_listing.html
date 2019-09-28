@@ -19,7 +19,7 @@
                   <div class="dropdown show my-auto post-actions ml-4 d-none d-md-block">
                         <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
+                          <i class="fas fa-ellipsis-v" data-toggle="tooltip" data-placement="bottom" title="More"></i>
                         </a>
 
                         <div class="dropdown-menu border-0 shadow dropdown-menu-right dropdown-menu-lg-left mt-2"
@@ -40,10 +40,10 @@
                       </div>
 		</div>
                 <div class="card-block text-left my-md-auto">
-                  <div class="post-meta text-left d-block d-md-none mb-2">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
+                  <div class="post-meta text-left d-block d-md-none mb-2">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="Stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
                   </div>
                   <h5 class="card-title post-title text-left mb-2"><a href="{{ p.permalink }}" class="stretched-link" onclick="">{{ p.title }}</a></h5>
-                  <div class="post-meta text-left d-none d-md-block">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
+                  <div class="post-meta text-left d-none d-md-block">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="Stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> {{ p.comment_count }} comments <span>&#183;</span> ({{ p.domain }})
                   </div>
 
                 </div>
