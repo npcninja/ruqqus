@@ -72,8 +72,6 @@ function formkey() {
 {% block progressbarJS %}
 {% endblock %}
 
-{% include "bootstrap.html" %}
-
 </head>
 
 <body id="{% block pagetype %}frontpage{% endblock %}">
@@ -231,6 +229,8 @@ function formkey() {
     </div>
   </footer>
  </div>
+
+{% include "bootstrap.html" %}
 
 <script src="/assets/js/collapse.js"></script>
 
