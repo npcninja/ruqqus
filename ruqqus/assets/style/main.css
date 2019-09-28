@@ -14214,6 +14214,10 @@ ul.comment-section {
   color: #adb5bd;
 }
 
+.submission .body {
+  padding: 1rem;
+}
+
 .submission .footer {
   background-color: #EBE9EF;
   padding: 1rem;
