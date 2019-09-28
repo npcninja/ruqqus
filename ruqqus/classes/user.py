@@ -12,6 +12,7 @@ from ruqqus.helpers.security import *
 from ruqqus.helpers.lazy import lazy
 from .votes import Vote
 from .ips import IP
+from .hashes import Hashes
 from ruqqus.__main__ import Base, db, cache
 
 class User(Base):
@@ -35,6 +36,7 @@ class User(Base):
     votes=relationship("Vote", lazy="dynamic", backref="users")
     commentvotes=relationship("CommentVote", lazy="dynamic", backref="users")
     ips = relationship('IP', lazy="dynamic", backref="users")
+    hashes = relationship("Hashes", lazy="dynamic", backref="user")
     bio=deferred(Column(String, default=""))
     bio_html=deferred(Column(String, default=""))
     badges=relationship("Badge", lazy="dynamic", backref="user")
@@ -125,6 +127,20 @@ class User(Base):
 
     def verifyPass(self, password):
         return check_password_hash(self.passhash, password)
+
+    def update_hash(self, new_hash):
+
+        old_hashes = db.query(Hashes).filter_by(user_id=self.id,
+                                                hash=new_hash).first()
+
+        if old_hashes or new_hash == self.passhash:
+            return "You cannot use an old password. Please try again, using a unique password. "
+
+        db.add(Hashes(uid=self.id, hash=self.passhash))
+        self.passhash = new_hash
+        db.add(self)
+        db.commit()
+        return True
         
     def rendered_userpage(self, v=None):
 
