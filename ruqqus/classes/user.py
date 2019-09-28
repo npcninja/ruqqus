@@ -134,7 +134,7 @@ class User(Base):
                                                 hash=new_hash).first()
 
         if old_hashes or new_hash == self.passhash:
-            return "You cannot use an old password. Please try again, using a unique password. "
+            return False
 
         db.add(Hashes(uid=self.id, hash=self.passhash))
         self.passhash = new_hash

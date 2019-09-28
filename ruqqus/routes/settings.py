@@ -57,7 +57,8 @@ def settings_security_post(v):
             return render_template("settings_security.html", v=v, error="Incorrect password")
 
         if not v.update_hash(v.hash_password(request.form.get("new_password"))):
-            return render_template("settings_security.html", v=v, msg="You cannot use an old password. Please try again using a unique password.")
+            return render_template("settings_security.html", v=v, msg="You cannot use an old password. "
+                                                                      "Please try again using a unique password.")
 
         return render_template("settings_security.html", v=v, msg="Your password has been changed.")
 

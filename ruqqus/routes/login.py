@@ -307,9 +307,15 @@ def post_reset():
                                i=random_image(),
                                error="Passwords didn't match.")
 
-    user.passhash = hash_password(password)
-    db.add(user)
-    db.commit()
+    if not user.update_hash(hash_password(password)):
+        return render_template("reset_password.html",
+                               v=user,
+                               token=token,
+                               time=timestamp,
+                               i=random_image(),
+                               error="You cannot use an old password. "
+                                     "Please try again using a unique password.")
+
 
     return render_template("message.html",
                            title="Password Reset Successful",
