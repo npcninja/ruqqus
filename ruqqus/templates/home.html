@@ -1,7 +1,8 @@
 {% extends "default.html" %}
 
+{% if v %}
+{% if not v.is_banned %}
 {% block PseudoSubmitForm %}
-
       <!-- Link to submission page from homepage, only visible on home -->
 
         <div class="row no-gutters d-none d-md-flex">
@@ -26,6 +27,8 @@
 
         </div>
 {% endblock %}
+{% endif %}
+{% endif %}
 
 {% block sortbar %}
          <div class="post-filter">
