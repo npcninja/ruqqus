@@ -335,8 +335,14 @@ ol > li::before {
     color: $black;
 }
 
-.navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far {
+.navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
     color: $primary;
+    text-align: center;
+    font-size: $font-size-lg;
+}
+
+.navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far {
+    color: $white;
     text-align: center;
     font-size: $font-size-lg;
 }
