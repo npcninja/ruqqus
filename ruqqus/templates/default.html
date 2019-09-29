@@ -25,26 +25,9 @@
   <!-- Ruqqus CSS -->
   <link rel="stylesheet" href="/assets/style/main.css">
 
-  <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("fixed-bar-mobile").style.top = "49px";
-      } 
-      else if (currentScrollPos <= 175) {
-        document.getElementById("fixed-bar-mobile").style.top = "49px";
-      }
-      else {
-        document.getElementById("fixed-bar-mobile").style.top = "-98px";
-        document.getElementById("dropdownMenuSortBy").classList.remove('show');
-        document.getElementById("dropdownMenuFrom").classList.remove('show');
-      }
-      prevScrollpos = currentScrollPos;
-    }
+  {% block fixedMobileBarJS %}
+  {% endblock %}
 
-
-  </script>
 {% if v %}
 
 <script>
