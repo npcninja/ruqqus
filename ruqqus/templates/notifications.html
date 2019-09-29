@@ -80,9 +80,13 @@
 
                         <div class="col-12">
 
+                            <div class="p-3">
+
                             {% for c in notifications %}
                                 {{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
                             {% endfor %}
+
+                            </div>
 
                             </div>
                         </div>
