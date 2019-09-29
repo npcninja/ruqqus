@@ -13,27 +13,10 @@
 
 <h1>Inbox</h1>
 
-<div class="container">
-        <div class="row justify-content-around">
-
-            <div class="col bg-white rounded py-3">
-
-                <div id="comment-listing" class="row text-left mb-5">
-
-                    <div class="col-12">
-
-                        <div class="comment-section">
-
 				{% for c in notifications %}
 					{{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
 				{% endfor %}
                             
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-	</div>
-</div>
 
 {% endblock %}
