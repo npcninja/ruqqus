@@ -1,8 +1,8 @@
 {% extends "default.html" %}
 
+{% block PseudoSubmitForm %}
 {% if v %}
 {% if not v.is_banned %}
-{% block PseudoSubmitForm %}
       <!-- Link to submission page from homepage, only visible on home -->
 
         <div class="row no-gutters d-none d-md-flex">
@@ -26,10 +26,8 @@
           </div>
 
         </div>
-{% endblock %}
-{% else %}
-{% block PseudoSubmitForm %}
-      <!-- Link to submission page from homepage, only visible on home -->
+        {% else %}
+        <!-- Link to sign up page from homepage, only visible on home to users not logged in-->
 
         <div class="row no-gutters d-none d-md-flex">
 
@@ -42,7 +40,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <a href="/signup">
+                <a href="/submit">
                   <input type="text" class="form-control"
                     placeholder="Share something with the Ruqqus commmunity..." aria-label="Username"
                     aria-describedby="basic-addon1">
@@ -52,9 +50,9 @@
           </div>
 
         </div>
+        {% endif %}
+{% endif %}
 {% endblock %}
-{% endif %}
-{% endif %}
 
 {% block sortbar %}
          <div class="post-filter">
