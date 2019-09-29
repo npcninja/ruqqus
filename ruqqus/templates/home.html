@@ -1,131 +1,113 @@
 {% extends "default.html" %}
 
 {% block PseudoSubmitForm %}
-{% if v %}
-{% if not v.is_banned %}
-      <!-- Link to submission page from homepage, only visible on home -->
+<!-- Link to submission page from homepage, only visible on home -->
 
-        <div class="row no-gutters d-none d-md-flex">
+<div class="row no-gutters d-none d-md-flex">
 
-          <div class="col">
-            <div class="card pseudo-submit-form">
-              <div class="card-header bg-white d-none">
-                <ul class="list-inline no-bullets mb-0">
-                  <li class="list-inline-item active mr-4"><i class="fas fa-align-left text-gray-400"></i></li>
-                  <li class="list-inline-item"><i class="fas fa-link text-gray-400"></i></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <a href="/submit">
-                  <input type="text" class="form-control"
-                    placeholder="Share something with the Ruqqus commmunity..." aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
+  <div class="col">
+    <div class="card pseudo-submit-form">
+      <div class="card-header bg-white d-none">
+        <ul class="list-inline no-bullets mb-0">
+          <li class="list-inline-item active mr-4"><i class="fas fa-align-left text-gray-400"></i></li>
+          <li class="list-inline-item"><i class="fas fa-link text-gray-400"></i></li>
+        </ul>
+      </div>
+      <div class="card-body">
+        {% if v %}
+        {% if not v.is_banned %}
+        <a href="/submit">
+          <input type="text" class="form-control"
+          placeholder="Share something with the Ruqqus commmunity..." aria-label="Username"
+          aria-describedby="basic-addon1">
+        </a>
         {% else %}
-        <!-- Link to sign up page from homepage, only visible on home to users not logged in-->
-
-        <div class="row no-gutters d-none d-md-flex">
-
-          <div class="col">
-            <div class="card pseudo-submit-form">
-              <div class="card-header bg-white d-none">
-                <ul class="list-inline no-bullets mb-0">
-                  <li class="list-inline-item active mr-4"><i class="fas fa-align-left text-gray-400"></i></li>
-                  <li class="list-inline-item"><i class="fas fa-link text-gray-400"></i></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <a href="/submit">
-                  <input type="text" class="form-control"
-                    placeholder="Share something with the Ruqqus commmunity..." aria-label="Username"
-                    aria-describedby="basic-addon1">
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <a href="/signup">
+          <input type="text" class="form-control"
+          placeholder="Share something with the Ruqqus commmunity..." aria-label="Username"
+          aria-describedby="basic-addon1">
+        </a>
         {% endif %}
-{% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
 {% endblock %}
 
 {% block sortbar %}
-         <div class="post-filter">
-            <span>Sort By:</span>
-            <span class="dropdown">
-              <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">{{ sort_method.capitalize() }}</a>
+<div class="post-filter">
+  <span>Sort By:</span>
+  <span class="dropdown">
+    <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">{{ sort_method.capitalize() }}</a>
 
-              <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy" aria-labelledby="dropdownSortBy">
-                <a class="dropdown-item" href="?sort=top">Top</a>
-                <a class="dropdown-item" href="?sort=new">New</a>
-                <a class="dropdown-item" href="?sort=fiery">Fiery</a>
-                <a class="dropdown-item" href="#">Based</a>
-              </span>
-            </span>
+    <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy" aria-labelledby="dropdownSortBy">
+      <a class="dropdown-item" href="?sort=top">Top</a>
+      <a class="dropdown-item" href="?sort=new">New</a>
+      <a class="dropdown-item" href="?sort=fiery">Fiery</a>
+      <a class="dropdown-item" href="#">Based</a>
+    </span>
+  </span>
 
-          </div>
+</div>
 {% endblock %}
 
 {% block content %}
 
-        <!-- Post filters bar visible only on medium devices or larger-->
+<!-- Post filters bar visible only on medium devices or larger-->
 
-        <div class="flex-row tab-bar sticky d-none d-md-flex">
+<div class="flex-row tab-bar sticky d-none d-md-flex">
 
-          <ul class="nav post-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link{% if sort_method=="hot" %} active{% endif %}" href="/"><i class="fas fa-fire"></i>Hot</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link{% if sort_method=="top" %} active{% endif %}" href="/?sort=top"><i class="fas fa-arrow-alt-circle-up"></i>Top</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link{% if sort_method=="new" %} active{% endif %}" href="/?sort=new"><i class="fas fa-asterisk"></i>New</a> 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link{% if sort_method=="fiery" %} active{% endif %}" href="/?sort=fiery"><i class="fas fa-bullhorn"></i>Disputed</a>
-            </li>
-            <li class="nav-item d-none">
-              <a class="nav-link {% if sort_method=="based" %} active{% endif %}" href="#"><i class="fas fa-bullhorn"></i>Based</a>
-            </li>
-          </ul>
+  <ul class="nav post-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link{% if sort_method=="hot" %} active{% endif %}" href="/"><i class="fas fa-fire"></i>Hot</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link{% if sort_method=="top" %} active{% endif %}" href="/?sort=top"><i class="fas fa-arrow-alt-circle-up"></i>Top</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link{% if sort_method=="new" %} active{% endif %}" href="/?sort=new"><i class="fas fa-asterisk"></i>New</a> 
+    </li>
+    <li class="nav-item">
+      <a class="nav-link{% if sort_method=="fiery" %} active{% endif %}" href="/?sort=fiery"><i class="fas fa-bullhorn"></i>Disputed</a>
+    </li>
+    <li class="nav-item d-none">
+      <a class="nav-link {% if sort_method=="based" %} active{% endif %}" href="#"><i class="fas fa-bullhorn"></i>Based</a>
+    </li>
+  </ul>
 
-                    <div class="post-filter pb-2 d-none">
-            <span>Sort By:</span>
-            <span class="dropdown">
-              <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Time
-              </a>
+  <div class="post-filter pb-2 d-none">
+    <span>Sort By:</span>
+    <span class="dropdown">
+      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Time
+    </a>
 
-              <span class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Day</a>
-                <a class="dropdown-item" href="#">Month</a>
-                <a class="dropdown-item" href="#">Year</a>
-                <a class="dropdown-item" href="#">All Time</a>
-              </span>
-            </span>
+    <span class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#">Day</a>
+      <a class="dropdown-item" href="#">Month</a>
+      <a class="dropdown-item" href="#">Year</a>
+      <a class="dropdown-item" href="#">All Time</a>
+    </span>
+  </span>
 
-          </div>
+</div>
 
-        </div>
+</div>
 
-        <div class="row no-gutters">
+<div class="row no-gutters">
 
-          <div class="col-12">
+  <div class="col-12">
 
-            <div class="posts">
+    <div class="posts">
 
-		{% include "submission_listing.html" %}
-              
-            </div>
-          </div>
-        </div>
+      {% include "submission_listing.html" %}
+
+    </div>
+  </div>
+</div>
 
 {% endblock %}
