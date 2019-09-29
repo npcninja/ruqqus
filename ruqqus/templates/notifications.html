@@ -22,26 +22,13 @@
     <!-- Ruqqus CSS -->
     <link rel="stylesheet" href="/assets/style/main.css">
 
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("filter-bar-mobile").style.top = "49px";
-            } else {
-                document.getElementById("filter-bar-mobile").style.top = "-98px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
-
 {% block adminscripts %}
 <script src="/assets/js/comment_modding.js"></script>
 {% endblock %}
 
 </head>
 
-<body id="#submit">
+<body id="#notifications">
 
   <!-- Navigation -->
 {% include "header.html" %}
