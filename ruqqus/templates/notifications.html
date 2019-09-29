@@ -1,22 +1,158 @@
-{% extends "default.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}
-<title>Notifications</title>
-<meta name="description" content="Sign into Ruqqus to view">
-{% endblock %}
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sign into Ruqqus to view">
+    <meta name="author" content="">
+
+    <title>Notifications</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e76eba0350.js" crossorigin="anonymous"></script>
+
+    <!-- Ruqqus CSS -->
+    <link rel="stylesheet" href="/assets/style/main.css">
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("filter-bar-mobile").style.top = "49px";
+            } else {
+                document.getElementById("filter-bar-mobile").style.top = "-98px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
 
 {% block adminscripts %}
 <script src="/assets/js/comment_modding.js"></script>
 {% endblock %}
 
-{% block content %}
+</head>
 
-<h1>Inbox</h1>
+<body id="#submit">
 
-				{% for c in notifications %}
-					{{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
-				{% endfor %}
-                            
+  <!-- Navigation -->
+{% include "header.html" %}
+
+    <!-- Page Content -->
+
+    <div class="container">
+
+        <div class="row justify-content-around">
+
+            <div class="col-12 col-md-7 h-100">
+
+            <div class="mt-3 mt-md-0">
+                <h1 class="h3">Inbox</h1>
+            </div>
+
+                <div class="bg-white border rounded">
+
+                    <!-- Inbox -->
+
+                    <div class="flex-row tab-bar sticky d-none">
+
+                        <ul class="nav post-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Text Post</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+
+                    </div>
 
 
-{% endblock %}
+                    <div class="row no-gutters">
+
+                        <div class="col-12">
+
+                            {% for c in notifications %}
+                                {{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
+                            {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar (hidden on devices smaller than "large") -->
+
+            <div class="col sidebar text-left d-none ml-3">
+                <div class="sidebar-section sidebar-rules">
+                    <div class="title">Ruqqus Rules</div>
+                    <div class="body">
+                        <ol class="pl-0">
+                            <li>No racism</li>
+                            <li>No doxxing, threats, or calls to violence</li>
+                            <li>No trolling</li>
+                            <li>No solicitation</li>
+                            <li>Patriots only</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="sidebar-section sidebar-stats">
+                    <div class="title">Stats</div>
+                    <div class="body">
+                        <div class="d-inline-block w-25">
+                            <span style="font-size: 13px;font-weight: bold;">{{ 1 | total_users }}</span>
+                            <small style="display: block;">users</small>
+                        </div>
+                        <div class="d-inline-block w-25">
+                            <span style="font-size: 13px;font-weight: bold;">{{ 1 | users_here }}</span>
+                            <small style="display: block;">online</small>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+
+        </div>
+
+            <footer class="footer py-5">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col">
+          <ul class="list-inline text-center text-small text-muted font-weight-bold mb-0">
+            <li class="list-inline-item"><a href="/about">About</a></li>
+            <li class="list-inline-item"><a href="#">Contact</a></li>
+            <li class="list-inline-item"><a href="/terms">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#">Donate</a></li>
+            <li class="list-inline-item"><a href="#">Press</a></li>
+            <li class="list-inline-item"><a href="#">Help</a></li>
+            <li class="list-inline-item"><a href="https://www.twitter.com/ruqqus">Twitter</a></li>
+            <li class="list-inline-item"><a href="https://ruqqus.org/contribute">Github</a></li>
+            <li class="list-inline-item">&copy; 2019 Ruqqus</li>
+          </ul>
+        </div>
+  </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
