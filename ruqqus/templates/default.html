@@ -31,7 +31,12 @@
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("fixed-bar-mobile").style.top = "49px";
-      } else {
+      } 
+      else if {
+        currentScrollPos <= 100px;
+        document.getElementById("fixed-bar-mobile").style.top = "49px";
+      }
+      else {
         document.getElementById("fixed-bar-mobile").style.top = "-98px";
         document.getElementById("dropdownMenuSortBy").classList.remove('show');
         document.getElementById("dropdownMenuFrom").classList.remove('show');
