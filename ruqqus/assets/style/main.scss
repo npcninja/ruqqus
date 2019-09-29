@@ -279,6 +279,28 @@ ol > li::before {
     vertical-align: middle;
 }
 
+// Tooltips
+
+.tooltip-inner {
+    background-color: $black;
+    }
+
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: $black !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: $black !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $black !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: $black !important;
+}
+
 // Navbar and tab Bar
 
 .navbar-expand-md .navbar-nav .nav-link {
@@ -1443,7 +1465,7 @@ ul.comment-section {
   }
 }
 
-// Submissions
+// Submit Page
 
 .text-format {
     display: flex;

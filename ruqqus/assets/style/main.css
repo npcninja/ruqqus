@@ -12611,6 +12611,26 @@ ol > li::before {
   vertical-align: middle;
 }
 
+.tooltip-inner {
+  background-color: #1E1E24;
+}
+
+.tooltip.bs-tooltip-right .arrow:before, .tooltip.bs-tooltip-auto[x-placement^=right] .arrow:before {
+  border-right-color: #1E1E24 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before, .tooltip.bs-tooltip-auto[x-placement^=left] .arrow:before {
+  border-left-color: #1E1E24 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before, .tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow:before {
+  border-bottom-color: #1E1E24 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before, .tooltip.bs-tooltip-auto[x-placement^=top] .arrow:before {
+  border-top-color: #1E1E24 !important;
+}
+
 .navbar-expand-md .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem;
