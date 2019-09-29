@@ -13420,21 +13420,21 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   margin-bottom: 0;
 }
 
-.comment-actions .fa, .comment-actions .fas {
+.comment-actions .fa, .comment-actions .fas, .comment-actions .far {
   font-size: 12px;
   margin-right: 0.5rem;
   color: #ACACAC;
 }
 
-.comment-actions .dropdown-item:active .fa, .comment-actions .dropdown-item:active .fas {
+.comment-actions .dropdown-item:active .fa, .comment-actions .dropdown-item:active .fas, .comment-actions .dropdown-item:active .far {
   color: #ffffff;
 }
 
-.comment-actions .dropdown-item:hover .fa, .comment-actions .dropdown-item:hover .fas {
+.comment-actions .dropdown-item:hover .fa, .comment-actions .dropdown-item:hover .fas, .comment-actions .dropdown-item:hover .far {
   color: #ffffff;
 }
 
-.comment-actions a:hover .fa, .comment-actions a:hover .fas {
+.comment-actions a:hover .fa, .comment-actions a:hover .fas, .comment-actions a:hover .far {
   color: #1E1E24;
 }
 
