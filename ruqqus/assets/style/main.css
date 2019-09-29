@@ -13381,7 +13381,11 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 .comment {
   display: flex;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+}
+
+#notifications .comment:first-of-type {
+  margin-top: 0;
 }
 
 .comment .comment-profile {
