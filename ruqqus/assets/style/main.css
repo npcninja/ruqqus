@@ -14477,7 +14477,7 @@ textarea {
     font-size: 16px !important;
   }
 
-  input[type=text] {
+  textarea, input[type=text] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
