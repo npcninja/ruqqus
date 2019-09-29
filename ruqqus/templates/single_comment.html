@@ -34,12 +34,7 @@
 
 
             <div id="comment-{{ c.base36id }}-actions" class="comment-actions{% if voted==1 %} upvoted{% elif voted==-1 %} downvoted{% endif %}">
-                <ul class="list-inline text-left">
-
-                    <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up" {% if voted==1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','1')"{% endif %}>
-                    </li>
-                    <li id="comment-{{ c.base36id }}-down" class="list-inline-item arrow-down" {% if voted==-1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','-1')"{% endif %}>
-                    </li>
+                <ul class="list-inline text-right">
 
                     {% if v %}
                     {% if not v.is_banned %}
@@ -89,6 +84,10 @@
                     </div>
                 </div>
             </li>
+             <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up" {% if voted==1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','1')"{% endif %}>
+                    </li>
+                    <li id="comment-{{ c.base36id }}-down" class="list-inline-item arrow-down" {% if voted==-1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','-1')"{% endif %}>
+                    </li>
         </ul>
 
     </div>
