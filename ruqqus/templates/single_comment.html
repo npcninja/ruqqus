@@ -43,13 +43,13 @@
 
                     {% if v %}
                     {% if not v.is_banned %}
-                    <li class="list-inline-item text-muted text-small"><a href="javascript:void(0)" onclick="addReplyForm('{{ c.base36id }}', '{{ c.post.base36id }}')"><i class="fas fa-reply"
+                    <li class="list-inline-item text-muted"><a href="javascript:void(0)" onclick="addReplyForm('{{ c.base36id }}', '{{ c.post.base36id }}')"><i class="fas fa-reply"
                         aria-hidden="true"></i><span class=""><span
                         class="comments-number"></span>Reply</span></a>
                     </li>
                     {% endif %}
                     {% endif %}
-                    <li class="list-inline-item text-muted d-none d-md-inline-block"><a href="{{ c.permalink }}"><span class="share"><i class="fas fa-link"></i>Permalink</span></a>
+                    <li class="list-inline-item text-muted"><a href="{{ c.permalink }}"><span class="share"><i class="fas fa-link"></i>Permalink</span></a>
                     </li>
                     <li class="list-inline-item text-muted d-none d-md-inline-block"><a href="{{ c.parent.permalink }}"><span class="save"><i class="fas fa-box-open"></i>Parent</span></a>
                     </li>
@@ -61,8 +61,7 @@
                       </a>
 
                       <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-                        <a class="dropdown-item d-block d-md-none" href="#"><i class="fas fa-save"></i>Permalink</a>
-                        <a class="dropdown-item d-block d-md-none" href="{{ c.parent.permalink }}"><i class="fas fa-save"></i>Parent</a>
+                        <a class="dropdown-item d-block d-md-none" href="{{ c.parent.permalink }}"><i class="fas fa-box-open"></i>Parent</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
                         {% if v %}
@@ -72,9 +71,9 @@
                         <div class="dropdown-divider"></div>
                         <h6 class="dropdown-header">Mod actions</h6>
 
-                        <a class="dropdown-item" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="undistinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')">Undistinguish</a>
+                        <a class="dropdown-item" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="undistinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="far fa-id-badge"></i>Undistinguish</a>
                         {% else %}
-                        <a class="dropdown-item" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="distinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')">Distinguish</a>
+                        <a class="dropdown-item" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="distinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Distinguish</a>
 
                         {% endif %}
                         {% endif %}
