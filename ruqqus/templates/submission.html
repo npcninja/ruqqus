@@ -103,9 +103,9 @@
                       </div>
                             </div>
                             <div class="card-block my-md-auto">
-                                <div class="post-meta text-left d-block d-md-none mb-2">{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})</div>
+                                <div class="post-meta text-left d-block d-md-none mb-2">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="Stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})</div>
                                 <h5 class="card-title post-title text-left mb-2"><a target="_blank" href="{{ p.url }}">{{ p.title }}</a></h5>
-                                <div class="post-meta text-left d-none d-md-block">{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})</div>
+                                <div class="post-meta text-left d-none d-md-block">{% if p.stickied %}<i class="fas fa-thumbtack text-success fa-rotate--45" data-toggle="tooltip" data-placement="bottom" title="Stickied post"></i> <span>&#183;</span> {% endif %}{{ p.age_string }} by <a href="{{ p.author.permalink }}">{{ p.author.username }}</a> <span>&#183;</span> ({{ p.domain }})</div>
 
                             </div>
 
