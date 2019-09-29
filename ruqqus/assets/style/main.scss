@@ -432,7 +432,7 @@ ol > li::before {
 // Navbar icons and search box
 
 .form-inline.search .form-control:hover, .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
-    border-color: $primary;
+    border-color: $white;
 }
 
 .form-inline.search .form-control:active, .form-inline.search .form-control:focus {
@@ -440,28 +440,28 @@ ol > li::before {
 }
 
 .form-inline.search .form-control {
-    background-color: $light;
-    border-color: $input-border-color;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.35);
     font-size: $small-font-size;
 }
 
 .form-inline.search .input-group-append .input-group-text .fa.fa-search {
-    color: $black;
+    color: $white;
     opacity: .25;
 }
 
 .form-inline.search .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: $black;
+  color: $white;
   opacity: .25; /* Firefox */
 }
 
 .form-inline.search .form-control::-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: $black;
+  color: $white;
   opacity: .25;
 }
 
 .form-inline.search .form-control::-ms-input-placeholder { /* Microsoft Edge */
-  color: $black;
+  color: $white;
   opacity: .25;
 }
 
