@@ -34,24 +34,6 @@
 </div>
 {% endblock %}
 
-{% block sortbar %}
-<div class="post-filter">
-  <span>Sort By:</span>
-  <span class="dropdown">
-    <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">{{ sort_method.capitalize() }}</a>
-
-    <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy" aria-labelledby="dropdownSortBy">
-      <a class="dropdown-item" href="?sort=top">Top</a>
-      <a class="dropdown-item" href="?sort=new">New</a>
-      <a class="dropdown-item" href="?sort=fiery">Fiery</a>
-      <a class="dropdown-item" href="#">Based</a>
-    </span>
-  </span>
-
-</div>
-{% endblock %}
-
 {% block content %}
 
 <!-- Post filters bar visible only on medium devices or larger-->
@@ -108,39 +90,49 @@
   </div>
 </div>
 
-    <div class="row fixed-top bg-white border-0 shadow d-inline-flex d-md-none p-3" id="fixed-bar-mobile"
-      style="z-index: 3; top: 49px; transition: top 0.3s;">
+<div class="row fixed-top bg-white border-0 shadow d-inline-flex d-md-none p-3" id="fixed-bar-mobile"
+style="z-index: 3; top: 49px; transition: top 0.3s;">
 
-      <div class="col">
+<div class="col">
 
-        <div class="d-flex flex-row flex-nowrap justify-content-between">
-  
-{% if sort_method %}
-{% block sortbar %}
-{% endblock %}
+  <div class="d-flex flex-row flex-nowrap justify-content-between">
 
-{% endif %}
+    <div class="post-filter">
+      <span>Sort By:</span>
+      <span class="dropdown">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">{{ sort_method.capitalize() }}</a>
 
-          <div class="post-filter">
-            <span>From:</span>
-            <span class="dropdown">
-              <a class="dropdown-toggle" href="#" role="button" id="dropdownFrom" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Time</a>
-
-              <span class="dropdown-menu border-0 shadow" id="dropdownMenuFrom" aria-labelledby="dropdownFrom">
-                <a class="dropdown-item" href="#">Past Day</a>
-                <a class="dropdown-item" href="#">Past Month</a>
-                <a class="dropdown-item" href="#">Past Year</a>
-                <a class="dropdown-item" href="#">All Time</a>
-              </span>
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
+        <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy" aria-labelledby="dropdownSortBy">
+          <a class="dropdown-item" href="?sort=top">Top</a>
+          <a class="dropdown-item" href="?sort=new">New</a>
+          <a class="dropdown-item" href="?sort=fiery">Fiery</a>
+          <a class="dropdown-item" href="#">Based</a>
+        </span>
+      </span>
 
     </div>
+
+    <div class="post-filter">
+      <span>From:</span>
+      <span class="dropdown">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownFrom" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Time</a>
+
+        <span class="dropdown-menu border-0 shadow" id="dropdownMenuFrom" aria-labelledby="dropdownFrom">
+          <a class="dropdown-item" href="#">Past Day</a>
+          <a class="dropdown-item" href="#">Past Month</a>
+          <a class="dropdown-item" href="#">Past Year</a>
+          <a class="dropdown-item" href="#">All Time</a>
+        </span>
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
 
 {% endblock %}
