@@ -204,31 +204,16 @@
                     <div class="col-12">
 
                                                         <div class="post-actions">
-                    <ul class="list-inline text-right">
-      <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
-                            <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
-                                <i class="fas fa-chevron-up mx-0" aria-hidden="true"></i>
-                            </span>
+                    <ul class="list-inline text-right d-flex">
 
+                    <li class="list-inline-item mr-auto"><a href="{{ p.permalink }}"><i class="fas fa-comment-dots"></i>{{ p.comment_count }}</a></li>
 
-                                
-        <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
-          <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
-          <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
-
-
-                            <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
-                                <i class="fas fa-chevron-down mx-0" aria-hidden="true"></i>
-                            </span>
-                        </li>
-
-
-                      <li class="list-inline-item"><a href="{{ p.permalink }}"><i class="fas fa-share-alt"></i>Share</a></li>
+                      <li class="list-inline-item"><a href="{{ p.permalink }}"><i class="fas fa-share-alt"></i></a></li>
                       <li class="list-inline-item">
                         <div class="dropdown show">
                           <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>More
+                            <i class="fas fa-ellipsis-h"></i>
                           </a>
 
                           <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
