@@ -12661,7 +12661,7 @@ ol > li::before {
   color: #1E1E24;
 }
 
-.navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
+.navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far {
   color: #6350CC;
   text-align: center;
   font-size: 1.25rem;
