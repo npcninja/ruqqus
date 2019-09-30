@@ -1676,11 +1676,15 @@ body {
     background-color: none;
 }
 
-#frontpage .card .post-img-lg {
+#frontpage .posts .card .post-img {
+    z-index: 1;
+}
+
+#frontpage .posts .card .post-img-lg {
     display: none;
 }
 
-#frontpage .card .post-img:hover, #frontpage .card .post-img:focus .post-img-lg {
+#frontpage .posts .card .post-img:hover, #frontpage .card .post-img:focus .post-img-lg {
     display: block;
 }
 
