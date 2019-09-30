@@ -44,12 +44,11 @@
                     {% if v %}
                     {% if not v.is_banned %}
                     <li class="list-inline-item text-muted"><a href="javascript:void(0)" onclick="addReplyForm('{{ c.base36id }}', '{{ c.post.base36id }}')"><i class="fas fa-reply"
-                        aria-hidden="true"></i><span
-                        class="comments-number"></span><span class="d-none d-md-block">Reply</span></a>
+                        aria-hidden="true"></i><span class="d-none d-md-inline-block">Reply</span></a>
                     </li>
                     {% endif %}
                     {% endif %}
-                    <li class="list-inline-item text-muted"><a href="{{ c.permalink }}"><i class="fas fa-link"></i><span class="d-none d-md-block">Permalink</span></a>
+                    <li class="list-inline-item text-muted"><a href="{{ c.permalink }}"><i class="fas fa-link"></i><span class="d-none d-md-inline-block">Permalink</span></a>
                     </li>
                     <li class="list-inline-item text-muted d-none d-md-inline-block"><a href="{{ c.parent.permalink }}"><span class="save"><i class="fas fa-box-open"></i>Parent</span></a>
                     </li>
