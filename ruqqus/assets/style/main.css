@@ -13355,6 +13355,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   object-fit: cover;
 }
 
+.post-img-lg {
+  display: none;
+}
+
 @media (max-width: 767.98px) {
   .post-img {
     width: 80px;
@@ -14411,10 +14415,6 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
 
   #frontpage .posts .card .post-img {
     z-index: 3;
-  }
-
-  #frontpage .posts .card .post-img-lg {
-    display: none;
   }
 
   #frontpage .posts .card.enlarged .post-img-lg {
