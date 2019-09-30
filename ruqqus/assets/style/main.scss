@@ -1677,14 +1677,14 @@ body {
 }
 
 #frontpage .posts .card .post-img {
-    z-index: 1;
+    z-index: 3;
 }
 
 #frontpage .posts .card .post-img-lg {
     display: none;
 }
 
-#frontpage .posts .card .post-img:hover, #frontpage .card .post-img:focus .post-img-lg {
+#frontpage .posts .card.enlarged .post-img-lg {
     display: block;
 }
 
