@@ -1676,6 +1676,14 @@ body {
     background-color: none;
 }
 
+#frontpage .card .post-img-lg {
+    display: none;
+}
+
+#frontpage .card .post-img:hover, #frontpage .card .post-img:focus .post-img-lg {
+    display: block;
+}
+
 .post-title a:hover, .post-title a:active, .post-title a:focus {
     color: $primary;
 }
