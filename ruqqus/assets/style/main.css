@@ -13384,10 +13384,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   color: #7D7D7D;
 }
 
-.comment:first-child {
-  margin-top: 0;
-}
-
 .comment {
   display: flex;
   position: relative;
