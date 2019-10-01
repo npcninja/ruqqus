@@ -8,16 +8,16 @@
   
   <meta name="author" content="">
 
-{% block title %}
+  {% block title %}
   <title>Ruqqus</title>
   <meta name="description" content="The independent social platform">
-{% endblock %}
+  {% endblock %}
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/e76eba0350.js" crossorigin="anonymous"></script>
@@ -28,36 +28,36 @@
   {% block fixedMobileBarJS %}
   {% endblock %}
 
-{% if v %}
+  {% if v %}
 
-<script>
-function post(url, callback, errortext) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", url, true);
-  var form = new FormData()
-  form.append("formkey", "{{ v.formkey }}");
-  xhr.withCredentials=true;
-  xhr.onload=callback
-  xhr.onerror=function(){alert(errortext)}
-  xhr.send(form);
-}
-function formkey() {
-  return '{{ v.formkey }}';
-}
-</script>
+  <script>
+    function post(url, callback, errortext) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      var form = new FormData()
+      form.append("formkey", "{{ v.formkey }}");
+      xhr.withCredentials=true;
+      xhr.onload=callback
+      xhr.onerror=function(){alert(errortext)}
+      xhr.send(form);
+    }
+    function formkey() {
+      return '{{ v.formkey }}';
+    }
+  </script>
 
-<script src="/assets/js/voting.js"></script>
-<script src="/assets/js/comment_replies.js"></script>
+  <script src="/assets/js/voting.js"></script>
+  <script src="/assets/js/comment_replies.js"></script>
 
-{% if v.admin_level %}
-<script src="/assets/js/comment_modding.js"></script>
-<script src="/assets/js/post_modding.js"></script>
-{% endif %}
+  {% if v.admin_level %}
+  <script src="/assets/js/comment_modding.js"></script>
+  <script src="/assets/js/post_modding.js"></script>
+  {% endif %}
 
-{% endif %}
+  {% endif %}
 
-{% block progressbarJS %}
-{% endblock %}
+  {% block progressbarJS %}
+  {% endblock %}
 
 </head>
 
@@ -71,18 +71,18 @@ function formkey() {
 
       <div class="col bg-white border-sm rounded-md h-100 custom-gutters">
 
-      {% block PseudoSubmitForm %}
-      {% endblock %}
+        {% block PseudoSubmitForm %}
+        {% endblock %}
 
-      {% block content %}
-      {% endblock %}
+        {% block content %}
+        {% endblock %}
 
       </div>
 
       <!-- Right Sidebar (hidden on devices smaller than "large") -->
 
       <div class="col sidebar text-left d-none d-lg-block ml-3">
-{% block sidebarblock %}
+        {% block sidebarblock %}
         <div class="sidebar-section sidebar-about">
           <div class="title">About Ruqqus</div>
           <div class="body">
@@ -91,7 +91,7 @@ function formkey() {
           </div>
         </div>
 
-{% endblock %}
+        {% endblock %}
 
         <div class="sidebar-section sidebar-stats">
           <div class="title">Stats</div>
@@ -106,55 +106,75 @@ function formkey() {
             </div>
           </div>
         </div>
-	{% if v %}
-	{% if v.admin_level %}
-	<div class="sidebar-section sidebar-adminpanel">
-	  <div class="title">Admin Panel
-	  </div>
-  	  <div class="body">
-	    {% block adminpanel %}
-	      <p>[No admin actions available]</p>
-	    {% endblock %}
-	  </div>
-	</div>
-	{% endif %}
-	{% endif %}
-        <div class="sidebar-section sidebar-trending d-none">
-          <div class="title">What's Hot</div>
-          <div class="body">
-            <p>Here are the most popular tags from the last 24 hours.</p>
-            <div class="hashtag">
-              <a href="#">#Mueller</a>
-              <div class="text-muted text-small font-weight-normal">2.3K posting about this</div>
-            </div>
-            <div class="hashtag">
-              <a href="#">#MemeWar2</a>
-              <div class="text-muted text-small font-weight-normal">1.2K posting about this</div>
-            </div>
-            <div class="hashtag">
-              <a href="#">#AskTrumpSupporters</a>
-              <div class="text-muted text-small font-weight-normal">900 posting about this</div>
-            </div>
-            <div class="hashtag">
-              <a href="#">#DNCDebates</a>
-              <div class="text-muted text-small font-weight-normal">600 posting about this</div>
-            </div>
+        {% if v %}
+        {% if v.admin_level %}
+        <div class="sidebar-section sidebar-adminpanel">
+         <div class="title">Admin Panel
+         </div>
+         <div class="body">
+           {% block adminpanel %}
+           <p>[No admin actions available]</p>
+           {% endblock %}
+         </div>
+       </div>
+       {% endif %}
+       {% endif %}
+       <div class="sidebar-section sidebar-trending d-none">
+        <div class="title">What's Hot</div>
+        <div class="body">
+          <p>Here are the most popular tags from the last 24 hours.</p>
+          <div class="hashtag">
+            <a href="#">#Mueller</a>
+            <div class="text-muted text-small font-weight-normal">2.3K posting about this</div>
           </div>
-        </div>
-        <div class="sidebar-section sidebar-rules">
-          <div class="title">Ruqqus Rules</div>
-          <div class="body">
-            <ol class="pl-0">
-              <li>No racism</li>
-              <li>No doxxing, threats, or calls to violence</li>
-              <li>No trolling</li>
-              <li>No solicitation</li>
-              <li>Patriots only</li>
-            </ol>
+          <div class="hashtag">
+            <a href="#">#MemeWar2</a>
+            <div class="text-muted text-small font-weight-normal">1.2K posting about this</div>
+          </div>
+          <div class="hashtag">
+            <a href="#">#AskTrumpSupporters</a>
+            <div class="text-muted text-small font-weight-normal">900 posting about this</div>
+          </div>
+          <div class="hashtag">
+            <a href="#">#DNCDebates</a>
+            <div class="text-muted text-small font-weight-normal">600 posting about this</div>
           </div>
         </div>
       </div>
+      <div class="sidebar-section sidebar-rules">
+        <div class="title">Ruqqus Rules</div>
+        <div class="body">
+          <ol class="pl-0">
+            <li>No racism</li>
+            <li>No doxxing, threats, or calls to violence</li>
+            <li>No trolling</li>
+            <li>No solicitation</li>
+            <li>Patriots only</li>
+          </ol>
+        </div>
+      </div>
+    </div>
     
+  </div>
+</div>
+
+<footer class="footer py-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col">
+        <ul class="list-inline text-center text-small text-muted font-weight-bold mb-0">
+          <li class="list-inline-item"><a href="/about">About</a></li>
+          <li class="list-inline-item"><a href="#">Contact</a></li>
+          <li class="list-inline-item"><a href="/terms">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#">Donate</a></li>
+          <li class="list-inline-item"><a href="#">Press</a></li>
+          <li class="list-inline-item"><a href="#">Help</a></li>
+          <li class="list-inline-item"><a href="https://www.twitter.com/ruqqus">Twitter</a></li>
+          <li class="list-inline-item"><a href="https://ruqqus.org/contribute">Github</a></li>
+          <li class="list-inline-item">&copy; 2019 Ruqqus</li>
+        </ul>
+      </div>
     </div>
 
     <footer class="footer py-5">
