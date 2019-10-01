@@ -13276,6 +13276,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   z-index: 3;
 }
 
+.post-actions:hover, .post-actions:focus, .post-actions:active {
+  z-index: 4;
+}
+
 .post-actions .fa, .post-actions .fas, .post-actions .far {
   font-size: 12px;
   color: #ACACAC;
@@ -13382,6 +13386,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   font-weight: 600;
   font-size: 13px;
   color: #7D7D7D;
+}
+
+.comment:first-child {
+  margin-top: 0;
 }
 
 .comment {
