@@ -211,9 +211,14 @@
           <div class="col-12">
 
           {% if u.post_count!=1 %}
-          <img src="/assets/illustrations/searching.png" class="mb-3" style="width: 150px" alt="empty state">
+          <div class="text-center my-auto">
+          <img src="/assets/illustrations/searching.png" class="mb-3" style="width: 225px; opacity: .15; filter: brightness(0);" alt="empty state">
 
-          <span class="h3">Sorry, nothing found! This user hasn't posted anything yet.</span>
+          <div class="h5">Sorry, but there's nothing here.</div>
+
+          <div class="text-small text-muted">This user hasn't posted yet</div>
+
+          </div>
           {% endif %}
 
             <div class="posts">
