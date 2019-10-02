@@ -620,22 +620,26 @@ label.terms {
 }
 
 .arrow-up::before {
+    cursor: pointer;
     color: $gray-400;
     font-family: "Font Awesome 5 Free";
     content: "\f077";
 }
 
 .arrow-down::before {
+    cursor: pointer;
     color: $gray-400;
     font-family: "Font Awesome 5 Free";
     content: "\f078";
 }
 
 .upvoted .arrow-up::before {
+    cursor: pointer;
     color: $upvote;
 }
 
 .downvoted .arrow-down::before {
+    cursor: pointer;
     color: $downvote;
 }
 
