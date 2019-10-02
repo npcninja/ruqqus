@@ -210,13 +210,14 @@
 
           <div class="col-12">
 
-          {% if u.post_count!=1 %}
-          <div class="text-center my-auto">
-          <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 225px; opacity: .15; filter: brightness(0);" alt="empty state">
+          {% if u.post_count=0 %}
+          <div class="text-center py-7 py-md-8">
 
-          <div class="h5">Sorry, but there's nothing here.</div>
+            <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 225px; opacity: .15; filter: brightness(0);" alt="empty state">
 
-          <div class="text-small text-muted">@{{ u.username }} hasn't posted anything yet</div>
+            <div class="font-weight-bold text-muted">Sorry, but there's nothing here.</div>
+
+            <div class="text-small text-muted">@{{ u.username }} hasn't posted anything yet</div>
 
           </div>
           {% endif %}
