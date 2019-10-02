@@ -211,15 +211,31 @@
           <div class="col-12">
 
           {% if u.post_count>=1 %}
+          {% elif v and v.id != u.id and u.post_count>=1 %}
+          <div class="text-center py-7 py-md-8">
+
+            <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
+
+            <div class="font-weight-bold text-muted">Your posts and comments will show up here.</div>
+
+            <div class="text-small text-muted mb-3">Make your first post @{{ u.username }}!</div>
+
+            <a href="/submit" class="btn btn-primary">Create post</a>
+
+          </div>
           {% else %}
           <div class="text-center py-7 py-md-8">
 
             <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
 
-            <div class="font-weight-bold text-muted">Sorry, but there's nothing here.</div>
+            <div class="font-weight-bold text-muted">Sorry, there's nothing here.</div>
 
+            {% if v and v.id != u.id %}
+            <div class="text-small text-muted mb-3">Make your first post @{{ u.username }}!</div>
+            <a href="/submit" class="btn btn-primary">Create post</a>
+            {% else %}
             <div class="text-small text-muted">@{{ u.username }} hasn't posted anything yet</div>
-
+            {% endif %}
           </div>
           {% endif %}
 
