@@ -216,13 +216,13 @@
 
             <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
 
-            <div class="font-weight-bold text-muted">Sorry, there's nothing here.</div>
-
-            {% if v and v.id != u.id %}
-            <div class="text-small text-muted mb-3">Make your first post @{{ u.username }}!</div>
-            <a href="/submit" class="btn btn-primary">Create post</a>
+            {% if v and v.id = u.id %}
+            <div class="font-weight-bold text-muted">You haven't made a ruckus.</div>
+            <div class="text-small text-muted mb-3">Your posts and comments will show up here.</div>
+            <a href="/submit" class="btn btn-primary">Create post now</a>
             {% else %}
-            <div class="text-small text-muted">@{{ u.username }} hasn't posted anything yet</div>
+            <div class="font-weight-bold text-muted">Umm, there's nothing here.</div>
+            <div class="text-small text-muted">@{{ u.username }} hasn't made a ruckus yet.</div>
             {% endif %}
           </div>
           {% endif %}
