@@ -1410,6 +1410,14 @@ ul.comment-section {
     color: $white;
 }
 
+// 404 Page
+
+#error {
+    padding-top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 // Footer
 
 #page .footer h1, #page .footer h2, #page .footer h3, #page .footer h4, #page .footer h5, #page .footer h6 {
