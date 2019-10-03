@@ -1097,6 +1097,16 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     color: $black;
 }
 
+.comment-actions .btn-link {
+    font-weight: $font-weight-normal;
+    font-size: $small-font-size;
+    margin-bottom: 0;
+}
+
+.comment-actions .btn-link:hover .fa, .comment-actions .btn-link:hover .fas, .comment-actions .btn-link:hover .far {
+    color: $black;
+}
+
 .comment-actions .fas.fa-ellipsis-h {
     font-size: $font-size-lg;
     vertical-align: bottom;
@@ -1124,6 +1134,15 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .comment-actions a:hover {
+    color: $black;
+}
+
+.comment-actions .btn-link {
+    color: $gray;
+    text-decoration: none;
+}
+
+.comment-actions .btn-link:hover {
     color: $black;
 }
 

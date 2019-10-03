@@ -13450,6 +13450,16 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   color: #1E1E24;
 }
 
+.comment-actions .btn-link {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.comment-actions .btn-link:hover .fa, .comment-actions .btn-link:hover .fas, .comment-actions .btn-link:hover .far {
+  color: #1E1E24;
+}
+
 .comment-actions .fas.fa-ellipsis-h {
   font-size: 1.25rem;
   vertical-align: bottom;
@@ -13477,6 +13487,15 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .comment-actions a:hover {
+  color: #1E1E24;
+}
+
+.comment-actions .btn-link {
+  color: #5F5F5F;
+  text-decoration: none;
+}
+
+.comment-actions .btn-link:hover {
   color: #1E1E24;
 }
 
