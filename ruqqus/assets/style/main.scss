@@ -307,6 +307,10 @@ ol > li::before {
     bottom: 0;
 }
 
+.alert .fas.text-lg, .alert .far.text-lg, .alert .fas.text-lg, .alert .fa.text-lg{
+    margin-right: 1.25rem;
+}
+
 // Navbar and tab Bar
 
 .navbar-expand-md .navbar-nav .nav-link {
