@@ -157,6 +157,14 @@
   </div>
 </div>
 
+<!-- Clipboard Toasts -->
+
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body bg-success text-white">
+    <i class="fas fa-check-circle mr-2"></i>Link copied!
+  </div>
+</div>
+
 <footer class="footer py-5">
   <div class="container-fluid">
     <div class="row justify-content-center">
@@ -217,6 +225,7 @@
     <script>
     var clipboard = new ClipboardJS('.copy-link');
     clipboard.on('success', function(e) {
+        $('.toast').toast('show');
         console.log(e);
     });
     clipboard.on('error', function(e) {
