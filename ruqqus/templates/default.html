@@ -225,18 +225,16 @@
     <script type="text/javascript">
     var clipboard = new ClipboardJS('.copy-link');
     clipboard.on('success', function(e) {
+
+      jQuery(function($) {
+        $('.toast').toast('show');
+      })
         console.log(e);
     });
     clipboard.on('error', function(e) {
         console.log(e);
     });
     </script>
-
-    <script>
-$(document).ready(function(){
-  $('.toast').toast('show');
-});
-</script>
 
 <!-- Initialize BS 4 tool tips -->
 
