@@ -66,6 +66,14 @@
   {% include "header.html" %}
   <!-- Page Content -->
 
+  <!-- Clipboard Toast -->
+
+  <div class="toast clipboard" style="position: absolute; top: 0; right: 0;" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="true" data-delay="8000">
+  <div class="toast-body bg-success text-white">
+    <i class="fas fa-check-circle mr-2"></i>Copied to clipboard
+  </div>
+  </div>
+
   <div class="container">
     <div class="row justify-content-around">
 
@@ -158,17 +166,6 @@
 </div>
 
 <!-- Clipboard Toasts -->
-
-<!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-
-<div class="toast clipboard" style="position: absolute; top: 0; right: 0;" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="true" data-delay="8000">
-  <div class="toast-body bg-success text-white">
-    <i class="fas fa-check-circle mr-2"></i>Copied to clipboard
-  </div>
-</div>
-
-</div>
 
 <footer class="footer py-5">
   <div class="container-fluid">
