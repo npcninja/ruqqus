@@ -12631,6 +12631,10 @@ ol > li::before {
   border-top-color: #1E1E24 !important;
 }
 
+.alert-dismissible .close {
+  bottom: 0;
+}
+
 .navbar-expand-md .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem;

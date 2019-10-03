@@ -301,6 +301,12 @@ ol > li::before {
     border-top-color: $black !important;
 }
 
+// Alerts
+
+.alert-dismissible .close {
+    bottom: 0;
+}
+
 // Navbar and tab Bar
 
 .navbar-expand-md .navbar-nav .nav-link {
