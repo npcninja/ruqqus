@@ -31,7 +31,31 @@
 <body id="error">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top d-none d-md-flex">
+        <div class="container-fluid">
+          <div class="flex-grow-1"><a href="/" class="navbar-brand text-primary">ruqqus</a></div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/terms">Terms</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/ruqqus">Contact</a>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+
+<!-- Mobile Navigation -->
+
+    <nav class="navbar navbar-dark bg-primary fixed-top d-flex d-md-none">
         <div class="container-fluid">
           <div class="flex-grow-1"><a href="/" class="navbar-brand text-primary">ruqqus</a></div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
