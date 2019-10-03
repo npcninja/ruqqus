@@ -209,6 +209,21 @@
 {% block enlargeThumbJS %}
 {% endblock %}
 
+<!-- ClipboardJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+<!-- Instantiate clipboard by passing a string selector -->
+    <script>
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+
 <!-- Initialize BS 4 tool tips -->
 
 <script src="/assets/js/tooltips.js"></script>
