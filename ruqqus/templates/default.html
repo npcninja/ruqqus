@@ -66,14 +66,6 @@
   {% include "header.html" %}
   <!-- Page Content -->
 
-  <!-- Clipboard Toast -->
-
-  <div class="toast clipboard" style="position: absolute; top: 0; right: 0;" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="true" data-delay="8000">
-  <div class="toast-body bg-success text-white">
-    <i class="fas fa-check-circle mr-2"></i>Copied to clipboard
-  </div>
-  </div>
-
   <div class="container">
     <div class="row justify-content-around">
 
@@ -165,7 +157,17 @@
   </div>
 </div>
 
-<!-- Clipboard Toasts -->
+<!-- Clipboard Toast -->
+
+<div style="position: fixed; bottom: 0; width: 100%;">
+
+  <div class="toast clipboard" style="position: absolute; top: 0; right: 0; z-index: 1000" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-autohide="true" data-delay="8000">
+    <div class="toast-body bg-success text-white">
+      <i class="fas fa-check-circle mr-2"></i>Copied to clipboard
+    </div>
+  </div>
+
+</div>
 
 <footer class="footer py-5">
   <div class="container-fluid">
@@ -224,19 +226,19 @@
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 
 <!-- Instantiate clipboard by passing a string selector -->
-    <script type="text/javascript">
-    var clipboard = new ClipboardJS('.copy-link');
-    clipboard.on('success', function(e) {
+<script type="text/javascript">
+  var clipboard = new ClipboardJS('.copy-link');
+  clipboard.on('success', function(e) {
 
-      jQuery(function($) {
-        $('.toast').toast('show');
-      })
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-    </script>
+    jQuery(function($) {
+      $('.toast').toast('show');
+    })
+    console.log(e);
+  });
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
+</script>
 
 <!-- Initialize BS 4 tool tips -->
 
