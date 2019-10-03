@@ -307,7 +307,7 @@ ol > li::before {
     bottom: 0;
 }
 
-.alert .fas.text-lg, .alert .far.text-lg, .alert .fas.text-lg, .alert .fa.text-lg{
+.alert .fas.text-lg, .alert .far.text-lg, .alert .fas.text-lg, .alert .fas .text-lg{
     margin-right: 1.25rem;
 }
 
@@ -1097,16 +1097,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     color: $black;
 }
 
-.comment-actions .btn-link {
-    font-weight: $font-weight-normal;
-    font-size: $small-font-size;
-    margin-bottom: 0;
-}
-
-.comment-actions .btn-link:hover .fa, .comment-actions .btn-link:hover .fas, .comment-actions .btn-link:hover .far {
-    color: $black;
-}
-
 .comment-actions .fas.fa-ellipsis-h {
     font-size: $font-size-lg;
     vertical-align: bottom;
@@ -1133,16 +1123,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     text-decoration: none;
 }
 
-.comment-actions a:hover {
-    color: $black;
-}
-
-.comment-actions .btn-link {
-    color: $gray;
-    text-decoration: none;
-}
-
-.comment-actions .btn-link:hover {
+.comment-actions a:hover, .comment-actions .copy-link:hover  {
     color: $black;
 }
 
