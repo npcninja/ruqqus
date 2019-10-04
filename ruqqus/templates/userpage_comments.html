@@ -92,7 +92,24 @@
 
           <div class="col-12">
 
-            <div class="posts px-3 pt-3">
+          {% if u.post_count>=1 %}
+          {% else %}
+          <div class="text-center py-7 py-md-8">
+
+            <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
+
+            {% if v and v.id == u.id %}
+            <div class="font-weight-bold text-muted">You haven't made a ruckus.</div>
+            <div class="text-small text-muted mb-3">Your posts and comments will show up here.</div>
+            <a href="/submit" class="btn btn-primary">Create post now</a>
+            {% else %}
+            <div class="font-weight-bold text-muted">Umm, there's nothing here.</div>
+            <div class="text-small text-muted">@{{ u.username }} hasn't made a ruckus yet.</div>
+            {% endif %}
+          </div>
+          {% endif %}
+
+            <div class="posts">
 	{% for c in listing %}
 		{{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
 	{% endfor%}
