@@ -87,7 +87,7 @@
 
                     <div class="dropdown-menu border-0 shadow dropdown-menu-right dropdown-menu-lg-left mt-2"
                     aria-labelledby="dropdownMoreLink">
-                    <a class="dropdown-item" href="#"><i class="fas fa-link"></i>Copy link</a>
+                    <a href="javascript:void(0);" role="button" class="dropdown-item copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-link"></i>Copy link</a>
                     <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
                     <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
                     {% if v %}
@@ -200,7 +200,7 @@
 
                 <li class="list-inline-item mr-auto"><a href="{{ p.permalink }}"><i class="fas fa-comment-dots"></i>{{ p.comment_count }}</a></li>
 
-                <li class="list-inline-item"><a href="{{ p.permalink }}"><i class="fas fa-share-alt"></i></a></li>
+                <li class="list-inline-item"><a href="javascript:void(0);" role="button" class="copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-share-alt"></i>Share</a></li>
                 <li class="list-inline-item">
                     <div class="dropdown show">
                       <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
