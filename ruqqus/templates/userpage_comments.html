@@ -109,7 +109,7 @@
           </div>
           {% endif %}
 
-            <div class="posts">
+            <div class="posts px-3">
 	{% for c in listing %}
 		{{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
 	{% endfor%}
