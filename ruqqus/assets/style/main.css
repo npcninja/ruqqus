@@ -12639,6 +12639,10 @@ ol > li::before {
   margin-right: 1.25rem;
 }
 
+.toast {
+  border: 0;
+}
+
 .toast.clipboard {
   font-size: 1rem;
 }
@@ -13315,6 +13319,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions a:hover .fa, .post-actions a:hover .fas {
+  color: #1E1E24;
+}
+
+.post-actions .copy-link:hover {
   color: #1E1E24;
 }
 

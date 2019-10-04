@@ -313,6 +313,10 @@ ol > li::before {
 
 // Toasts
 
+.toast {
+    border: 0;
+}
+
 .toast.clipboard {
     font-size: 1rem;
 }
@@ -957,6 +961,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions a:hover .fa, .post-actions a:hover .fas {
+    color: $black;
+}
+
+.post-actions .copy-link:hover  {
     color: $black;
 }
 
