@@ -52,7 +52,7 @@
                     {% endif %}
                     <li class="list-inline-item text-muted"><a href="javascript:void(0);" role="button" class="copy-link" data-clipboard-text="https://www.ruqqus.com{{ c.permalink }}"><i class="fas fa-link d-none d-md-inline-block"></i><i class="fas fa-share-alt d-inline-block d-md-none"></i><span class="d-inline-block d-md-none">Share</span><span class="d-none d-md-inline-block">Copy link</span></a>
                     </li>
-                    <li class="list-inline-item text-muted d-none"><a href="{{ c.parent.permalink }}"><span class="save"><i class="fas fa-box-open"></i>Parent</span></a>
+                    <li class="list-inline-item text-muted d-none"><a href="{{ c.parent.permalink }}"><span class="save"><i class="fas fa-dna"></i>Parent</span></a>
                     </li>
                     <li class="list-inline-item">
                         <div class="dropdown show">
@@ -62,7 +62,7 @@
                       </a>
 
                       <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-                        <a class="dropdown-item" href="{{ c.parent.permalink }}"><i class="fas fa-box-open"></i>Parent</a>
+                        <a class="dropdown-item" href="{{ c.parent.permalink }}"><i class="fas fa-dna"></i>Parent</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
                         {% if v %}
