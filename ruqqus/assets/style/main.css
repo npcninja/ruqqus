@@ -13024,11 +13024,15 @@ label.terms {
 .upvoted .arrow-up::before {
   cursor: pointer;
   color: #6350CC;
+  font-family: "Font Awesome 5 Free";
+  content: "";
 }
 
 .downvoted .arrow-down::before {
   cursor: pointer;
   color: #48A9A6;
+  font-family: "Font Awesome 5 Free";
+  content: "";
 }
 
 .upvoted .arrow-mobile-up {

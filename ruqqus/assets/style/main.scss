@@ -656,11 +656,15 @@ label.terms {
 .upvoted .arrow-up::before {
     cursor: pointer;
     color: $upvote;
+    font-family: "Font Awesome 5 Free";
+    content: "\f077";
 }
 
 .downvoted .arrow-down::before {
     cursor: pointer;
     color: $downvote;
+    font-family: "Font Awesome 5 Free";
+    content: "\f077";
 }
 
 .upvoted .arrow-mobile-up {
