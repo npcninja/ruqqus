@@ -29,6 +29,16 @@ def settings_profile(v):
 def settings_security(v):
     return render_template("settings_security.html", v=v)
 
+@app.route("/terms", methods=["GET"])
+@auth_desired
+def terms(v):
+    return redirect("terms.html")
+
+@app.route("/terms/conduct", methods=["GET"])
+@auth_desired
+def terms_conduct(v):
+    return render_template("terms_conduct.html", v=v)
+
 @app.route("/favicon.ico", methods=["GET"])
 def favicon():
     return send_file("./assets/images/logo/ruqqus_logo_square_white_fill.png")
