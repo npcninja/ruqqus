@@ -781,6 +781,41 @@ color: $dark;
     width: 1rem;
 }
 
+// Left Sidebar (Terms pages)
+
+.scrollspy.sidebar-sticky {
+    position: sticky;
+    overflow-y: auto;
+    top: 3rem;
+    height: 100%;
+}
+
+.scrollspy.sidebar-sticky .list-group .list-group-item {
+    position: relative;
+    display: block;
+    background-color: $white;
+    font-size: $font-size-base;
+    padding: .5rem .75rem;
+    margin-bottom: -1px;
+    border: none;
+    border-left: 1px solid $border-color;
+    border-radius: 0;
+}
+
+.scrollspy.sidebar-sticky .list-group .list-group-item:focus, .scrollspy.sidebar-sticky .list-group .list-group-item:hover {
+    background: transparent;
+    font-weight: 500;
+}
+
+.scrollspy.sidebar-sticky .list-group .list-group-item.active {
+    background-color: transparent;
+    color: $primary;
+    font-weight: 500;
+    left: -1px;
+    border-left: solid 2px $primary;
+    z-index: 2;
+}
+
 // Sidebar content
 
 .sidebar {
