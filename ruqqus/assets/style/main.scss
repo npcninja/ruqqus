@@ -796,7 +796,7 @@ color: $dark;
 .scrollspy.sidebar-sticky .list-group .list-group-item {
     position: relative;
     display: block;
-    background-color: $white;
+    background-color: transparent;
     font-size: $font-size-base;
     font-weight: 600;
     color: $text-muted;
@@ -806,9 +806,8 @@ color: $dark;
 }
 
 .scrollspy.sidebar-sticky .list-group .list-group-item:focus, .scrollspy.sidebar-sticky .list-group .list-group-item:hover {
-    background: transparent;
     color: $primary;
-    border-left: 1px solid $primary;
+    border-left: 2px solid $primary;
 }
 
 .scrollspy.sidebar-sticky .list-group .list-group-item.active {
