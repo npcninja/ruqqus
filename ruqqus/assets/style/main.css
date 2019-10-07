@@ -13326,6 +13326,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   color: #1E1E24;
 }
 
+.post-actions:hover {
+  z-index: 4;
+}
+
 .post-actions .copy-link:hover {
   color: #1E1E24;
 }

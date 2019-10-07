@@ -1006,6 +1006,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     color: $black;
 }
 
+.post-actions:hover {
+    z-index: 4;
+}
+
 .post-actions .copy-link:hover  {
     color: $black;
 }
