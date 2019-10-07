@@ -17,7 +17,7 @@
     <div class="card-header bg-transparent border-0 d-flex flex-row flex-nowrap p-0 my-md-auto pl-3 ml-auto">
       {% if p.url.endswith((".jpg",".png")) %}<img href="{{ p.url }}" src="{{ p.url }}" class="post-img" alt="">{% endif %}
       <div class="dropdown show my-auto post-actions ml-4 d-none d-md-block">
-        <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
+        <a href="#" onclick="bringToFront()" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <i class="fas fa-ellipsis-v"></i>
       </a>
