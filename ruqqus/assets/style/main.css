@@ -13326,7 +13326,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   color: #1E1E24;
 }
 
-.post-actions:hover {
+.post-actions:hover, .post-actions:focus {
   z-index: 4;
 }
 
