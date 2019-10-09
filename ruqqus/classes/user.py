@@ -268,6 +268,7 @@ class User(Base):
         return self.submissions.filter_by(is_banned=False).count()
 
     @property
+    @cache.memoize(timeout=60) 
     def comment_count(self):
 
         return self.comments.filter_by(is_banned=False).count()
