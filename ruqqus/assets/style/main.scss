@@ -551,7 +551,7 @@ label.terms {
 }
 
 .dropdown-menu {
-    padding: 0;
+    padding: 0.5rem;
 }
 
 .user-profile > .dropdown-toggle::after {
@@ -560,30 +560,22 @@ label.terms {
 
 .dropdown-item {
     padding: 0.5rem 1rem;
-}
-
-.dropdown-menu .dropdown-item:first-of-type {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.dropdown-menu .dropdown-item:last-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: $border-radius;
 }
 
 .dropdown .dropdown-menu .dropdown-meta {
     padding: 0.5rem 1rem;
 }
 
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item.active {
     color: $black;
     text-decoration: none;
     background-color: $gray-200;
 }
 
-.dropdown-item:hover .fas, .dropdown-item:focus .fas, .dropdown-item:hover .far, .dropdown-item:focus .far {
-    color: $white;
+.dropdown-item:hover .fas, .dropdown-item:focus .fas, .dropdown-item.active .fas, .dropdown-item:hover .far, .dropdown-item:focus .far, .dropdown-item.active .far
+.dropdown-item:hover .fa, .dropdown-item:focus .fa, .dropdown-item.active .fa {
+    color: $black;
 }
 
 // Font Awesome
@@ -1075,7 +1067,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions .dropdown-item:hover {
-    color: $white;
+    color: $black;
 }
 
 .post-img {

@@ -12923,7 +12923,7 @@ label.terms {
 }
 
 .dropdown-menu {
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .user-profile > .dropdown-toggle::after {
@@ -12932,30 +12932,22 @@ label.terms {
 
 .dropdown-item {
   padding: 0.5rem 1rem;
-}
-
-.dropdown-menu .dropdown-item:first-of-type {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.dropdown-menu .dropdown-item:last-of-type {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 0.25rem;
 }
 
 .dropdown .dropdown-menu .dropdown-meta {
   padding: 0.5rem 1rem;
 }
 
-.dropdown-item:hover, .dropdown-item:focus {
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item.active {
   color: #1E1E24;
   text-decoration: none;
   background-color: #EBE9EF;
 }
 
-.dropdown-item:hover .fas, .dropdown-item:focus .fas, .dropdown-item:hover .far, .dropdown-item:focus .far {
-  color: #ffffff;
+.dropdown-item:hover .fas, .dropdown-item:focus .fas, .dropdown-item.active .fas, .dropdown-item:hover .far, .dropdown-item:focus .far, .dropdown-item.active .far .dropdown-item:hover .fa,
+.dropdown-item:focus .fa, .dropdown-item.active .fa {
+  color: #1E1E24;
 }
 
 .fa-rotate-45 {
@@ -13392,7 +13384,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions .dropdown-item:hover {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 .post-img {
