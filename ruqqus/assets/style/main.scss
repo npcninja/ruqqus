@@ -776,6 +776,10 @@ color: $dark;
     background-color: $light;
 }
 
+#frontpage .pseudo-submit-form.card .card-body .form-control:active, #frontpage .pseudo-submit-form.card .card-body .form-control:focus {
+    background-color: $white;
+}
+
 .post-filter {
     display: inline-block;
     font-size: $small-font-size;
@@ -928,7 +932,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 // Thread
 
-#frontpage .posts .card {
+#frontpage .posts .card, #userpage .posts .card {
     border-width: 0 0 1px 0;
     border-color: $border-color;
     border-style: solid;
@@ -936,7 +940,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     padding: 15px;
 }
 
-#frontpage .posts .card:hover {
+#frontpage .posts .card:hover, #userpage .posts .card:hover {
     background-color: $gray-100;
 }
 
@@ -1756,7 +1760,7 @@ body {
     background-color: $white;
 }
 
-#frontpage {
+#frontpage, #userpage {
     padding-top: 98px;
     background-color: $white;
 }

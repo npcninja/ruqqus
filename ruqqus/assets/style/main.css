@@ -13134,6 +13134,10 @@ a:hover .link-arrow {
   background-color: #FAFAFA;
 }
 
+#frontpage .pseudo-submit-form.card .card-body .form-control:active, #frontpage .pseudo-submit-form.card .card-body .form-control:focus {
+  background-color: #ffffff;
+}
+
 .post-filter {
   display: inline-block;
   font-size: 13px;
@@ -13247,7 +13251,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   border-radius: 50rem;
 }
 
-#frontpage .posts .card {
+#frontpage .posts .card, #userpage .posts .card {
   border-width: 0 0 1px 0;
   border-color: #E6E6E6;
   border-style: solid;
@@ -13255,7 +13259,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   padding: 15px;
 }
 
-#frontpage .posts .card:hover {
+#frontpage .posts .card:hover, #userpage .posts .card:hover {
   background-color: #F8F8F9;
 }
 
@@ -14444,7 +14448,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     background-color: #ffffff;
   }
 
-  #frontpage {
+  #frontpage, #userpage {
     padding-top: 98px;
     background-color: #ffffff;
   }
