@@ -13122,12 +13122,16 @@ a:hover .link-arrow {
   border-top-right-radius: 0.25rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #FAFAFA;
+  background-color: #ffffff;
 }
 
 #frontpage .pseudo-submit-form.card .card-body {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+#frontpage .pseudo-submit-form.card .card-body .form-control {
+  background-color: #FAFAFA;
 }
 
 .post-filter {

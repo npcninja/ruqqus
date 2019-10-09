@@ -764,12 +764,16 @@ color: $dark;
     border-top-right-radius: $border-radius;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: $light;
+    background-color: $white;
 }
 
 #frontpage .pseudo-submit-form.card .card-body {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#frontpage .pseudo-submit-form.card .card-body .form-control {
+    background-color: $light;
 }
 
 .post-filter {
