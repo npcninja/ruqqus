@@ -1470,7 +1470,7 @@ ul.comment-section {
 }
 
 .profile-actions .dropdown-item:hover {
-    color: $white;
+    color: $black;
 }
 
 .profile-actions .dropdown-item {
@@ -1487,12 +1487,12 @@ ul.comment-section {
     margin-right: .5rem;
 }
 
-.profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas {
-    color: $white;
+.profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas, .profile-actions .dropdown-item:active .far {
+    color: $black;
 }
 
-.profile-actions .dropdown-item:hover .fa, .profile-actions .dropdown-item:hover .fas {
-    color: $white;
+.profile-actions .dropdown-item:hover .fa, .profile-actions .dropdown-item:hover .fas, .profile-actions .dropdown-item:active .far {
+    color: $black;
 }
 
 // 404 Page

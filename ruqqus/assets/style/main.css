@@ -13769,7 +13769,7 @@ ul.comment-section {
 }
 
 .profile-actions .dropdown-item:hover {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 .profile-actions .dropdown-item {
@@ -13786,12 +13786,12 @@ ul.comment-section {
   margin-right: 0.5rem;
 }
 
-.profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas {
-  color: #ffffff;
+.profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas, .profile-actions .dropdown-item:active .far {
+  color: #1E1E24;
 }
 
-.profile-actions .dropdown-item:hover .fa, .profile-actions .dropdown-item:hover .fas {
-  color: #ffffff;
+.profile-actions .dropdown-item:hover .fa, .profile-actions .dropdown-item:hover .fas, .profile-actions .dropdown-item:active .far {
+  color: #1E1E24;
 }
 
 #error {
