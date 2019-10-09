@@ -268,6 +268,11 @@ class User(Base):
         return self.submissions.filter_by(is_banned=False).count()
 
     @property
+    def comment_count(self):
+
+        return self.comments.filter_by(is_banned=False).count()
+
+    @property
     #@cache.memoize(timeout=60)
     def badge_pairs(self):
 
