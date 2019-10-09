@@ -12922,6 +12922,10 @@ label.terms {
   padding: 0.1rem 0;
 }
 
+.dropdown-menu {
+  padding: 0;
+}
+
 .user-profile > .dropdown-toggle::after {
   display: none;
 }
@@ -12930,14 +12934,24 @@ label.terms {
   padding: 0.5rem 1rem;
 }
 
+.dropdown-menu .dropdown-item:first-of-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.dropdown-menu .dropdown-item:last-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .dropdown .dropdown-menu .dropdown-meta {
   padding: 0.5rem 1rem;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #ffffff;
+  color: #1E1E24;
   text-decoration: none;
-  background-color: #6350CC;
+  background-color: #EBE9EF;
 }
 
 .dropdown-item:hover .fas, .dropdown-item:focus .fas, .dropdown-item:hover .far, .dropdown-item:focus .far {
@@ -13315,11 +13329,11 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions .dropdown-item:active .fa, .post-actions .dropdown-item:active .fas {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 .post-actions .dropdown-item:hover .fa, .post-actions .dropdown-item:hover .fas {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 .post-actions a:hover .fa, .post-actions a:hover .fas {
