@@ -538,6 +538,10 @@ label {
     font-weight: $font-weight-bold;
     font-size: 12px;
     letter-spacing: 0.5px;
+    color: $black;
+}
+
+#login label {
     color: $text-muted;
 }
 

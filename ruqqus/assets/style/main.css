@@ -12910,6 +12910,10 @@ label {
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.5px;
+  color: #1E1E24;
+}
+
+#login label {
   color: #7D7D7D;
 }
 
