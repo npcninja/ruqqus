@@ -13176,6 +13176,7 @@ a:hover .link-arrow {
   font-size: 12px;
   font-weight: 600;
   color: #5F5F5F;
+  text-transform: uppercase;
   padding: 0 0 0.5rem 0;
   border-bottom: 1px solid #ECECEC;
   margin-bottom: 1rem;
