@@ -13175,8 +13175,9 @@ a:hover .link-arrow {
 .sidebar .sidebar-section .title {
   font-size: 12px;
   font-weight: 600;
-  color: #5F5F5F;
+  color: #7D7D7D;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   padding: 0 0 0.5rem 0;
   border-bottom: 1px solid #ECECEC;
   margin-bottom: 1rem;
