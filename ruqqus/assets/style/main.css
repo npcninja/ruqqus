@@ -13504,7 +13504,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .comment-actions .list-inline .list-inline-item .dropdown-item:active {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 .comment-actions a {
@@ -13517,7 +13517,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .comment-actions .dropdown-item:hover {
-  color: #ffffff;
+  color: #1E1E24;
 }
 
 ul.comment-section {
