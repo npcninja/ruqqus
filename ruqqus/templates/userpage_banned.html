@@ -55,19 +55,44 @@
 {% block content %}
 <!-- Post filters bar visible only on medium devices or larger-->
 
-        <div class="flex-row filter-bar sticky d-none d-md-flex">
+<div class="row fixed-top bg-white border-0 shadow d-inline-flex d-md-none p-3" id="fixed-bar-mobile" style="z-index: 100; top: 49px; transition: top 0.3s ease 0s;">
 
-          <ul class="nav post-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link active text-uppercase" href="/u/{{ u.username}}"><i class="fas fa-feather-alt"></i>Posts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="/u/{{ u.username}}/comments"><i class="fas fa-comment-dots" aria-hidden="true"></i>Comments</a>
-            </li>
+      <div class="col">
 
-          </ul>
+        <div class="d-flex flex-row flex-nowrap justify-content-between">
+
+          <div class="post-filter">
+            <span>Show:</span>
+            <span class="dropdown">
+              <a class="dropdown-toggle" href="#" role="button" id="dropdownSortBy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Posts</a>
+
+              <span class="dropdown-menu border-0 shadow" id="dropdownMenuSortBy" aria-labelledby="dropdownSortBy">
+                <a class="dropdown-item" href="/u/{{ u.username }}">Posts</a>
+                <a class="dropdown-item" href="/u/{{ u.username }}/comments">Comments</a>
+              </span>
+            </span>
+
+          </div>
+
+          <div class="post-filter">
+            <span>Sort By:</span>
+            <span class="dropdown">
+              <a class="dropdown-toggle" href="#" role="button" id="dropdownFrom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New</a>
+
+              <span class="dropdown-menu border-0 shadow" id="dropdownMenuFrom" aria-labelledby="dropdownFrom">
+                <a class="dropdown-item" href="#">Top</a>
+                <a class="dropdown-item" href="#">Fiery</a>
+                <a class="dropdown-item" href="#">Based</a>
+              </span>
+            </span>
+
+          </div>
 
         </div>
+
+      </div>
+
+    </div>
 
         <div class="row no-gutters">
 
