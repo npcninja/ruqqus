@@ -582,25 +582,25 @@ label.terms {
     color: $black;
 }
 
-.post-actions .dropdown-item:hover .removeDropdownItem, .post-actions .dropdown-item:focus .removeDropdownItem, .post-actions .dropdown-item.active .removeDropdownItem {
+.post-actions .removeDropdownItem.dropdown-item:hover, .post-actions .removeDropdownItem.dropdown-item:focus, .post-actions .removeDropdownItem.dropdown-item.active {
     color: $white;
     text-decoration: none;
     background-color: $warning;
 }
 
-.post-actions .dropdown-item:hover .removeDropdownItem .fas, .post-actions .dropdown-item:focus .removeDropdownItem .fas, .post-actions .dropdown-item.active .removeDropdownItem .fas, .post-actions .dropdown-item:hover .removeDropdownItem .far, .post-actions .dropdown-item:focus .removeDropdownItem .far, .post-actions .dropdown-item.active .removeDropdownItem .far
-.post-actions .dropdown-item:hover .removeDropdownItem .fa, .post-actions .dropdown-item:focus .removeDropdownItem .fa, .post-actions .dropdown-item.active .removeDropdownItem .fa {
+.post-actions .removeDropdownItem.dropdown-item:hover .fas, .post-actions .removeDropdownItem.dropdown-item:focus .fas, .post-actions .removeDropdownItem.dropdown-item.active .fas, .post-actions .removeDropdownItem.dropdown-item:hover .far, .post-actions .removeDropdownItem.dropdown-item:focus .far, .post-actions .removeDropdownItem.dropdown-item.active .far
+.post-actions .removeDropdownItem.dropdown-item:hover .fa, .post-actions .removeDropdownItem.dropdown-item:focus .fa, .post-actions .removeDropdownItem.dropdown-item.active .fa {
     color: $white;
 }
 
-.post-actions .dropdown-item:hover .approveDropdownItem, .post-actions .dropdown-item:focus .approveDropdownItem, .post-actions .dropdown-item.active .approveDropdownItem {
+.post-actions .approveDropdownItem.dropdown-item:hover, .post-actions .approveDropdownItem.dropdown-item:focus, .post-actions .approveDropdownItem.dropdown-item.active {
     color: $white;
     text-decoration: none;
     background-color: $success;
 }
 
-.post-actions .dropdown-item:hover .approveDropdownItem .fas, .post-actions .dropdown-item:focus .approveDropdownItem .fas, .post-actions .dropdown-item.active .approveDropdownItem .fas, .post-actions .dropdown-item:hover .approveDropdownItem .far, .post-actions .dropdown-item:focus .approveDropdownItem .far, .post-actions .dropdown-item.active .approveDropdownItem .far
-.post-actions .dropdown-item:hover .approveDropdownItem .fa, .post-actions .dropdown-item:focus .approveDropdownItem .fa, .post-actions .dropdown-item.active .approveDropdownItem .fa {
+.post-actions .approveDropdownItem.dropdown-item:hover .fas, .post-actions .approveDropdownItem.dropdown-item:focus .fas, .post-actions .approveDropdownItem.dropdown-item.active .fas, .post-actions .approveDropdownItem.dropdown-item:hover .far, .post-actions .approveDropdownItem.dropdown-item:focus .far, .post-actions .approveDropdownItem.dropdown-item.active .far
+.post-actions .approveDropdownItem.dropdown-item:hover .fa, .post-actions .approveDropdownItem.dropdown-item:focus .fa, .post-actions .approveDropdownItem.dropdown-item.active .fa {
     color: $white;
 }
 
