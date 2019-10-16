@@ -5,27 +5,6 @@
 <meta name="description" content="[banned]">
 {% endblock %}
 
-{% block fixedMobileBarJS %}
-    <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("fixed-bar-mobile").style.top = "49px";
-      } 
-      else if (currentScrollPos <= 125) {
-        document.getElementById("fixed-bar-mobile").style.top = "49px";
-      }
-      else {
-        document.getElementById("fixed-bar-mobile").style.top = "-98px";
-        document.getElementById("dropdownMenuSortBy").classList.remove('show');
-        document.getElementById("dropdownMenuFrom").classList.remove('show');
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  </script>
-{% endblock %}
-
 {% block sidebarblock %}
 <div class="sidebar-section sidebar-profile-basic">
   <div class="body">
@@ -127,20 +106,21 @@
 
   </ul>
 
+</div>
 
-  <div class="row no-gutters">
+<div class="row no-gutters">
 
-    <div class="col-12">
+  <div class="col-12">
 
-      <div class="text-center py-7 py-md-8">
+    <div class="text-center py-7 py-md-8">
 
-        <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
+      <img src="https://imgur.com/7qp4UpX.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
 
 
-        <div class="font-weight-bold text-muted">Sorry, there's no profile here.</div>
-        <div class="text-small text-muted">This user was either banned or deleted.</div>
+      <div class="font-weight-bold text-muted">Sorry, there's no profile here.</div>
+      <div class="text-small text-muted">This user was either banned or deleted.</div>
 
-      </div>
     </div>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}
