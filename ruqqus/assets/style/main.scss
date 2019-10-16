@@ -585,7 +585,7 @@ label.terms {
 .dropdown-item:hover .removeDropdownItem, .dropdown-item:focus .removeDropdownItem, .dropdown-item.active .removeDropdownItem {
     color: $white;
     text-decoration: none;
-    background-color: $danger;
+    background-color: $warning;
 }
 
 .dropdown-item:hover .removeDropdownItem .fas, .dropdown-item:focus .removeDropdownItem .fas, .dropdown-item.active .removeDropdownItem .fas, .dropdown-item:hover .removeDropdownItem .far, .dropdown-item:focus .removeDropdownItem .far, .dropdown-item.active .removeDropdownItem .far
@@ -596,7 +596,7 @@ label.terms {
 .dropdown-item:hover .approveDropdownItem, .dropdown-item:focus .approveDropdownItem, .dropdown-item.active .approveDropdownItem {
     color: $white;
     text-decoration: none;
-    background-color: $danger;
+    background-color: $success;
 }
 
 .dropdown-item:hover .approveDropdownItem .fas, .dropdown-item:focus .approveDropdownItem .fas, .dropdown-item.active .approveDropdownItem .fas, .dropdown-item:hover .approveDropdownItem .far, .dropdown-item:focus .approveDropdownItem .far, .dropdown-item.active .approveDropdownItem .far
