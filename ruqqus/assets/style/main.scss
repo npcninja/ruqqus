@@ -582,6 +582,17 @@ label.terms {
     color: $black;
 }
 
+.dropdown-item:hover .removeDropdownItem, .dropdown-item:focus .removeDropdownItem, .dropdown-item.active .removeDropdownItem {
+    color: $white;
+    text-decoration: none;
+    background-color: $danger;
+}
+
+.dropdown-item:hover .removeDropdownItem .fas, .dropdown-item:focus .removeDropdownItem .fas, .dropdown-item.active .removeDropdownItem .fas, .dropdown-item:hover .removeDropdownItem .far, .dropdown-item:focus .removeDropdownItem .far, .dropdown-item.active .removeDropdownItem .far
+.dropdown-item:hover .removeDropdownItem .fa, .dropdown-item:focus .removeDropdownItem .fa, .dropdown-item.active .removeDropdownItem .fa {
+    color: $white;
+}
+
 // Font Awesome
 
 .fa-rotate-45 {

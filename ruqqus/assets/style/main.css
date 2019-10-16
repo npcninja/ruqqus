@@ -12954,6 +12954,17 @@ label.terms {
   color: #1E1E24;
 }
 
+.dropdown-item:hover .removeDropdownItem, .dropdown-item:focus .removeDropdownItem, .dropdown-item.active .removeDropdownItem {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #FF8C42;
+}
+
+.dropdown-item:hover .removeDropdownItem .fas, .dropdown-item:focus .removeDropdownItem .fas, .dropdown-item.active .removeDropdownItem .fas, .dropdown-item:hover .removeDropdownItem .far, .dropdown-item:focus .removeDropdownItem .far, .dropdown-item.active .removeDropdownItem .far .dropdown-item:hover .removeDropdownItem .fa,
+.dropdown-item:focus .removeDropdownItem .fa, .dropdown-item.active .removeDropdownItem .fa {
+  color: #ffffff;
+}
+
 .fa-rotate-45 {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
