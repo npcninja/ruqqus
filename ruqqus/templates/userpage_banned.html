@@ -1,5 +1,28 @@
 {% extends "default.html" %}
 
+{% block pagetype %}userpage{% endblock %}
+
+{% block fixedMobileBarJS %}
+    <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("fixed-bar-mobile").style.top = "49px";
+      } 
+      else if (currentScrollPos <= 125) {
+        document.getElementById("fixed-bar-mobile").style.top = "49px";
+      }
+      else {
+        document.getElementById("fixed-bar-mobile").style.top = "-98px";
+        document.getElementById("dropdownMenuSortBy").classList.remove('show');
+        document.getElementById("dropdownMenuFrom").classList.remove('show');
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+{% endblock %}
+
 {% block title %}
 <title>{{ u.username }}</title>
 <meta name="description" content="[banned]">
