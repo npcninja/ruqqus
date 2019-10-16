@@ -593,6 +593,17 @@ label.terms {
     color: $white;
 }
 
+.dropdown-item:hover .approveDropdownItem, .dropdown-item:focus .approveDropdownItem, .dropdown-item.active .approveDropdownItem {
+    color: $white;
+    text-decoration: none;
+    background-color: $danger;
+}
+
+.dropdown-item:hover .approveDropdownItem .fas, .dropdown-item:focus .approveDropdownItem .fas, .dropdown-item.active .approveDropdownItem .fas, .dropdown-item:hover .approveDropdownItem .far, .dropdown-item:focus .approveDropdownItem .far, .dropdown-item.active .approveDropdownItem .far
+.dropdown-item:hover .approveDropdownItem .fa, .dropdown-item:focus .approveDropdownItem .fa, .dropdown-item.active .approveDropdownItem .fa {
+    color: $white;
+}
+
 // Font Awesome
 
 .fa-rotate-45 {

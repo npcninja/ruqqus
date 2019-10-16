@@ -12965,6 +12965,17 @@ label.terms {
   color: #ffffff;
 }
 
+.dropdown-item:hover .approveDropdownItem, .dropdown-item:focus .approveDropdownItem, .dropdown-item.active .approveDropdownItem {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #FF8C42;
+}
+
+.dropdown-item:hover .approveDropdownItem .fas, .dropdown-item:focus .approveDropdownItem .fas, .dropdown-item.active .approveDropdownItem .fas, .dropdown-item:hover .approveDropdownItem .far, .dropdown-item:focus .approveDropdownItem .far, .dropdown-item.active .approveDropdownItem .far .dropdown-item:hover .approveDropdownItem .fa,
+.dropdown-item:focus .approveDropdownItem .fa, .dropdown-item.active .approveDropdownItem .fa {
+  color: #ffffff;
+}
+
 .fa-rotate-45 {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
