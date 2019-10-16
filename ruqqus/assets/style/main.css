@@ -12954,28 +12954,6 @@ label.terms {
   color: #1E1E24;
 }
 
-.post-actions .removeDropdownItem.dropdown-item:hover, .post-actions .removeDropdownItem.dropdown-item:focus, .post-actions .removeDropdownItem.dropdown-item.active {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #ffc107;
-}
-
-.post-actions .removeDropdownItem.dropdown-item:hover .fas, .post-actions .removeDropdownItem.dropdown-item:focus .fas, .post-actions .removeDropdownItem.dropdown-item.active .fas, .post-actions .removeDropdownItem.dropdown-item:hover .far, .post-actions .removeDropdownItem.dropdown-item:focus .far, .post-actions .removeDropdownItem.dropdown-item.active .far .post-actions .removeDropdownItem.dropdown-item:hover .fa,
-.post-actions .removeDropdownItem.dropdown-item:focus .fa, .post-actions .removeDropdownItem.dropdown-item.active .fa {
-  color: #ffffff;
-}
-
-.post-actions .approveDropdownItem.dropdown-item:hover, .post-actions .approveDropdownItem.dropdown-item:focus, .post-actions .approveDropdownItem.dropdown-item.active {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #23CE6B;
-}
-
-.post-actions .approveDropdownItem.dropdown-item:hover .fas, .post-actions .approveDropdownItem.dropdown-item:focus .fas, .post-actions .approveDropdownItem.dropdown-item.active .fas, .post-actions .approveDropdownItem.dropdown-item:hover .far, .post-actions .approveDropdownItem.dropdown-item:focus .far, .post-actions .approveDropdownItem.dropdown-item.active .far .post-actions .approveDropdownItem.dropdown-item:hover .fa,
-.post-actions .approveDropdownItem.dropdown-item:focus .fa, .post-actions .approveDropdownItem.dropdown-item.active .fa {
-  color: #ffffff;
-}
-
 .fa-rotate-45 {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -13381,6 +13359,28 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   vertical-align: bottom;
 }
 
+.post-actions .removeDropdownItem.dropdown-item:hover, .post-actions .removeDropdownItem.dropdown-item:focus, .post-actions .removeDropdownItem.dropdown-item.active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ffc107;
+}
+
+.post-actions .removeDropdownItem.dropdown-item:hover .fas, .post-actions .removeDropdownItem.dropdown-item:focus .fas, .post-actions .removeDropdownItem.dropdown-item.active .fas, .post-actions .removeDropdownItem.dropdown-item:hover .far, .post-actions .removeDropdownItem.dropdown-item:focus .far, .post-actions .removeDropdownItem.dropdown-item.active .far .post-actions .removeDropdownItem.dropdown-item:hover .fa,
+.post-actions .removeDropdownItem.dropdown-item:focus .fa, .post-actions .removeDropdownItem.dropdown-item.active .fa {
+  color: #ffffff;
+}
+
+.post-actions .approveDropdownItem.dropdown-item:hover, .post-actions .approveDropdownItem.dropdown-item:focus, .post-actions .approveDropdownItem.dropdown-item.active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #23CE6B;
+}
+
+.post-actions .approveDropdownItem.dropdown-item:hover .fas, .post-actions .approveDropdownItem.dropdown-item:focus .fas, .post-actions .approveDropdownItem.dropdown-item.active .fas, .post-actions .approveDropdownItem.dropdown-item:hover .far, .post-actions .approveDropdownItem.dropdown-item:focus .far, .post-actions .approveDropdownItem.dropdown-item.active .far .post-actions .approveDropdownItem.dropdown-item:hover .fa,
+.post-actions .approveDropdownItem.dropdown-item:focus .fa, .post-actions .approveDropdownItem.dropdown-item.active .fa {
+  color: #ffffff;
+}
+
 .post-actions .list-inline {
   margin-bottom: 0;
 }
@@ -13544,6 +13544,28 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .comment-actions .dropdown-item:hover {
   color: #1E1E24;
+}
+
+.comment-actions .removeDropdownItem.dropdown-item:hover, .comment-actions .removeDropdownItem.dropdown-item:focus, .comment-actions .removeDropdownItem.dropdown-item.active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ffc107;
+}
+
+.comment-actions .removeDropdownItem.dropdown-item:hover .fas, .comment-actions .removeDropdownItem.dropdown-item:focus .fas, .comment-actions .removeDropdownItem.dropdown-item.active .fas, .comment-actions .removeDropdownItem.dropdown-item:hover .far, .comment-actions .removeDropdownItem.dropdown-item:focus .far, .comment-actions .removeDropdownItem.dropdown-item.active .far .comment-actions .removeDropdownItem.dropdown-item:hover .fa,
+.comment-actions .removeDropdownItem.dropdown-item:focus .fa, .comment-actions .removeDropdownItem.dropdown-item.active .fa {
+  color: #ffffff;
+}
+
+.comment-actions .approveDropdownItem.dropdown-item:hover, .comment-actions .approveDropdownItem.dropdown-item:focus, .comment-actions .approveDropdownItem.dropdown-item.active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #23CE6B;
+}
+
+.comment-actions .approveDropdownItem.dropdown-item:hover .fas, .comment-actions .approveDropdownItem.dropdown-item:focus .fas, .comment-actions .approveDropdownItem.dropdown-item.active .fas, .comment-actions .approveDropdownItem.dropdown-item:hover .far, .comment-actions .approveDropdownItem.dropdown-item:focus .far, .comment-actions .approveDropdownItem.dropdown-item.active .far .comment-actions .approveDropdownItem.dropdown-item:hover .fa,
+.comment-actions .approveDropdownItem.dropdown-item:focus .fa, .comment-actions .approveDropdownItem.dropdown-item.active .fa {
+  color: #ffffff;
 }
 
 ul.comment-section {
