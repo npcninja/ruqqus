@@ -4,7 +4,7 @@ url="/api/ban_post/"+post_id
 callback=function(){
 document.getElementById("post-"+post_id).classList.add("banned");
 
-button=document.getElementById("moderate-post-"+post_id);
+var button=document.getElementById("moderate-post-"+post_id);
 button.onclick=function(){approvePost(post_id)};
 button.classList.remove("removeDropdownItem");
 button.classList.add("approveDropdownItem");
@@ -19,7 +19,7 @@ url="/api/unban_post/"+post_id
 callback=function(){
 document.getElementById("post-"+post_id).classList.remove("banned");
 
-button=document.getElementById("moderate-post-"+post_id);
+var button=document.getElementById("moderate-post-"+post_id);
 button.onclick=function(){removePost(post_id)};
 button.classList.remove("approveDropdownItem");
 button.classList.add("removeDropdownItem");
