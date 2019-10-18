@@ -150,6 +150,10 @@ body {
     background-color: $white;
 }
 
+#article {
+    background-color: $white;
+}
+
 // Padding and Margins
 
 #thread .custom-gutters {
@@ -998,7 +1002,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     color: $text-muted;
     font-weight: $font-weight-normal;
     font-size: $small-font-size;
-    z-index: 3;
+    z-index: 4;
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {

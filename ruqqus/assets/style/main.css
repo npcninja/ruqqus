@@ -12494,6 +12494,10 @@ body {
   background-color: #ffffff;
 }
 
+#article {
+  background-color: #ffffff;
+}
+
 #thread .custom-gutters {
   padding: 0 15px;
 }
@@ -13317,7 +13321,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   color: #7D7D7D;
   font-weight: 400;
   font-size: 13px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
