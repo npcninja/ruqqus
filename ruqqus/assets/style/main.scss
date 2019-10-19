@@ -1566,11 +1566,12 @@ ul.comment-section {
 }
 
 .footer .list-inline-item {
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-normal;
 }
 
 .footer a {
     text-decoration: none;
+    color: $text-muted;
 }
 
 .footer a:hover, .footer a:focus, .footer a:active {
@@ -1880,10 +1881,6 @@ body {
 
 .user-name {
     color: $text-muted;
-}
-
-.footer .list-inline-item {
-    font-weight: $font-weight-normal;
 }
 
 input[type="color"],

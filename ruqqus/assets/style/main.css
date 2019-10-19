@@ -13859,11 +13859,12 @@ ul.comment-section {
 }
 
 .footer .list-inline-item {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .footer a {
   text-decoration: none;
+  color: #7D7D7D;
 }
 
 .footer a:hover, .footer a:focus, .footer a:active {
@@ -14566,10 +14567,6 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
 
   .user-name {
     color: #7D7D7D;
-  }
-
-  .footer .list-inline-item {
-    font-weight: 400;
   }
 
   input[type=color],
