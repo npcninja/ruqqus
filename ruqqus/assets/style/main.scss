@@ -885,7 +885,7 @@ color: $dark;
 
 .sidebar-section.sidebar-alert {
     color: $white;
-    background-color: $primary;
+    background-color: $dark;
     border: none;
 }
 
@@ -1004,7 +1004,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     color: $text-muted;
     font-weight: $font-weight-normal;
     font-size: $small-font-size;
-    z-index: 4;
+    z-index: 3;
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
