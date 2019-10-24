@@ -119,21 +119,8 @@
                             </div>
 
                             <h2 class="h5">Email</h2>
-				
-				{% if not v.is_activated %}
-				
-				<p class="text-small text-muted">You have not verified your current email address. You will not be able to use your email for account recovery unless you verify it.</p>
-				<div class="footer">
-				<div class="d-flex">
-				<a id="verifyAlink" class="ml-auto" href="javascript:void(0)" onclick="post('/api/verify_email');document.getElementById('verifyButton').innerHTML='Verification email sent!';document.getElementById('verifyAlink').setAttribute('onclick','');"><button id="verifyButton" class="btn btn-primary">Verify Email</button></a>
-				</div>
-				</div>
-
-				{% endif %}
-
-
-
-                            <p class="text-small text-muted">Change the email address associated with your account. This will also change the email address used to log into Ruqqus.</p>
+			
+                            <p class="text-small text-muted">Change the email address used to sign in to your account.</p>
 
                             <div class="settings-section rounded">
 
