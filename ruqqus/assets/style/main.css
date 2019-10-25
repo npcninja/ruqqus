@@ -13053,9 +13053,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .post-actions .fa, .post-actions .fas, .post-actions .far {
-  font-size: 12px;
+  font-size: 13px;
   color: #ACACAC;
   margin-right: 0.5rem;
+  width: 1rem;
 }
 
 .post-actions .voting .fa, .post-actions .voting .fas, .post-actions .voting .far {
@@ -13145,6 +13146,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 .post-actions a {
   color: #5F5F5F;
   text-decoration: none;
+  font-size: 13px;
 }
 
 .post-actions a:hover {
