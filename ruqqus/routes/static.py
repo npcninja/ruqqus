@@ -51,5 +51,5 @@ def submit_get(v):
 
 @app.route("/about/<path:path>")
 @auth_desired
-def about_path(v):
+def about_path(path, v):
     return render_template(safe_join("about", path+"html"))
