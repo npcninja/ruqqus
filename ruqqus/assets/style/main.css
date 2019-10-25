@@ -12595,7 +12595,15 @@ ol > li::before {
   color: #E0E4E9;
 }
 
-.form-control:hover, .form-control:focus, .form-control:active {
+.form-control:hover {
+  color: #1E1E24;
+  background-color: #ffffff;
+  outline: 0;
+  border-color: #ACACAC;
+  box-shadow: none;
+}
+
+.form-control:focus, .form-control:active {
   color: #1E1E24;
   background-color: #ffffff;
   outline: 0;

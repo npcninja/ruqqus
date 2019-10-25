@@ -535,7 +535,15 @@ ol > li::before {
     color: $gray-300;
 }
 
-.form-control:hover, .form-control:focus, .form-control:active {
+.form-control:hover {
+    color: $black;
+    background-color: #ffffff;
+    outline: 0;
+    border-color: $gray-600;
+    box-shadow: none;
+}
+
+.form-control:focus, .form-control:active {
     color: $black;
     background-color: #ffffff;
     outline: 0;
