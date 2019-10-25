@@ -8,7 +8,10 @@
 
             {% if error %}
 <div class="alert alert-danger alert-dismissible fade show my-3" role="alert">
+<i class="fas fa-exclamation-circle text-lg my-auto"></i>
+<div>
   {{ error }}
+ </div>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -16,7 +19,10 @@
 {% endif %}
 {% if msg %}
 <div class="alert alert-success alert-dismissible fade show my-3" role="alert">
+<i class="fas fa-check-circle text-lg my-auto" aria-hidden="true"></i>
+<div>
   {{ msg }}
+</div>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
