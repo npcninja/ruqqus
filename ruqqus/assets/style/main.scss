@@ -1524,6 +1524,12 @@ ul.comment-section {
     display: none;
 }
 
+// Message pages
+
+#message .sidebar, #message-success .sidebar{
+    display: none;
+}
+
 // Footer
 
 #page .footer h1, #page .footer h2, #page .footer h3, #page .footer h4, #page .footer h5, #page .footer h6 {
