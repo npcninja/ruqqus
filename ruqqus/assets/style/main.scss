@@ -1512,6 +1512,7 @@ ul.comment-section {
 .profile-actions a {
     color: $gray;
     text-decoration: none;
+    font-size: $small-font-size;
 }
 
 .profile-actions .dropdown-item:hover {
@@ -1522,14 +1523,11 @@ ul.comment-section {
     font-size: 13px;
 }
 
-.profile-actions .fa, .profile-actions .fas {
-    font-size: 12px;
-    margin-right: 0.5rem;
-}
-
-.profile-actions .fa, .profile-actions .fas {
-    font-size: 12px;
+.profile-actions .fa, .profile-actions .fas, .profile-actions .far {
+    font-size: $small-font-size;
+    color: $gray-600;
     margin-right: .5rem;
+    width: 1rem;
 }
 
 .profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas, .profile-actions .dropdown-item:active .far {
