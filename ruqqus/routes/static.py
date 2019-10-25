@@ -8,7 +8,7 @@ from ruqqus.classes import *
 #take care of misc pages that never really change (much)
 @app.route('/assets/<path:path>')
 def static_service(path):
-    return send_from_directory('./assets', path)
+    return send_from_directory('./assets', path+".html")
 
 @app.route("/robots.txt", methods=["GET"])
 def robots_txt():
