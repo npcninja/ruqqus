@@ -8,7 +8,7 @@ from ruqqus.classes import *
 #take care of misc pages that never really change (much)
 @app.route('/assets/<path:path>')
 def static_service(path):
-    return send_from_directory('./assets', path+".html")
+    return send_from_directory('assets', path+".html")
 
 @app.route("/robots.txt", methods=["GET"])
 def robots_txt():
@@ -51,7 +51,7 @@ def submit_get(v):
 
 @app.route("/favicon.ico")
 def favicon_ico():
-    return send_from_directory('./assets', "images/favicon.ico")
+    return send_from_directory('assets', "images/favicon.ico")
 
 @app.route("/about/<path:path>")
 @auth_desired
