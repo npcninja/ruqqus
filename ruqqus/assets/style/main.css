@@ -12727,28 +12727,28 @@ label.terms {
   cursor: pointer;
   color: #C2C2C2;
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "";
 }
 
 .arrow-down::before {
   cursor: pointer;
   color: #C2C2C2;
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "";
 }
 
 .upvoted .arrow-up::before {
   cursor: pointer;
   color: #6350CC;
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "";
 }
 
 .downvoted .arrow-down::before {
   cursor: pointer;
   color: #48A9A6;
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "";
 }
 
 .upvoted .arrow-mobile-up {

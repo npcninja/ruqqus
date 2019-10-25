@@ -671,28 +671,28 @@ label.terms {
     cursor: pointer;
     color: $gray-400;
     font-family: "Font Awesome 5 Free";
-    content: "\f077";
+    content: "\f062";
 }
 
 .arrow-down::before {
     cursor: pointer;
     color: $gray-400;
     font-family: "Font Awesome 5 Free";
-    content: "\f078";
+    content: "\f063";
 }
 
 .upvoted .arrow-up::before {
     cursor: pointer;
     color: $upvote;
     font-family: "Font Awesome 5 Free";
-    content: "\f077";
+    content: "\f062";
 }
 
 .downvoted .arrow-down::before {
     cursor: pointer;
     color: $downvote;
     font-family: "Font Awesome 5 Free";
-    content: "\f078";
+    content: "\f063";
 }
 
 .upvoted .arrow-mobile-up {
