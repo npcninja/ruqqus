@@ -165,10 +165,10 @@
 <nav aria-label="Page navigation">
   <ul class="pagination py-3 pl-3 mb-0">
     <li class="page-item disabled">
-     {% if page %}<a class="page-link" tabindex="-1" aria-disabled="true" href="page={{ page-1 }}">Back</a>{% endif %}
+     {% if page %}<a class="page-link" tabindex="-1" aria-disabled="true" href="?page={{ page -1 }}">Back</a>{% endif %}
     </li>
     <li class="page-item">
-      {% if page %}<a class="page-link" tabindex="-1" aria-disabled="true" href="page={{ page+1 }}">Next</a>{% endif %}
+      {% if page %}<a class="page-link" tabindex="-1" aria-disabled="true" href="?page={{ page +1 }}">Next</a>{% endif %}
     </li>
   </ul>
 </nav>
