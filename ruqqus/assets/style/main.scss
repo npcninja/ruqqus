@@ -396,7 +396,7 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
-.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav .nav-link:active .far, .navbar-dark .navbar-nav .nav-link:active .fab {
+.navbar-light .navbar-nav .nav-link:active .fa, .navbar-light .navbar-nav .nav-link:active .fas, .navbar-light .navbar-nav .nav-link:active .far, .navbar-light .navbar-nav .nav-link:active .fab {
     color: $primary;
     text-align: center;
     font-size: $font-size-lg;

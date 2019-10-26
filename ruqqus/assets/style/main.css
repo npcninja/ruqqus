@@ -12461,7 +12461,7 @@ ol > li::before {
   border-radius: 0.25rem;
 }
 
-.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav .nav-link:active .far, .navbar-dark .navbar-nav .nav-link:active .fab {
+.navbar-light .navbar-nav .nav-link:active .fa, .navbar-light .navbar-nav .nav-link:active .fas, .navbar-light .navbar-nav .nav-link:active .far, .navbar-light .navbar-nav .nav-link:active .fab {
   color: #6350CC;
   text-align: center;
   font-size: 1.25rem;
