@@ -12435,6 +12435,10 @@ ol > li::before {
   background-color: #ffffff;
 }
 
+.navbar-nav .nav-link {
+  padding: 0.35rem 0.75rem;
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #1E1E24;
 }
