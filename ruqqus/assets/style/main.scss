@@ -396,7 +396,7 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
-.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
+.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav .nav-link:active .far, .navbar-dark .navbar-nav .nav-link:active .fab {
     color: $primary;
     text-align: center;
     font-size: $font-size-lg;
@@ -434,11 +434,11 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
-.navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
+.navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav .nav-link:active .far, .navbar-dark .navbar-nav .nav-link:active .fab {
     color: $black;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus .fa, .navbar-dark .navbar-nav .nav-link:focus .fas, .navbar-dark .navbar-nav:focus .nav-link .far, .navbar-dark .navbar-nav:focus .nav-link .fab {
+.navbar-dark .navbar-nav .nav-link:focus .fa, .navbar-dark .navbar-nav .nav-link:focus .fas, .navbar-dark .navbar-nav .nav-link:focus .far, .navbar-dark .navbar-nav .nav-link:focus .fab {
     color: $black;
 }
 
@@ -551,20 +551,20 @@ ol > li::before {
   opacity: .25;
 }
 
-.form-inline.search .form-control:hover::-ms-input-placeholder { /* Microsoft Edge */
+.form-inline.search .form-control::-ms-input-placeholder { /* Microsoft Edge */
   color: $white;
   opacity: .25;
 }
 
-.form-inline.search .form-control:hover::placeholder, .form-inline.search .form-control:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form-inline.search .form-control:active::placeholder, .form-inline.search .form-control:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: $black;
 }
 
-.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form-inline.search .form-control:active::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: $black;
 }
 
-.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder{ /* Microsoft Edge */
+.form-inline.search .form-control:active::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder{ /* Microsoft Edge */
   color: $black;
 }
 
