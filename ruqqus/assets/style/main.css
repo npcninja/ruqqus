@@ -12349,6 +12349,10 @@ ol > li::before {
   opacity: 0.5;
 }
 
+.btn-white {
+  color: #1E1E24;
+}
+
 .btn-success, .btn-danger {
   color: #ffffff;
 }
@@ -12439,8 +12443,17 @@ ol > li::before {
   padding: 0.35rem 0.75rem;
 }
 
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 0.35rem 0.75rem;
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #1E1E24;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
 }
 
 .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
@@ -12469,6 +12482,11 @@ ol > li::before {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
 }
 
 .post-nav .nav-link {
@@ -12549,8 +12567,8 @@ ol > li::before {
 }
 
 .form-inline.search .form-control {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
   font-size: 1rem;
 }
 
