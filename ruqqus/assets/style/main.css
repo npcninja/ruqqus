@@ -13066,11 +13066,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   background-color: #F8F8F9;
 }
 
-#frontpage .posts .card:last-of-type, #userpage .posts .card:last-of-type {
-  border: none;
-  border-radius: 0.25rem;
-}
-
 .post-title {
   font-size: 16px;
 }
