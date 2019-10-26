@@ -12614,10 +12614,25 @@ ol > li::before {
   opacity: 0.25;
 }
 
-.form-inline.search .form-control::-ms-input-placeholder {
+.form-inline.search .form-control:hover::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #ffffff;
   opacity: 0.25;
+}
+
+.form-inline.search .form-control:hover::placeholder, .form-inline.search .form-control:focus::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #1E1E24;
+}
+
+.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #1E1E24;
+}
+
+.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #1E1E24;
 }
 
 .bg-svg {

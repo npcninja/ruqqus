@@ -551,9 +551,21 @@ ol > li::before {
   opacity: .25;
 }
 
-.form-inline.search .form-control::-ms-input-placeholder { /* Microsoft Edge */
+.form-inline.search .form-control:hover::-ms-input-placeholder { /* Microsoft Edge */
   color: $white;
   opacity: .25;
+}
+
+.form-inline.search .form-control:hover::placeholder, .form-inline.search .form-control:focus::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $black;
+}
+
+.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $black;
+}
+
+.form-inline.search .form-control:hover::-ms-input-placeholder, .form-inline.search .form-control:focus::-ms-input-placeholder{ /* Microsoft Edge */
+  color: $black;
 }
 
 // Jumbotron and Backgrounds
