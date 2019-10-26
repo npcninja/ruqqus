@@ -434,6 +434,10 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
+.navbar-dark .navbar-nav .nav-link:hover:active .fa, .navbar-dark .navbar-nav .nav-link:hover:active .fas, .navbar-dark .navbar-nav .nav-link:hover:active .far, .navbar-dark .navbar-nav .nav-link:hover:active .fab {
+    color: $black;
+}
+
 .navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav .nav-link:active .far, .navbar-dark .navbar-nav .nav-link:active .fab {
     color: $black;
 }
