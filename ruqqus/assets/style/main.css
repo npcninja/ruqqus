@@ -12461,13 +12461,13 @@ ol > li::before {
   border-radius: 0.25rem;
 }
 
-.navbar-light .navbar-nav .nav-link .fa, .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-light .navbar-nav .nav-link .fab {
+.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
   color: #6350CC;
   text-align: center;
   font-size: 1.25rem;
 }
 
-.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
+.navbar-light .navbar-nav .nav-link .fa, .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-light .navbar-nav .nav-link .fab {
   color: #6350CC;
   text-align: center;
   font-size: 1.25rem;
@@ -12489,7 +12489,7 @@ ol > li::before {
   color: #ffffff;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:active {
   background-color: #FAFAFA;
   border-radius: 0.25rem;
 }
@@ -12499,18 +12499,18 @@ ol > li::before {
   border-radius: 0.25rem;
 }
 
-.navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.25rem;
-}
-
 .navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
   color: #1E1E24;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus .fa, .navbar-dark .navbar-nav .nav-link:focus .fas, .navbar-dark .navbar-nav:focus .nav-link .far, .navbar-dark .navbar-nav:focus .nav-link .fab {
   color: #1E1E24;
+}
+
+.navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 .post-nav .nav-link {

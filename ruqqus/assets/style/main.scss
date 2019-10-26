@@ -396,13 +396,13 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
-.navbar-light .navbar-nav .nav-link .fa, .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-light .navbar-nav .nav-link .fab {
+.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
     color: $primary;
     text-align: center;
     font-size: $font-size-lg;
 }
 
-.navbar-light .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
+.navbar-light .navbar-nav .nav-link .fa, .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-light .navbar-nav .nav-link .fab {
     color: $primary;
     text-align: center;
     font-size: $font-size-lg;
@@ -424,7 +424,7 @@ ol > li::before {
     color: $white;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus {
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:active {
     background-color: $light;
     border-radius: $border-radius
 }
@@ -434,18 +434,18 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
-.navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
-    color: $white;
-    text-align: center;
-    font-size: $font-size-lg;
-}
-
 .navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
     color: $black;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus .fa, .navbar-dark .navbar-nav .nav-link:focus .fas, .navbar-dark .navbar-nav:focus .nav-link .far, .navbar-dark .navbar-nav:focus .nav-link .fab {
     color: $black;
+}
+
+.navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
+    color: $white;
+    text-align: center;
+    font-size: $font-size-lg;
 }
 
 .post-nav .nav-link {
