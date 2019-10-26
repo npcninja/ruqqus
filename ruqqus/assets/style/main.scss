@@ -330,7 +330,7 @@ ol > li::before {
     bottom: 0;
 }
 
-.alert .fas.text-lg, .alert .far.text-lg, .alert .fas.text-lg, .alert .fas .text-lg{
+.alert .fa.text-lg, .alert .fas.text-lg, .alert .far.text-lg, .alert .fab.text-lg {
     margin-right: 1.25rem;
 }
 
@@ -391,13 +391,25 @@ ol > li::before {
     border-radius: $border-radius
 }
 
-.navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far {
+.navbar-light .navbar-nav .nav-link .fa, .navbar-light .navbar-nav .nav-link .fas, .navbar-light .navbar-nav .nav-link .far, .navbar-light .navbar-nav .nav-link .fab {
     color: $primary;
     text-align: center;
     font-size: $font-size-lg;
 }
 
-.navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far {
+.navbar-dark .navbar-nav .nav-link.active {
+    color: $black;
+    background-color: $white;
+    border-radius: $border-radius;
+}
+
+.navbar-dark .navbar-nav .nav-link:active .fa, .navbar-dark .navbar-nav .nav-link:active .fas, .navbar-dark .navbar-nav:active .nav-link .far, .navbar-dark .navbar-nav:active .nav-link .fab {
+    color: $white;
+    text-align: center;
+    font-size: $font-size-lg;
+}
+
+.navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
     color: $white;
     text-align: center;
     font-size: $font-size-lg;
@@ -453,11 +465,11 @@ ol > li::before {
     color: $primary;
 }
 
-.post-nav .nav-link:hover .fa , .post-nav .nav-link:focus .fa, .post-nav .nav-link:hover .fas , .post-nav .nav-link:focus .fas {
+.post-nav .nav-link:hover .fa , .post-nav .nav-link:focus .fa, .post-nav .nav-link:hover .fas, .post-nav .nav-link:focus .fas, .post-nav .nav-link:hover .far, .post-nav .nav-link:focus .far, .post-nav .nav-link:hover .fab , .post-nav .nav-link:focus .fab {
     color: $primary;
 }
 
-.post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas {
+.post-nav > .nav-item > .nav-link.active .fa, .post-nav > .nav-item > .nav-link.active .fas, .post-nav > .nav-item > .nav-link.active .far, .post-nav > .nav-item > .nav-link.active .fab {
     color: $primary;
 }
 
