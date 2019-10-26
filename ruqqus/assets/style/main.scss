@@ -1850,6 +1850,16 @@ body {
     padding-right: 0;
 }
 
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+}
+
 #thread {
     background-color: $white;
 }
