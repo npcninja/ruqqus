@@ -1146,6 +1146,12 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     margin-right: 0;
 }
 
+// Pagination
+
+.page-link {
+    font-weight: $font-weight-bold;
+}
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .post-actions .list-inline .list-inline-item {

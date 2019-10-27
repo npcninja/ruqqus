@@ -13186,6 +13186,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   margin-right: 0;
 }
 
+.page-link {
+  font-weight: 600;
+}
+
 @media (max-width: 767.98px) {
   .post-actions .list-inline .list-inline-item {
     margin-right: 1.5rem;
