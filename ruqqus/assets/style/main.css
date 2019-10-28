@@ -12344,6 +12344,10 @@ ol > li::before {
   border-radius: 0.25rem;
 }
 
+.btn-secondary {
+  color: #7D7D7D;
+}
+
 .btn.disabled, .btn:disabled {
   opacity: 0.5;
 }
