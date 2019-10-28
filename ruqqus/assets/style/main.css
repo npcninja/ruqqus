@@ -13535,6 +13535,7 @@ ul.comment-section {
   font-size: 13px;
   color: #1E1E24;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 #login {
