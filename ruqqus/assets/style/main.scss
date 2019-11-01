@@ -755,6 +755,14 @@ label.terms {
     bottom: -4px;
 }
 
+.comment-actions .arrow-up {
+    top: 0;
+}
+
+.comment-actions .arrow-down {
+    bottom: 0;
+}
+
 .upvoted .arrow-up {
     cursor: pointer;
     border-bottom: 12px solid $upvote;
@@ -1906,14 +1914,6 @@ body {
 .voting {
     font-weight: $font-weight-normal;
     min-width: length;
-}
-
-.arrow-up {
-    top: 0;
-}
-
-.arrow-down {
-    bottom: 0;
 }
 
 .post-title {

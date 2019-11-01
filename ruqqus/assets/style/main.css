@@ -12814,6 +12814,14 @@ label.terms {
   bottom: -4px;
 }
 
+.comment-actions .arrow-up {
+  top: 0;
+}
+
+.comment-actions .arrow-down {
+  bottom: 0;
+}
+
 .upvoted .arrow-up {
   cursor: pointer;
   border-bottom: 12px solid #6350CC;
@@ -14317,14 +14325,6 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
   .voting {
     font-weight: 400;
     min-width: length;
-  }
-
-  .arrow-up {
-    top: 0;
-  }
-
-  .arrow-down {
-    bottom: 0;
   }
 
   .post-title {
