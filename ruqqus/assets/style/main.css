@@ -12745,7 +12745,7 @@ label.terms {
 }
 
 .sidebar-section .fa, .sidebar-section .fas {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .icon::before {
@@ -13047,7 +13047,18 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .profile-pic {
-  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.profile-pic .letter {
+  position: relative;
+  top: 25%;
+  font-size: 1.25rem;
 }
 
 .profile-pic-25 {
