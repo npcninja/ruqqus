@@ -13059,11 +13059,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   position: relative;
   top: 25%;
   font-size: 1.25rem;
-  display: none;
-}
-
-.profile-pic .letter::first-letter {
-  display: inline;
 }
 
 .profile-pic-25 {
