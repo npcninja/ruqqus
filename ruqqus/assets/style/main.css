@@ -12791,32 +12791,28 @@ label.terms {
   min-width: 40px;
 }
 
-.arrow-up::before {
+.arrow-up {
   cursor: pointer;
-  color: #C2C2C2;
-  font-family: "Font Awesome 5 Free";
-  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #C2C2C2;
 }
 
-.arrow-down::before {
+.arrow-down {
   cursor: pointer;
-  color: #C2C2C2;
-  font-family: "Font Awesome 5 Free";
-  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #C2C2C2;
 }
 
-.upvoted .arrow-up::before {
+.upvoted .arrow-up {
   cursor: pointer;
-  color: #6350CC;
-  font-family: "Font Awesome 5 Free";
-  content: "";
+  border-color: #6350CC;
 }
 
-.downvoted .arrow-down::before {
+.downvoted .arrow-down {
   cursor: pointer;
-  color: #48A9A6;
-  font-family: "Font Awesome 5 Free";
-  content: "";
+  border-color: #48A9A6;
 }
 
 .upvoted .arrow-mobile-up {

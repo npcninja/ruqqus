@@ -732,32 +732,28 @@ label.terms {
     min-width: 40px;
 }
 
-.arrow-up::before {
+.arrow-up {
     cursor: pointer;
-    color: $gray-400;
-    font-family: "Font Awesome 5 Free";
-    content: "\f062";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid $gray-400;
 }
 
-.arrow-down::before {
+.arrow-down {
     cursor: pointer;
-    color: $gray-400;
-    font-family: "Font Awesome 5 Free";
-    content: "\f063";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid $gray-400;
 }
 
-.upvoted .arrow-up::before {
+.upvoted .arrow-up {
     cursor: pointer;
-    color: $upvote;
-    font-family: "Font Awesome 5 Free";
-    content: "\f062";
+    border-color: $upvote;
 }
 
-.downvoted .arrow-down::before {
+.downvoted .arrow-down {
     cursor: pointer;
-    color: $downvote;
-    font-family: "Font Awesome 5 Free";
-    content: "\f063";
+    border-color: $downvote;
 }
 
 .upvoted .arrow-mobile-up {
