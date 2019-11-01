@@ -737,6 +737,10 @@ label.terms {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 12px solid $gray-400;
+    width: 0;
+    height: 0;
+    position: relative;
+    top: -3px;
 }
 
 .arrow-down {
@@ -744,16 +748,20 @@ label.terms {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 12px solid $gray-400;
+    width: 0;
+    height: 0;
+    position: relative;
+    bottom: -3px;
 }
 
 .upvoted .arrow-up {
     cursor: pointer;
-    border-color: $upvote;
+    border-bottom: 12px solid $upvote;
 }
 
 .downvoted .arrow-down {
     cursor: pointer;
-    border-color: $downvote;
+    border-top: 12px solid $downvote;
 }
 
 .upvoted .arrow-mobile-up {
