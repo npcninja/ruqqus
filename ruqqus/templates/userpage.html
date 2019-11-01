@@ -189,7 +189,7 @@
         <div class="col bg-light border-bottom rounded-md p-3">
             <div class="profile-details text-center mt-3">
             	<div class="profile-pic" style="background-color:#{{ u.color }}">
-            		<span class="letter">{{ u.username | truncate(2) }}</span>
+            		<span class="letter">{{ u.username | truncate(2),true }}</span>
             	</div>
                 <h1 class="h5 d-inline-block mb-3 mr-2" style="color:#{{ u.color }}">@{{ u.username }}</h1>
                 <div class="profile-actions d-inline-block">
