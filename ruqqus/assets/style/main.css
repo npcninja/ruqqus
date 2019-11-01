@@ -12800,7 +12800,7 @@ label.terms {
   width: 0;
   height: 0;
   position: relative;
-  top: -4px;
+  top: -5px;
 }
 
 .arrow-down {
@@ -12811,7 +12811,7 @@ label.terms {
   width: 0;
   height: 0;
   position: relative;
-  bottom: -4px;
+  bottom: -5px;
 }
 
 .comment-actions .arrow-up {
