@@ -12794,8 +12794,8 @@ label.terms {
 
 .arrow-up {
   cursor: pointer;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
   border-bottom: 12px solid #C2C2C2;
   width: 0;
   height: 0;
@@ -12805,8 +12805,8 @@ label.terms {
 
 .arrow-down {
   cursor: pointer;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
   border-top: 12px solid #C2C2C2;
   width: 0;
   height: 0;
