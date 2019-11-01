@@ -1017,6 +1017,11 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     position: relative;
     top: 25%;
     font-size: $font-size-lg;
+    display: none;
+}
+
+.profile-pic .letter::first-letter {
+    display: inline;
 }
 
 .profile-pic-25 {
