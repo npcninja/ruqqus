@@ -14318,6 +14318,14 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     min-width: length;
   }
 
+  .arrow-up {
+    top: 0;
+  }
+
+  .arrow-down {
+    bottom: 0;
+  }
+
   .post-title {
     font-size: 1rem;
     font-weight: 400;

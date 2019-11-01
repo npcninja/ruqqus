@@ -1907,6 +1907,14 @@ body {
     min-width: length;
 }
 
+.arrow-up {
+    top: 0;
+}
+
+.arrow-down {
+    bottom: 0;
+}
+
 .post-title {
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
