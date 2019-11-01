@@ -12786,6 +12786,7 @@ label.terms {
 .voting {
   position: relative;
   z-index: 2;
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
   min-width: 40px;
@@ -12799,7 +12800,7 @@ label.terms {
   width: 0;
   height: 0;
   position: relative;
-  top: -3px;
+  top: -4px;
 }
 
 .arrow-down {
@@ -12810,7 +12811,7 @@ label.terms {
   width: 0;
   height: 0;
   position: relative;
-  bottom: -3px;
+  bottom: -4px;
 }
 
 .upvoted .arrow-up {
