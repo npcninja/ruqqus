@@ -193,18 +193,32 @@
             	</div>
                 <h1 class="h5 d-inline-block text-gray mb-3 mr-2">@{{ u.username }}</h1>
                 <div class="profile-actions d-inline-block">
-                    <div class="dropdown show">
-                        <a href="#" role="button" id="dropdownProfileActionsLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </a>
-			{% if v and v.id != u.id %}
-                        <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-                            <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>Message</a>
-                            <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
-                        </div>
+                    {% if v and v.id != u.id %}
+                            <div class="dropdown show">
+                                <a href="#" role="button" id="dropdownProfileActionsLinkMobile" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </a>
+
+                                <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
+                                  <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>Message</a>
+                                  <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+                                </div>
+                            </div>
 			{% endif %}
-                    </div>
+            {% if v and v.id == u.id %}
+        <div class="dropdown show">
+                                <a href="#" role="button" id="dropdownProfileActionsLinkMobile" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </a>
+
+                                <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
+                                  <a class="dropdown-item" href="/settings/profile#bio"><i class="fas fa-user-circle"></i>Edit profile</a>
+                                  <a class="dropdown-item" href="/settings/security"><i class="fas fa-cog"></i>Account details</a>
+                                </div>
+                            </div>
+                         {% endif %} 
                 </div>
                 <div>
                             {% if u.admin_level>=3 %}<span class="badge badge-pill badge-danger text-white">Admin</span>{% endif %}
