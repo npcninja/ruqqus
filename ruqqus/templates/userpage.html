@@ -191,7 +191,7 @@
      <div class="profile-pic mb-3" style="background-color:#{{ u.color }}">
       <span class="letter">{{ u.username[0]  }}</span>
     </div>
-    <h1 class="h6 d-inline-block text-gray mb-3 mr-2">@{{ u.username }}</h1>
+    <h1 class="h6 d-inline-block text-gray mb-3">@{{ u.username }}</h1>
     <span>
       {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-success" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
       {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
@@ -214,19 +214,30 @@
     </div>
     {% endif %}
     {% if v and v.id == u.id %}
-    <div class="dropdown show">
-      <a href="#" role="button" id="dropdownProfileActionsLinkMobile" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-ellipsis-h"></i>
-    </a>
 
-    <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-      <a class="dropdown-item" href="/settings/profile#bio"><i class="fas fa-user-circle"></i>Edit profile</a>
-      <a class="dropdown-item" href="/settings/security"><i class="fas fa-cog"></i>Account details</a>
+    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#profileActionsModalCenter"></i>
+
+    <!-- Modal -->
+    <div class="modal fade" id="profileActionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="list-group">
+              <a href="/settings/profile#bio" class="list-group-item list-group-item-action active">Edit profile</a>
+              <a href="/settings/security" class="list-group-item list-group-item-action">Account details</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    {% endif %} 
   </div>
-  {% endif %} 
-</div>
+
 </div>
 </div>
 </div>
