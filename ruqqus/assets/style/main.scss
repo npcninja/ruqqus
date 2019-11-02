@@ -1019,6 +1019,17 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     font-size: $font-size-lg;
 }
 
+.navbar .navbar-nav .profile-pic {
+    width: 28px;
+    height: 28px;
+}
+
+.navbar .navbar-nav .profile-pic .letter {
+    width: 28px;
+    height: 28px;
+    position: static;
+}
+
 .profile-pic-25 {
     width: 25px;
     height: 25px;
@@ -1892,6 +1903,10 @@ body {
 .navbar-dark .navbar-nav .nav-link:active {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 0;
+}
+
+.nav-link.no-hover-bg:hover {
+    background-color: transparent;
 }
 
 #thread {
