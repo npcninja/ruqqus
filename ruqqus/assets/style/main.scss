@@ -1014,8 +1014,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .profile-pic .letter {
-    position: relative;
-    top: 25%;
+    line-height: 3.5rem;
     font-size: $font-size-lg;
 }
 
@@ -1025,9 +1024,8 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .navbar .navbar-nav .profile-pic .letter {
-    width: 28px;
-    height: 28px;
-    position: static;
+    line-height: 2rem;
+    font-size: $small-font-size;
 }
 
 .profile-pic-25 {
