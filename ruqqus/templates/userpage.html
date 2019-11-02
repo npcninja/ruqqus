@@ -201,24 +201,28 @@
     </p>
     <div class="profile-actions d-inline-block">
       {% if v and v.id != u.id %}
-      <div class="dropdown show">
-        <a href="#" role="button" id="dropdownProfileActionsLinkMobile" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-ellipsis-h"></i>
-      </a>
+    <!-- Modal -->
+    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#profileModal"></i>
 
-      <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-        <a class="dropdown-item" href="#"><i class="fas fa-paper-plane"></i>Message</a>
-        <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Report</a>
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="list-group">
+            <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-paper-plane mr-2"></i>Message</a>
+              <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-flag mr-2"></i>Flag</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     {% endif %}
     {% if v and v.id == u.id %}
 
-    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#profileActionsModalCenter"></i>
+    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#settingsModal"></i>
 
     <!-- Modal -->
-    <div class="modal fade" id="profileActionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body">
