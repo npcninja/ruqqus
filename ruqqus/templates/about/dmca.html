@@ -1,0 +1,48 @@
+{% extends "settings.html" %}
+
+{% block content %}
+<h1 class="h3">DMCA Notice</h1>
+<p>At Ruqqus, we value your rights, including both your freedom of speech, and your intellectual property rights. If a post or comment on Ruqqus violates your intellectual property rights (or links to such a violation), use this form to submit a DMCA takedown request.
+
+<form action="api/dmca-submit" method="post" id="dmca-submission" autocomplete="off">
+<input type="hidden" name="formkey" value="{{ v.formkey }}">
+
+<h4>Part 1: Your information</h4>
+
+<label for="email">Email</label>
+<input id="email" name="email" value="{{ v.email }}" readonly="readonly" disabled>
+
+<label for="username">Ruqqus username</label>
+<input id="username" name="username" value="{{ v.username }}" readonly="readonly" disabled>
+
+<label for="realname">Your full legal name.</label>
+<div>You must use your full legal name. Nicknames, usernames, stage names, abbreviations, etc. are not accepted and will result in rejection of your request.</div>
+<input id="realname" name="realname" required>
+
+<label for="address">Your full legal address</label>
+<div>PO boxes are not accepted.</div>
+<textarea form="dmca-submission" id="address" name="address" required>
+
+<h4>Part 2: The copyrighted work</h4>
+
+<label for="work-description">Describe the copyrighted work</label>
+<div>Include, at minimum, the work title and date of publication.</div>
+<textarea form="dmca-submission" id="work-description" name="work-description" required>
+
+<label for="work-owner">Who is the copyright owner?</label>
+<input type="radio" name="work-owner" value="Me"> Me<br>
+<input type="radio" name="work-owner" value="A company, client, or organization that I represent"> A company, client, or organization that I represent<br>
+<input type="radio" name="work-owner" value="Someone else"> Someone else<br>
+
+<label for="owner-details">If you selected "A company, client, or organization that I represent" or "Someone else" above, provide additional information about the copyright owner.</label>
+<textarea form="dmca-submission" id="owner-details" name="owner-details">
+
+<h4>Part 3: Alleged Violations</h4>
+
+<label for="ruqqus-links">Provide link(s) to the allegedly infringing Ruqqus content</label>
+<textarea form="dmca-submission" id="ruqqus-links" name="ruqqus-links" required>
+
+
+
+</form>
+{% endblock%}
