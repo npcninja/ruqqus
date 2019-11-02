@@ -13061,6 +13061,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .navbar .navbar-nav .profile-pic {
+  display: inline-block;
   width: 28px;
   height: 28px;
 }
