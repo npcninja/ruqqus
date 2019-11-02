@@ -14314,7 +14314,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     border-radius: 0;
   }
 
-  .nav-link:hover.no-hover-bg {
+  .no-hover-bg.nav-link:hover {
     background-color: transparent;
   }
 
