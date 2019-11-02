@@ -21,19 +21,19 @@
 
 {% if v %}
           <li class="nav-item d-flex align-items-center justify-content-center text-center mx-1">
-            <a class="btn btn-white" href="/submit">Create post</a>
+            <a class="nav-link" href="/submit" data-toggle="tooltip" data-placement="bottom" title="Create post"><i class="far fa-feather-alt"></i></a>
           </li>
 
 {% if v.notifications_count %}
 
           <li class="nav-item d-flex align-items-center text-center justify-content-center mx-1">
-            <a class="nav-link" href="/notifications"><span class="text-danger"><i class="far fa-bell" data-toggle="tooltip" data-placement="bottom" title="Notifications"></i>[{{ v.notifications_count }}]</a><span>
+            <a class="nav-link" href="/notifications" data-toggle="tooltip" data-placement="bottom" title="Notifications"><span class="text-danger"><i class="far fa-bell" data-toggle="tooltip" data-placement="bottom" title="Notifications"></i>[{{ v.notifications_count }}]</a><span>
           </li>
 
 {% else %}
 
           <li class="nav-item d-flex align-items-center text-center justify-content-center mx-1">
-            <a class="nav-link" href="/notifications?all=true"><i class="far fa-bell"></i></a>
+            <a class="nav-link" href="/notifications?all=true" data-toggle="tooltip" data-placement="bottom" title="Notifications"><i class="far fa-bell"></i></a>
           </li>
 
 {% endif %}
@@ -89,23 +89,23 @@
                         <a class="btn btn-white btn-block" href="/submit">Create post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ v.permalink }}"><i class="fas fa-user-circle fa-width-rem mr-3"></i>{{ v.username }}</a>
+                        <a class="nav-link" href="{{ v.permalink }}"><i class="far fa-user-circle fa-width-rem mr-3"></i>@{{ v.username }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/notifications?all=true"><i class="fas fa-envelope fa-width-rem mr-3"></i>Inbox</a>
+                        <a class="nav-link" href="/notifications?all=true"><i class="far fa-envelope fa-width-rem mr-3"></i>Inbox</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/settings"><i class="fas fa-cog fa-width-rem mr-3"></i>Settings</a>
+                        <a class="nav-link" href="/settings"><i class="far fa-cog fa-width-rem mr-3"></i>Settings</a>
                     </li>
                     <li class="nav-item nav-item border-top mt-2 pt-2">
                         <a class="nav-link" href="javascript:void(0)", onclick="post('/logout');window.location.href='https://ruqqus.com/'">Log out</a>
                     </li>
                     {% else %}
                     <li class="nav-item d-flex align-items-center justify-content-center pb-2">
-                        <a class="btn btn-white btn-block" href="/login">Sign In</a>
+                        <a class="btn btn-white btn-block" href="/login">Sign in</a>
                     </li>
                     <li class="nav-item d-flex align-items-center justify-content-center">
-                        <a class="btn btn-outline-white btn-block" href="/signup">Sign Up</a>
+                        <a class="btn btn-outline-white btn-block" href="/signup">Sign up</a>
                     </li>
                 {% endif %}
                 </ul>
