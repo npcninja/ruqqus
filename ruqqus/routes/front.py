@@ -71,4 +71,4 @@ def home(v):
         if sticky:
             posts=[sticky]+posts
     
-    return render_template("home.html", v=v, listing=posts, sort_method=sort_method)
+    return render_template("home.html", v=v, listing=posts, sort_method=sort_method, page=page)

@@ -141,7 +141,7 @@ class User(Base):
         else:
             listing=[p for p in self.submissions.filter_by(is_banned=False).order_by(text("created_utc desc")).offset(25*(page-1)).limit(25)]  
 
-        return render_template("userpage.html", u=self, v=v, listing=listing)
+        return render_template("userpage.html", u=self, v=v, listing=listing, page=page)
 
     def rendered_comments_page(self, v=None):
 
