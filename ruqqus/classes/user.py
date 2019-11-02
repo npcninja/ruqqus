@@ -229,7 +229,7 @@ class User(Base):
     @lazy
     def color(self):
 
-        random.seed(self.id)
+        random.seed(f"{self.id}+{self.username}")
 
         R=random.randint(16, 239)
         G=random.randint(16, 239)
