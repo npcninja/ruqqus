@@ -43,25 +43,30 @@ def home(v):
     #get list of ids
     ids = frontlist(sort=sort_method, page=page)
 
-    #assemble list of tuples
-    i=1
-    tups=[]
-    for x in ids:
-        tups.append((x, i))
-        i+=1
+    #check if ids exist
+    if ids:
+        #assemble list of tuples
+        i=1
+        tups=[]
+        for x in ids:
+            tups.append((x, i))
+            i+=1
 
-    #tuple string
-    tups = str(tups).lstrip("[").rstrip("]")
+        #tuple string
+        tups = str(tups).lstrip("[").rstrip("]")
+            
+
+        #hit db for entries
         
-
-    #hit db for entries
-    posts=db.query(Submission
-                   ).from_statement(
-                       text(f"""
-                        select submissions.*, submissions.ups, submissions.downs
-                        from submissions
-                        join (values {tups}) as x(id, n) on submissions.id=x.id order by x.n"""
-                            )).all()
+        posts=db.query(Submission
+                       ).from_statement(
+                           text(f"""
+                            select submissions.*, submissions.ups, submissions.downs
+                            from submissions
+                            join (values {tups}) as x(id, n) on submissions.id=x.id order by x.n"""
+                                )).all()
+    else:
+        posts=[]
     
 
     #If page 1, check for sticky
