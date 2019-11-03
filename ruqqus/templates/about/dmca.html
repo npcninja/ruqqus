@@ -1,8 +1,8 @@
 {% extends "default.html" %}
 
 {% block content %}
-<h1 class="h3">DMCA Notice</h1>
-<p>At Ruqqus, we value your rights, including both your freedom of speech, and your intellectual property rights. If a post or comment on Ruqqus violates your intellectual property rights (or links to such a violation), use this form to submit a DMCA takedown request.
+<h1 class="h3">DMCA Takedown Request</h1>
+<p>At Ruqqus, we value your rights, including both your freedom of speech, and your intellectual property rights. If a post or comment on Ruqqus violates your intellectual property rights (or links to such a violation), use this form to submit a DMCA takedown request.</p>
 
 <form action="api/dmca-submit" method="post" id="dmca-submission" autocomplete="off">
 <input type="hidden" name="formkey" value="{{ v.formkey }}">
@@ -41,6 +41,18 @@
 
 <label for="ruqqus-links">Provide link(s) to the allegedly infringing Ruqqus content</label><br>
 <textarea form="dmca-submission" id="ruqqus-links" name="ruqqus-links" required></textarea><br><br>
+
+<h4>Part 4: Legal Statements</h4>
+
+<div>To submit a DMCA takedown request, you must read and agree to the following statements.</div><br>
+
+<input type="checkbox" name="agree-goodfaith" value="1" required>I have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.<br>
+<input type="checkbox" name="agree-accuracy" value="1" required>I state that the information in this notification is accurate, and under penalty of perjury, that I am authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.<br>
+<input type="checkbox" name="agree-terms" value="1" required>I understand that abuse of this form may lead to the suspension of my Ruqqus account.<br><br>
+
+<label for="signature">Signature</label>
+<div>By typing your full name below, you are providing us with your digital signature, which is as legally binding as your physical signature. Please note that your signature must exactly match the full name entered at the top of this form.</div>
+<input type="text" id="signature" name="signature">
 
 <input type="submit" value="Send DMCA Takedown Request">
 
