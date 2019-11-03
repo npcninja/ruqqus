@@ -2,7 +2,7 @@ from flask import *
 
 app=Flask(__name__)
 
-app.config["SERVER_NAME"]="www.ruqq.us"
+app.config["SERVER_NAME"]="pr70.ruqq.us"
 
 @app.route("/<pid>", methods=["GET"])
 def pid(pid):
