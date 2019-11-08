@@ -10,6 +10,8 @@ from ruqqus.classes import *
 from flask import *
 from ruqqus.__main__ import app, db
 
+from ruqqus.mail import *
+
 @app.route("/api/is_available/<name>", methods=["GET"])
 def api_is_available(name):
     if db.query(User.username).filter(User.username.ilike(name)).count():
@@ -246,6 +248,27 @@ def edit_comment(v):
 
     db.add(c)
     db.commit()
+
+
+@app.route("/dmca", methods=["POST"])
+@auth_required
+@validate_formkey
+def dmca_post(v):
+
+    email = request.form.get("email")
+    name = request.form.ge("name")
+    address = request.form.get("address")
+    description = request.form.get("work-description")
+    owner = request.form.get("work-owner")
+    links = request.form.get("ruqqus-links")
+    signature = request.form.get("signature")
+
+    if not send_mail(to_address=os.environ.get("admin_email"), subject="DMCA Takedown Reuqest"):
+        abort(500)
+
+    return redirect(v.url, message="Your takedown request has been submitted.")
+
+
 
 
 
