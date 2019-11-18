@@ -32,8 +32,10 @@
 </script>
 {% endblock %}
 
-{% block searchText %}
-<!-- Show search text, only visible on search page -->
+
+
+{% block content %}
+<!-- Search text -->
 
 <div class="row no-gutters">
 
@@ -48,16 +50,14 @@
       <div class="card-body">
         <div class="pl-md-3">
           <div class="text-muted text-small mb-1">Showing results for</div>
-          <h1 class="h5 mb-0">I searched for this</h1>
+          <h1 class="h5 mb-0">{{ term }}</h1>
         </div>
       </div>
     </div>
   </div>
 
 </div>
-{% endblock %}
 
-{% block content %}
 
 <!-- Post filters bar visible only on medium devices or larger-->
 
