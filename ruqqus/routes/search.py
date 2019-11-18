@@ -27,7 +27,7 @@ def search(v):
         posts=posts.order_by(text("submissions.score desc"))
         
     total=posts.count()
-    posts=[x.id for x in posts.offset(25*(page-1)).limit(26).all()]
+    posts=[x for x in posts.offset(25*(page-1)).limit(26).all()]
     
     next_exists=(len(posts)==26)
     results=posts[0:25]
