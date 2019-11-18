@@ -16,7 +16,7 @@ def search(v):
     search = db.query(Submission).filter_by(is_banned=False, is_deleted=False).filter(Submission.title.ilike(term)).offset(25*(page-1))
     
     total=search.count()
-    results=search.limit(26)
+    results=[p for p in search.limit(26)]
 
     next_exists=(len(results)==26)
     results=results[0:25]
