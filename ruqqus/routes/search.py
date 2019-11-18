@@ -7,7 +7,7 @@ from ruqqus.__main__ import app, db
 @auth_desired
 def search(v):
 
-    term=request.form.get("q")
+    term=request.args.get("q")
     page=max(1, int(request.args.get("page", 1)))
 
     term="%"+term+"%"
