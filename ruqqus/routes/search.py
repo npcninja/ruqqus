@@ -20,4 +20,4 @@ def search(v):
     next_exists=(len(results)==26)
     results=results[0:25]
 
-    #return render_template("search_results.html", v=v total=total, listing=results, next_exists=next_exists)
+    return render_template("search.html", v=v total=total, listing=results, next_exists=next_exists)
