@@ -65,13 +65,13 @@
 
   <ul class="nav post-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link{% if sort_method=="top" %} active{% endif %}" href="/?sort=top"><i class="fas fa-arrow-alt-circle-up"></i>Top</a>
+      <a class="nav-link{% if sort_method=="top" %} active{% endif %}" href="?sort=top&q={{ query | urlencode }}"><i class="fas fa-arrow-alt-circle-up"></i>Top</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link{% if sort_method=="new" %} active{% endif %}" href="/?sort=new"><i class="fas fa-asterisk"></i>New</a> 
+      <a class="nav-link{% if sort_method=="new" %} active{% endif %}" href="?sort=new&q={{ query | urlencode }}"><i class="fas fa-asterisk"></i>New</a> 
     </li>
     <li class="nav-item">
-      <a class="nav-link{% if sort_method=="fiery" %} active{% endif %}" href="/?sort=fiery"><i class="fas fa-bullhorn"></i>Disputed</a>
+      <a class="nav-link{% if sort_method=="fiery" %} active{% endif %}" href="?sort=fiery&q={{ query | urlencode }}"><i class="fas fa-bullhorn"></i>Disputed</a>
     </li>
   </ul>
 
@@ -157,10 +157,10 @@
 <nav aria-label="Page navigation">
   <ul class="pagination pagination-sm py-3 pl-3 mb-0">
     <li class="page-item{% if page==1 %} disabled{% endif %}">
-      <small><a class="page-link" href="?page={{ page-1 }}" tabindex="-1"{% if page==1 %} aria-disabled="true"{% endif %}>Back</a></small>
+      <small><a class="page-link" href="?sort={{ sort_method }}&page={{ page-1 }}" tabindex="-1"{% if page==1 %} aria-disabled="true"{% endif %}>Back</a></small>
     </li>
     <li class="page-item{% if not next_exists %} disabled{% endif %}">
-      <small><a class="page-link" href="?page={{ page+1 }}">Next</a></small>
+      <small><a class="page-link" href="?sort={{ sort_method }}&page={{ page+1 }}">Next</a></small>
     </li>
   </ul>
 </nav>
