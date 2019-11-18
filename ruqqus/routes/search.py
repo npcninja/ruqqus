@@ -29,7 +29,7 @@ def search(v):
     total=posts.count()
     posts=[x.id for x in posts.offset(25*(page-1)).limit(26).all()]
     
-    next_exists=(len(results)==26)
-    results=results[0:25]
+    next_exists=(len(posts)==26)
+    results=posts[0:25]
 
     return render_template("search.html", v=v, total=total, listing=results, sort_method=sort, next_exists=next_exists)
