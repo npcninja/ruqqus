@@ -9,7 +9,7 @@ from ruqqus.__main__ import app, db
 def search(v):
 
     term=request.args.get("q")
-    sort_method=request.args.get("sort", "hot").lower()
+    sort=request.args.get("sort", "hot").lower()
     
     page=max(1, int(request.args.get("page", 1)))
 
@@ -32,4 +32,4 @@ def search(v):
     next_exists=(len(results)==26)
     results=results[0:25]
 
-    return render_template("search.html", v=v, total=total, listing=results, sort_method=sort_method, next_exists=next_exists)
+    return render_template("search.html", v=v, total=total, listing=results, sort_method=sort, next_exists=next_exists)
