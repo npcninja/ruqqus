@@ -32,4 +32,4 @@ def search(v):
     next_exists=(len(posts)==26)
     results=posts[0:25]
 
-    return render_template("search.html", v=v, total=total, listing=results, sort_method=sort, next_exists=next_exists)
+    return render_template("search.html", v=v, total=total, page=page, listing=results, sort_method=sort, next_exists=next_exists)
