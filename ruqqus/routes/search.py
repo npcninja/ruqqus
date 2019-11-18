@@ -15,7 +15,7 @@ def search(v):
 
     term="%"+term+"%"
 
-    posts = db.query(Submission).filter_by(is_banned=False, is_deleted=False).filter(Submission.title.ilike(term)).
+    posts = db.query(Submission).filter_by(is_banned=False, is_deleted=False).filter(Submission.title.ilike(term))
 
     if sort=="hot":
         posts=posts.order_by(text("submissions.rank_hot desc"))
