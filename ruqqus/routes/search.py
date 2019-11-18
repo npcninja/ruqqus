@@ -7,12 +7,12 @@ from ruqqus.__main__ import app, db
 @auth_desired
 def search(v):
 
-    term=request.args.get("q")
+    term=request.form.get("q")
     page=max(1, int(request.args.get("page", 1)))
 
     term="%"+term+"%"
 
-    search = db.query(Submission).filter(Submission.title.ilike(term)).offset(25*(page-1))
+    search = db.query(Submission).filter_by(is_banned=False, is_deleted=False).filter(Submission.title.ilike(term)).offset(25*(page-1))
     
     total=search.count()
     results=search.limit(26)
