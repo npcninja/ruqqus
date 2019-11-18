@@ -8,12 +8,12 @@ from ruqqus.__main__ import app, db
 @auth_desired
 def search(v):
 
-    term=request.args.get("q")
+    query=request.args.get("q")
     sort=request.args.get("sort", "hot").lower()
     
     page=max(1, int(request.args.get("page", 1)))
 
-    term="%"+term+"%"
+    term="%"+query+"%"
 
     posts = db.query(Submission).filter_by(is_banned=False, is_deleted=False).filter(Submission.title.ilike(term))
 
@@ -32,4 +32,4 @@ def search(v):
     next_exists=(len(posts)==26)
     results=posts[0:25]
 
-    return render_template("search.html", v=v, term=term, total=total, page=page, listing=results, sort_method=sort, next_exists=next_exists)
+    return render_template("search.html", v=v, query=query, total=total, page=page, listing=results, sort_method=sort, next_exists=next_exists)
