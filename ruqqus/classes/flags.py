@@ -1,42 +1,17 @@
-from flask import render_template
 from sqlalchemy import *
-from sqlalchemy.orm import relationship
+from ruqqus.__main__ import Base, db, cache
 
-from ruqqus.__main__ import Base, db
+from .submissions import *
+from .comments import *
+from .users import *
 
 class Flag(Base):
 
     __tablename__="flags"
 
-    id=Column(BigInteger, primary_key=True)
-    user_id=Column(Integer, ForeignKey("users.id"))
-    post_id=Column(Integer, ForeignKey("submissions.id"))
-    resolved=Column(Boolean, default=False)
+    post_id=Column(Integer, ForeignKey(Submission.id))
+    user_id=Column(Integer, ForeignKey(User.id))    
 
-    user=relationship("User", uselist=False)
-    post=relationship("Submission", uselist=False)
+    def __repr__(self):
 
-    def resolve(self):
-
-        self.resolved=True
-        db.add(self)
-        db.commit()
-                      
-
-class CommentFlag(Base):
-
-    __tablename__="commentflags"
-
-    id=Column(BigInteger, primary_key=True)
-    user_id=Column(Integer, ForeignKey("users.id"))
-    comments_id=Column(Integer, ForeignKey("comments.id"))
-    resolved=Column(Boolean, default=False)
-
-    user=relationship("User", uselist=False)
-    comment=relationship("Comment", uselist=False)
-
-    def resolve(self):
-
-        self.resolved=True
-        db.add(self)
-        db.commit()
+        return f"<Flag(id={self.id})>"

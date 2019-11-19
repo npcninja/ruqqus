@@ -32,6 +32,8 @@ class Submission(Base):
     body_html=Column(String(2200), default="")
     embed_url=Column(String(256), default="")
     domain_ref=Column(Integer, ForeignKey("domains.id"))
+    flags=relationship("Flag", lazy="dynamic")
+    is_approved=Column(Integer, default=0)
 
 
     #These are virtual properties handled as postgres functions server-side
@@ -41,7 +43,10 @@ class Submission(Base):
     downs=Column(Integer, server_default=FetchedValue())
     age=Column(Integer, server_default=FetchedValue())
     comment_count=Column(Integer, server_default=FetchedValue())
-    flags=Column(Integer, server_default=FetchedValue())
+    flag_count=Column(Integer, server_default=FetchedValue())
+    score=Column(Float, server_default=FetchedValue())
+    rank_hot=Column(Float, server_default=FetchedValue())
+    rank_fiery=Column(Float, server_default=FetchedValue())
     
 
     def __init__(self, *args, **kwargs):
@@ -56,10 +61,6 @@ class Submission(Base):
     def __repr__(self):
         return f"<Submission(id={self.id})>"
 
-    @property
-    @cache.memoize(timeout=60)
-    def rank_hot(self):
-        return (self.ups-self.downs)/(((self.age+100000)/6)**(1/3))
 
     @property
     #@cache.memoize(timeout=60)
@@ -70,15 +71,6 @@ class Submission(Base):
         return db.query(Domain).filter_by(id=self.domain_ref).first()
 
 
-    @property
-    @cache.memoize(timeout=60)
-    def rank_fiery(self):
-        return (math.sqrt(self.ups * self.downs))/(((self.age+100000)/6)**(1/3))
-
-    @property
-    @cache.memoize(timeout=60)
-    def score(self):
-        return self.ups-self.downs
     @property
     @cache.memoize(timeout=60)
     def score_percent(self):
@@ -223,10 +215,6 @@ class Submission(Base):
             years=now.tm_year-ctd.tm_year
             return f"{years} year{'s' if years>1 else ''} ago"
         
-    @property
-    @cache.memoize(timeout=60)
-    def unresolved_flag_count(self):
-        return self.flags.filter_by(resolved=False).count()
 
     @property
     def created_date(self):
