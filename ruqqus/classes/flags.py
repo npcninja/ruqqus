@@ -1,8 +1,8 @@
 from sqlalchemy import *
 from ruqqus.__main__ import Base, db, cache
 
-from .submissions import *
-from .comments import *
+from .submission import *
+from .comment import *
 from .users import *
 
 class Flag(Base):
