@@ -171,6 +171,21 @@ def prep_database():
     RETURNS NULL ON NULL INPUT;
     """)
 
+    #flag count
+    c.execute("""
+    CREATE OR REPLACE FUNCTION flag_count(comments)
+    RETURNS bigint AS '
+      SELECT COUNT(*)
+      FROM commentflags
+      JOIN users ON commentflags.user_id=users.id
+      WHERE comment_id=$1.id
+      AND users.ban_state>=0
+      '
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT;
+    """)
+    
 
     #===========USERS=============
 
