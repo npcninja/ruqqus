@@ -1,7 +1,6 @@
 from .admin_api import *
 from .comments import *
 from .errors import *
-from .flags import *
 from .front import *
 from .login import *
 from .posts import *

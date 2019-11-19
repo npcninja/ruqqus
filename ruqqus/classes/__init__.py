@@ -1,5 +1,6 @@
 from .badges import *
 from .comment import *
+from .flags import *
 from .user import *
 from .submission import *
 from .ips import *
