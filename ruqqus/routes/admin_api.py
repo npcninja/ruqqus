@@ -210,3 +210,35 @@ def api_undistinguish_comment(c_id, v):
     db.commit()
 
     return ("", comment)
+
+@app.route("/api/approve_post/<pid>", methods=["post"])
+@admin_level_required(3)
+def api_approve_post(pid, v):
+
+    p = db.query(Submission).filter_by(id=base36decode(pid)).first()
+
+    if not p:
+        abort(404)
+
+    p.is_banned=False
+    p.is_approved=v.id
+
+    db.add(p)
+    db.commit()
+    return "", 204
+
+@app.route("/api/approve_comment/<cid>", methods=["post"])
+@admin_level_required(3)
+def api_approve_post(cid, v):
+
+    c = db.query(Comment).filter_by(id=base36decode(cid)).first()
+
+    if not c:
+        abort(404)
+
+    c.is_banned=False
+    c.is_approved=v.id
+
+    db.add(c)
+    db.commit()
+    return "", 204
