@@ -3,7 +3,7 @@ from ruqqus.__main__ import Base, db, cache
 
 from .submission import *
 from .comment import *
-from .users import *
+from .user import *
 
 class Flag(Base):
 
