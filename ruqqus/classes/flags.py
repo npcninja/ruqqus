@@ -9,6 +9,7 @@ class Flag(Base):
 
     __tablename__="flags"
 
+    id=Column(Integer, primary_key=True)
     post_id=Column(Integer, ForeignKey(Submission.id))
     user_id=Column(Integer, ForeignKey(User.id))    
 
