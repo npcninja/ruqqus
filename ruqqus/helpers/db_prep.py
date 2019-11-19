@@ -116,7 +116,7 @@ def prep_database():
       FROM flags
       JOIN users ON flags.user_id=users.id
       WHERE post_id=$1.id
-      AND users.ban_status>=0
+      AND users.ban_state>=0
       '
     LANGUAGE SQL
     IMMUTABLE
