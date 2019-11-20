@@ -56,15 +56,13 @@
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left border-0 shadow fade px-0 mt-2"
         aria-labelledby="dropdownMenuButton">
         <div class="px-2">
-          <div class="dropdown-meta">
-            <div class="font-weight-bold mb-2">{{ v.username }}</div>
-            <div class="text-small text-primary"><i class="fad fa-medal mr-2"></i>{{ v.energy }} Rep</div>
+          <div class="dropdown-meta p-0">
+            <a class="dropdown-item font-weight-bold" href="{{ v.permalink }}">{{ v.username }}</a>
+            <div class="text-small text-primary"><i class="fad fa-medal mr-3"></i>{{ v.energy }} Rep</div>
           </div>
         </div>
         <hr class="my-2">
         <div class="px-2">
-          <a class="dropdown-item" href="{{ v.permalink }}"><i class="fas fa-user-circle text-left mr-3"></i>My
-            profile</a>
             {% if v.notifications_count %}
             <a class="dropdown-item" href="/notifications"><i class="fas fa-inbox text-left mr-3"></i>Inbox<span
               class="badge badge-danger align-top ml-1">{{ v.notifications_count }}</span></a>
